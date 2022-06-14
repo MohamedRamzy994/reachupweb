@@ -1,0 +1,244 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+@using AppletSoftware.Models
+@using System.Threading
+@using System.Globalization
+@model PagedList.IPagedList<AspNetNew>
+@{
+    ViewBag.currentnews = "active";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- ---------------------- Start Section Blog ------------------------------- -->
+
+<section class="blog" id="myblog">
+
+    <div class="container">
+
+        @if (CultureInfo.CurrentCulture.Name == "en-US")
+    {
+        <div class="row">
+
+            <div class="blog-heading text-center wow fadeInUp" data-wow-offset="400">
+                <h2 class="text-center">@Appletindex.Index.appletindexnewstitle </h2>
+            </div>
+
+
+
+            <!-- End blog-heading -->
+
+            @foreach (var item in Model)
+        {
+
+            <div class="col-sm-6 col-sm-offset-0 col-xs-offset-1 col-xs-10">
+                <div class="blog-content wow fadeInUp" data-wow-offset="400">
+
+                    <div class="blog-img">
+                        <img src="@Url.Content("~/Images/resizednews/"+item.News_Photo)" class="img-responsive" style="height:300px;">
+                        <div class="blog-overlay">
+                            <a href="@Url.Action("NewsDetails","Home",new {News_Id =item.News_Id})"> <i class="fa fa-search-plus" aria-hidden="true"></i> </a>
+                        </div>
+                    </div>
+
+                    <div class="blog-posts">
+
+                        <div class="myspan">
+                            <i class="fa fa-plus" aria-hidden="true"></i>
+                        </div>
+
+                        <p> <a href="#">@Html.DisplayFor(m => item.News_Title_En)</a> </p>
+                        <p>
+
+                            @Html.Raw(item.News_Short_En)
+
+
+                        </p>
+
+                        <a href="@Url.Action("NewsDetails","Home",new {News_Id =item.News_Id})" class="btn btn-default hvr-bounce-to-right">@Appletindex.Index.appletindexnewsreadmore</a>
+
+                        <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a9d222e2326af0013ae40ec&product=inline-share-buttons' async='async'></script>
+                        <div class="sharethis-inline-share-buttons"></div>
+
+
+
+
+                    </div>
+                    <!-- End blog-posts -->
+
+                </div>
+            </div>
+            <!-- End Col-md 1 -->
+
+
+
+
+
+    }
+
+
+            <div class="col-sm-12 col-xs-12 text-center">
+                <nav aria-label="Page navigation">
+
+
+                    @Html.PagedListPager(Model, page => Url.Action("News", new { page }))
+
+                </nav>
+            </div>
+
+
+        </div>
+}
+else if (CultureInfo.CurrentCulture.Name == "ar-SA")
+{
+    <div class="row">
+
+        <div class="blog-heading text-center wow fadeInUp" data-wow-offset="400">
+            <h2 class="text-center">@Appletindex.Index.appletindexnewstitle </h2>
+        </div>
+
+
+
+        <!-- End blog-heading -->
+
+        @foreach (var item in Model)
+    {
+
+        <div class="col-sm-6 col-sm-offset-0 col-xs-offset-1 col-xs-10">
+            <div class="blog-content wow fadeInUp" data-wow-offset="400">
+
+                <div class="blog-img">
+                    <img src="@Url.Content("~/Images/resizednews/"+item.News_Photo)" class="img-responsive" style="height:300px;">
+                    <div class="blog-overlay">
+                        <a href="@Url.Action("NewsDetails","Home",new {News_Id =item.News_Id})"> <i class="fa fa-search-plus" aria-hidden="true"></i> </a>
+                    </div>
+                </div>
+
+                <div class="blog-posts">
+
+                    <div class="myspan">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+
+                    <p> <a href="#">@Html.DisplayFor(m => item.News_Title_Ar)</a> </p>
+                    <p>
+
+                        @Html.Raw(item.News_Short_Ar)
+
+
+                    </p>
+
+                    <a href="@Url.Action("NewsDetails","Home",new {News_Id =item.News_Id})" class="btn btn-default hvr-bounce-to-right">@Appletindex.Index.appletindexnewsreadmore</a>
+
+                    <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a9d222e2326af0013ae40ec&product=inline-share-buttons' async='async'></script>
+                    <div class="sharethis-inline-share-buttons"></div>
+
+
+
+
+                </div>
+                <!-- End blog-posts -->
+
+            </div>
+        </div>
+        <!-- End Col-md 1 -->
+
+
+
+
+
+}
+
+
+        <div class="col-sm-12 col-xs-12 text-center">
+            <nav aria-label="Page navigation">
+
+
+                @Html.PagedListPager(Model, page => Url.Action("News", new { page }))
+
+            </nav>
+        </div>
+
+
+    </div>
+}
+else
+{
+    <div class="row">
+
+        <div class="blog-heading text-center wow fadeInUp" data-wow-offset="400">
+            <h2 class="text-center">@Appletindex.Index.appletindexnewstitle </h2>
+        </div>
+
+
+
+        <!-- End blog-heading -->
+
+        @foreach (var item in Model)
+    {
+
+        <div class="col-sm-6 col-sm-offset-0 col-xs-offset-1 col-xs-10">
+            <div class="blog-content wow fadeInUp" data-wow-offset="400">
+
+                <div class="blog-img">
+                    <img src="@Url.Content("~/Images/resizednews/"+item.News_Photo)" class="img-responsive" style="height:300px;">
+                    <div class="blog-overlay">
+                        <a href="@Url.Action("NewsDetails","Home",new {News_Id =item.News_Id})"> <i class="fa fa-search-plus" aria-hidden="true"></i> </a>
+                    </div>
+                </div>
+
+                <div class="blog-posts">
+
+                    <div class="myspan">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </div>
+
+                    <p> <a href="#">@Html.DisplayFor(m => item.News_Title_En)</a> </p>
+                    <p>
+
+                        @Html.Raw(item.News_Short_En)
+
+
+                    </p>
+
+                    <a href="@Url.Action("NewsDetails","Home",new {News_Id =item.News_Id})" class="btn btn-default hvr-bounce-to-right">@Appletindex.Index.appletindexnewsreadmore</a>
+
+                    <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a9d222e2326af0013ae40ec&product=inline-share-buttons' async='async'></script>
+                    <div class="sharethis-inline-share-buttons"></div>
+
+
+
+
+                </div>
+                <!-- End blog-posts -->
+
+            </div>
+        </div>
+        <!-- End Col-md 1 -->
+
+
+
+
+
+}
+
+
+        <div class="col-sm-12 col-xs-12 text-center">
+            <nav aria-label="Page navigation">
+
+
+                @Html.PagedListPager(Model, page => Url.Action("News", new { page }))
+
+            </nav>
+        </div>
+
+
+    </div>
+}
+
+
+
+    </div>
+
+</section>
+
+<!-- --------------------------- End Blog ---------------------------- -->

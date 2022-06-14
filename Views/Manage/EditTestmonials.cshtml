@@ -1,0 +1,570 @@
+﻿@model AppletSoftware.Models.TestmonialsViewModel
+
+@{
+
+    Layout = "~/Views/Shared/_DashLayout.cshtml";
+}
+
+<!-- breadcrumbs -->
+<div class="w3l_agileits_breadcrumbs">
+    <div class="w3l_agileits_breadcrumbs_inner">
+        <ul>
+            <li><a href="@Url.Action("Testmonials","Manage")">@AppletDashIndex.DashIndex.appletdashindexsidebartestimonials</a><span>«</span></li>
+            <li>@AppletDashIndex.DashIndex.appletdashedittestmonialsbreadcrumbs</li>
+        </ul>
+    </div>
+</div>
+<!-- //breadcrumbs -->
+
+<div class="inner_content_w3_agile_info two_in">
+    <h2 class="w3_inner_tittle">@AppletDashIndex.DashIndex.appletdashedittestmonialsbreadcrumbs</h2>
+
+    <!--/forms-->
+    <div class="forms-main_agileits">
+        <!--/forms-inner-->
+        <div class="forms-inner">
+            <!--/set-3-->
+
+            <div class="wthree_general">
+
+
+                <div class="grid-1 graph-form agile_info_shadow">
+                    <h3 class="w3_inner_tittle two"> @AppletDashIndex.DashIndex.appletdashedittestmonialsdetails</h3>
+
+                    <div class="row">
+
+
+                        <div class="col-md-4 col-md-offset-0">
+                            <div class="form-group has-success">
+
+
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">  @Html.Label(AppletDashIndex.DashIndex.appletdashedittestmonialsclientnameenglish)</div>
+                                    <div class="panel-body"> @Html.DisplayFor(m => m.Testmonial_ClientName_En, new { @class = "" })</div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-md-offset-0">
+                            <div class="form-group has-success">
+
+
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">  @Html.Label(AppletDashIndex.DashIndex.appletdashedittestmonialsclientnamearabic))</div>
+                                    <div class="panel-body"> @Html.DisplayFor(m => m.Testmonial_ClientName_Ar, new { @class = "" })</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="col-md-4 col-md-offset-0">
+                            <div class="form-group has-success">
+
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">  @Html.Label(AppletDashIndex.DashIndex.appletdashedittestmonialsdatetime))</div>
+                                    <div class="panel-body"> @Html.DisplayFor(m => m.Testmonial_DateTime, new { @class = "" })</div>
+                                </div>
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                    <div class="row">
+
+
+                        <div class="col-md-4 col-md-offset-0">
+
+                            <div class="panel panel-info">
+                                <div class="panel-heading">  @Html.Label(AppletDashIndex.DashIndex.appletdashedittestmonialsquestionenglish))</div>
+                                <div class="panel-body"> @Html.Raw(Model.Testmonial_Question_En)</div>
+                            </div>
+
+
+
+
+
+
+
+
+
+                        </div>
+                        <div class="col-md-4 col-md-offset-0">
+
+                            <div class="panel panel-info">
+                                <div class="panel-heading">  @Html.Label(AppletDashIndex.DashIndex.appletdashedittestmonialsquestionarabic))</div>
+                                <div class="panel-body"> @Html.Raw(Model.Testmonial_Question_Ar)</div>
+                            </div>
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="col-md-4 col-md-offset-0">
+                            <div class="form-group has-success">
+
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">  @Html.Label(AppletDashIndex.DashIndex.appletdashedittestmonialsPublisher))</div>
+
+                                    @{
+                        AppletSoftware.Models.AppletSoftwareEntities Context = new AppletSoftware.Models.AppletSoftwareEntities();
+
+                        string Fname_En = Context.AspNetUsersInfoPlus.Where(m => m.Id == Model.Id).SingleOrDefault().UInfoPlus_Fname_En;
+                        string Lname_En = Context.AspNetUsersInfoPlus.Where(m => m.Id == Model.Id).SingleOrDefault().UInfo_Lname_En;
+
+                        string Publisher = Fname_En + " " + Lname_En;
+
+                                    }
+
+                                    <div class="panel-body"> @Html.DisplayFor(m => Publisher, new { @class = "" })</div>
+                                </div>
+
+
+
+
+
+
+                            </div>
+
+
+
+                        </div>
+
+
+
+                    </div>
+
+                    <div class="row">
+
+
+                        <div class="col-md-4 col-md-offset-0">
+
+                            <div class="panel panel-info">
+                                <div class="panel-heading">  @Html.Label(AppletDashIndex.DashIndex.appletdashedittestmonialsanswerenglish))</div>
+                                <div class="panel-body"> @Html.Raw(Model.Testmonial_Answer_En)</div>
+                            </div>
+
+
+
+
+
+
+
+
+
+                        </div>
+                        <div class="col-md-4 col-md-offset-0">
+
+                            <div class="panel panel-info">
+                                <div class="panel-heading">  @Html.Label(AppletDashIndex.DashIndex.appletdashedittestmonialsanswerarabic))</div>
+                                <div class="panel-body"> @Html.Raw(Model.Testmonial_Answer_Ar)</div>
+                            </div>
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                        <div class="col-md-4 col-md-offset-0">
+
+
+                            @{ 
+                               
+
+                                string Category = Context.AspNetTestmonialsCategories.Find(Model.TsCat_Id).TsCat_Name_En;
+
+
+                            }
+
+                            <div class="panel panel-info">
+                                <div class="panel-heading">  @Html.Label(AppletDashIndex.DashIndex.appletdashedittestmonialscategoryenglish))</div>
+                                <div class="panel-body"> @Html.DisplayFor(m=>Category)</div>
+                            </div>
+
+
+
+
+
+
+
+
+
+                        </div>
+
+
+
+
+
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-4 col-md-offset-0">
+                            <div class="form-group has-success">
+
+
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">  @Html.Label(AppletDashIndex.DashIndex.appletdashedittestmonialsjobtitleenglish))</div>
+                                    <div class="panel-body"> @Html.DisplayFor(m => m.Testmonial_ClientJobTitle_En, new { @class = "" })</div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-md-offset-0">
+                            <div class="form-group has-success">
+
+
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">  @Html.Label(AppletDashIndex.DashIndex.appletdashedittestmonialsclientnamearabic))</div>
+                                    <div class="panel-body"> @Html.DisplayFor(m => m.Testmonial_ClientJobTitle_Ar, new { @class = "" })</div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-md-4 col-md-offset-0">
+
+
+
+                            <div class="panel panel-info">
+                                <div class="panel-heading">  @Html.Label(AppletDashIndex.DashIndex.appletdashedittestmonialsclientphoto)</div>
+                                <div class="panel-body"> <img src="@Url.Content("~/Images/resizedtestmonials/"+Model.Testmonial_ClientPhoto)" class="img-thumbnail" /></div>
+                            </div>
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+
+
+            </div>
+
+            @using (Html.BeginForm("EditTestmonials", "Manage", FormMethod.Post, new { id = "EditTestmonialForm", role = "form", enctype = "multipart/form-data" }))
+            {
+
+
+                @Html.AntiForgeryToken()
+            <div class="wthree_general">
+                @Html.HiddenFor(m=>Model.Testmonial_Id)
+
+                <div class="grid-1 graph-form agile_info_shadow">
+                    <h3 class="w3_inner_tittle two">@AppletDashIndex.DashIndex.appletdashedittestmonialsbreadcrumbs</h3>
+
+                    <div class="row">
+
+
+                        <div class="col-md-5 col-md-offset-1">
+                            <div class="form-group has-success">
+                                @Html.ValidationMessageFor(m => m.Testmonial_ClientName_En, "", new { @class = "text-danger" })
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-pencil-square-o"></i>
+                                    </span>
+                                    @Html.TextBoxFor(m => m.Testmonial_ClientName_En, new { @class = "form-control1 icon", placeholder = AppletDashIndex.DashIndex.appletdashtestmonialclientnameenglish })
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-5 col-md-offset-1">
+                            <div class="form-group has-success">
+                                @Html.ValidationMessageFor(m => m.Testmonial_ClientName_Ar, "", new { @class = "text-danger" })
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-pencil-square-o"></i>
+                                    </span>
+                                    @Html.TextBoxFor(m => m.Testmonial_ClientName_Ar, new { @class = "form-control1 icon", placeholder = AppletDashIndex.DashIndex.appletdashtestmonialclientnamearabic })
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+
+                        <div class="col-md-5 col-md-offset-1">
+                            <div class="form-group has-success">
+                                @Html.ValidationMessageFor(m => m.Testmonial_Question_En, "", new { @class = "text-danger" })
+                                <span class="input-group-addon">
+                                    @AppletDashIndex.DashIndex.appletdashtestmonialquestionenglish &nbsp;<i class="fa fa-pencil-square-o"></i>
+                                </span>
+                                @Html.TextAreaFor(m => m.Testmonial_Question_En, new { @class = "form-control1 icon", placeholder = AppletDashIndex.DashIndex.appletdashtestmonialquestionenglish })
+
+                                <script>
+                                    CKEDITOR.replace('Testmonial_Question_En');
+                                </script>
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-5 col-md-offset-1">
+                            <div class="form-group has-success">
+                                @Html.ValidationMessageFor(m => m.Testmonial_Question_Ar, "", new { @class = "text-danger" })
+                                <span class="input-group-addon">
+                                    @AppletDashIndex.DashIndex.appletdashtestmonialquestionarabic &nbsp;<i class="fa fa-pencil-square-o"></i>
+                                </span>
+                                @Html.TextAreaFor(m => m.Testmonial_Question_Ar, new { @class = "form-control1 icon", placeholder = AppletDashIndex.DashIndex.appletdashtestmonialquestionarabic })
+
+                                <script>
+                                    CKEDITOR.replace('Testmonial_Question_Ar');
+                                </script>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+
+
+                        <div class="col-md-5 col-md-offset-1">
+                            <div class="form-group has-success">
+                                @Html.ValidationMessageFor(m => m.Testmonial_Answer_En, "", new { @class = "text-danger" })
+                                <span class="input-group-addon">
+                                    @AppletDashIndex.DashIndex.appletdashtestmonialanswerenglish &nbsp;<i class="fa fa-pencil-square-o"></i>
+                                </span>
+                                @Html.TextAreaFor(m => m.Testmonial_Answer_En, new { @class = "form-control1 icon", placeholder = AppletDashIndex.DashIndex.appletdashtestmonialanswerenglish })
+
+                                <script>
+                                    CKEDITOR.replace('Testmonial_Answer_En');
+                                </script>
+
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-5 col-md-offset-1">
+                            <div class="form-group has-success">
+                                @Html.ValidationMessageFor(m => m.Testmonial_Answer_Ar, "", new { @class = "text-danger" })
+                                <span class="input-group-addon">
+                                    @AppletDashIndex.DashIndex.appletdashtestmonialanswerarabic  &nbsp;<i class="fa fa-pencil-square-o"></i>
+                                </span>
+                                @Html.TextAreaFor(m => m.Testmonial_Answer_Ar, new { @class = "form-control1 icon", placeholder = AppletDashIndex.DashIndex.appletdashtestmonialanswerarabic })
+
+                                <script>
+                                    CKEDITOR.replace('Testmonial_Answer_Ar');
+                                </script>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+
+
+                        <div class="col-md-5 col-md-offset-1">
+                            <div class="form-group has-success">
+                                @Html.ValidationMessageFor(m => m.Testmonial_ClientJobTitle_En, "", new { @class = "text-danger" })
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-envelope-square"></i>
+                                    </span>
+                                    @Html.TextBoxFor(m => m.Testmonial_ClientJobTitle_En, new { @class = "form-control1 icon", placeholder = AppletDashIndex.DashIndex.appletdashtestmonialsjobtitleenglish })
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-5 col-md-offset-1">
+                            <div class="form-group has-success">
+                                @Html.ValidationMessageFor(m => m.Testmonial_ClientJobTitle_Ar, "", new { @class = "text-danger" })
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-envelope-square"></i>
+                                    </span>
+                                    @Html.TextBoxFor(m => m.Testmonial_ClientJobTitle_Ar, new { @class = "form-control1 icon", placeholder = AppletDashIndex.DashIndex.appletdashtestmonialsjobtitlearabic })
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-5 col-md-offset-1">
+                            <div class="form-group has-success">
+
+                                @Html.ValidationMessageFor(m => m.TsCat_Id, "", new { @class = "text-danger" })
+                                <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fa fa-bitbucket"></i>
+                                    </span>
+
+                                    @Html.DropDownListFor(m => m.TsCat_Id, Model.Categories, AppletDashIndex.DashIndex.appletdashnewprojectplaceholdercategory, new { @class = "form-control" })
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-md-offset-1 ">
+                            <!-- FONT AWESOME THEME -->
+                            <!-- load the JS files in the right order -->
+                            <div class="has-success">
+                                <div class="file-loading">
+
+                                    @Html.TextBoxFor(m => m.Testmonial_ClientPhoto, new { type = "file", multiple = true })
+                                </div>
+
+
+                            </div>
+                        </div>
+                        <script>
+
+
+                            $(document).on('ready', function () {
+
+                                $("#Testmonial_ClientPhoto").fileinput({
+                                    showUpload: false,
+                                    maxFileCount: 1,
+                                    mainClass: "input-group-lg",
+                                    theme: "fa",
+                                    initialPreview: [
+                                        "<img src='/Images/images/logo.png' class='file-preview-image' alt='Desert' title='Desert' height='50'>",
+
+                                    ],
+                                    // initial preview configuration
+                                    initialPreviewConfig: [
+                                        {
+                                            caption: 'appletsoftware',
+                                            width: '120px',
+                                            url: '/Images/images/logo.png',
+                                            key: 100,
+                                            extra: { id: 100 }
+                                        }
+
+
+
+                                    ]
+
+                                });
+
+
+                            });
+
+                        </script>
+
+
+
+
+                    </div>
+
+                    <div class="button">
+
+                        <p class="btnText">@AppletDashIndex.DashIndex.appletdashnewprojectreadybutton</p>
+                        <div class="btnTwo">
+                            <input type="submit" class="btnText2 btn-submit" value="@AppletDashIndex.DashIndex.appletdashnewprojectsavebutton">
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+            </div>
+
+                <!--//set-3-->
+            }
+        </div>
+
+        <!--//forms-inner-->
+    </div>
+    <!--//forms-->
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var modelStatus =@string.IsNullOrEmpty(Model.Testmonialstatus).ToString().ToLower();
+
+        if (status == false) {
+
+            var modelMessage =@string.Compare(Model.Testmonialstatus, "Success");
+
+
+            if (modelMessage == 0) {
+
+
+
+                $.toast({
+                    text: " Testmonial Edited Successfuly Thank you :) !", // Text that is to be shown in the toast
+                    heading: 'APPLET Software', // Optional heading to be shown on the toast
+                    icon: 'success', // Type of toast icon
+                    showHideTransition: 'slide', // fade, slide or plain
+                    allowToastClose: true, // Boolean value true or false
+                    hideAfter: 10000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
+                    stack: 5, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
+                    position: { left: '0', right: '0', top: '0', bottom: 'auto' }, // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+
+
+
+                    textAlign: 'center',  // Text alignment i.e. left, right or center
+                    loader: true,  // Whether to show loader or not. True by default
+                    loaderBg: '#9EC600',  // Background color of the toast loader
+                    beforeShow: function () { }, // will be triggered before the toast is shown
+                    afterShown: function () { }, // will be triggered after the toat has been shown
+                    beforeHide: function () { }, // will be triggered before the toast gets hidden
+                    afterHidden: function () { }  // will be triggered after the toast has been hidden
+                });
+
+
+
+
+            }
+
+
+
+        }
+
+
+
+
+    });
+
+</script>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

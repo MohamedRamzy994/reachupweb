@@ -1,0 +1,374 @@
+/* *****************************Start Media Query*************************** */
+
+@media (max-width: 390px) { 
+    
+    
+    .loading-overlay h1 { font-size: 25px;font-weight: bold;/* margin:100px auto 50px; */}
+    
+    .loading-overlay p { margin: 0 auto 50px;font-size: 17px }
+    
+    .sk-cube-grid { width: 50px; height: 50px; }
+}
+
+/* ************************************************************************************************************ */
+
+@media (min-width: 391px) and (max-width: 767px) {
+            
+    .loading-overlay h1 { font-size: 25px;font-weight: bold;/* margin:100px auto 50px; */}
+    
+    .loading-overlay p { margin: 0 auto 50px;font-size: 17px }
+    
+    .sk-cube-grid { width: 50px; height: 50px; }
+}
+
+/* *****************************Start Media Query*************************** */
+
+@media (max-width: 767px) {
+    .container-fluid>.navbar-collapse,
+    .container-fluid>.navbar-header,
+    .container>.navbar-collapse,
+    .container>.navbar-header { padding-top: 8px;padding-bottom: 8px }
+    .navbar .logo h1 {
+        font-size: 30px;
+        margin-top: -2px
+    }
+    
+    
+    .about_us .about_img img { width: 80% }
+    
+    .Pricing-content { margin-bottom: 50px }
+    
+    .Get_Start h1 { margin-bottom: 20px; font-size: 25px; }
+    
+    .Get_Start .btn-Register a { padding: 7px;font-size: 17px }
+    
+    .team .my_head { font-size: 25px }
+    
+    .slick-dots { display: block !important; bottom: -50px; }
+    
+    .slick-dots li button:before { font-size: 15px }
+    
+    .counter .icon { margin-left: 20% }
+    
+    .counter_content { margin-bottom: 50px }
+    
+    .projects .myimg { margin-bottom: 50px }
+    
+    .customer img { margin-bottom: 30px }
+    
+    .btn.submit-btn { margin-left: 15px }
+    
+    #name { margin-top: 30px }
+    
+    .footer-first { margin-bottom: 30px }
+    
+    .footer-third { margin-top: 30px }
+    
+    .work-right { margin-top: 10% }
+    
+    .work-left ul li p a { font-size: 18px }
+    
+    .Subscribe h1 { font-size: 25px }
+    
+    .Subscribe input { width: 280px }
+    
+    .section-heading > h2 { font-size: 27px }
+    
+    .blog .blog-overlay .fa { font-size: 25px }
+    
+    .video-area { height: 350px }
+    
+    .video-area .video-play-btn a { 
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+        font-size: 25px
+    }
+    
+    .counter .count { font-size: 20px}
+    
+    .counter .inline_element p { font-size: 13px }
+    
+    .counter i { font-size: 27px }
+    
+    .counter .icon { margin-bottom: 8px }
+    
+    .Feature h5 { font-size: 20px }
+    
+    .Feature i { font-size: 25px }
+    
+    .counter .inline_element:nth-of-type(1) { margin-right: 5px }
+    
+    .myvisible { margin-left: -30px }
+    
+    .about_us .title-one ~ p { margin-bottom: 40px }
+    
+    /* ***************** */
+    
+    .MyBackground h1 { font-size: 25px }
+    
+    .MyBackground h2 { font-size: 20px }
+    
+    .MyBackground p { font-size: 17px }
+    
+    .MyBackground a { font-size: 15px ;padding: 4px 30px }
+    
+    /* ***************************** */
+    
+    ul.navbar-nav { margin-top: -8px;margin-bottom: -8px }
+
+    .navbar-nav > li {
+        margin: 0;
+        padding-left: 10px;
+        margin-bottom: 1px;
+        text-align: center;
+    }
+    .Pricing .pricingmore {
+        width: 30%;
+    }
+    
+    .navbar-nav > li:hover { background-color: #ff2b42;color: #FFF }
+    
+    .navbar-default .navbar-nav>li>a:focus, 
+    .navbar-default .navbar-nav>li>a:hover,
+    .navbar-default .navbar-nav>.active>a:focus,
+    .navbar-default .navbar-nav>.active>a:hover { color: #FFF }
+    
+    .navbar-toggle  { background-color: #FFF }
+    
+    .navbar-header { background: #EEE }
+    
+    /* ************************** */
+    
+    .navbar .logo img { width: 30px }
+    
+    .navbar .logo h1 { font-size: 25px }
+    
+    .navbar .logo img { margin-top: -9% }
+    
+    /* **************************** */
+    
+    .post .col-md-9 { width: 100% }
+    
+    .post .post-title { margin-left: 5% }
+    
+    .post .icon { padding-right: 20px }
+}
+
+
+
+@media (max-width: 600px) { 
+    .post .post-title { margin-top: 20%;margin-left: 5%;font-size: 15px }
+    
+    .post .post-title h2 { font-size: 17px}
+}
+
+
+/* ***************************************************************************** */
+
+@media (max-width: 400px) { 
+ 
+    .services h2 , .work-top h3 , .Pricing h1 , .blog h2 , .customer h1 , .Feature h1 { font-size: 25px }
+    
+    .Subscribe h1 { font-size: 20px }
+    
+    .Subscribe input { width: 200px }
+    
+    .Subscribe .btn-danger { font-size: 16px }
+    
+    .Subscribe input { font-size: 14px }
+    
+    .projects p a { font-size :15px }
+    
+    .work-left ul li p a { font-size: 14px }
+    
+    .about_us .left ul li { font-size: 15px }
+    
+    .team .content img { margin: auto }
+    
+    .Pricing a { width: 60%;font-size: 12px }
+    
+    .Pricing p { font-size: 13px }
+    
+    .Get_Start h1 { font-size: 20px }
+    
+    .Get_Start .btn-Register { margin-top: 25px }
+
+    .myhidden { display: block }
+    
+    .myvisible { display: none }
+    
+     /* ***************** */
+    
+    .MyBackground h1 { font-size: 20px }
+    
+    .MyBackground h2 { font-size: 15px }
+    
+    .MyBackground p { font-size: 13px }
+    
+    .MyBackground a { font-size: 12px ;padding: 4px 25px }
+    
+    .navbar .logo h1 { font-size: 25px }
+    
+    .MyBackground a.get { display: inline-block;margin-bottom: 20px }
+    
+    .post .post-title { margin-top: 25%;padding-left: 10px; }
+    
+    .post .icon { padding-right: 20px }
+    
+ 
+}
+
+
+/* ***************************************************************************** */
+
+
+/*  Medium devices (tablets, 768px and up)  */
+@media (min-width: 768px) and (max-width: 991px) {
+    .navbar-header {
+        float: left;
+    }
+
+    .navbar .logo img {
+        width: 10px;
+    }
+
+    .navbar .logo h1 {
+        font-size: 20px;
+    }
+    .post .post-title { margin-top: 15%;}
+    
+    .post .col-md-9 { width: 100% }
+
+    .navbar .container { width: 100% }
+    
+    .navbar .navbar-header { width: 25% }
+    
+    .navbar .navbar-collapse { width: 100% }
+    
+    .container-fluid>.navbar-collapse,
+    .container-fluid>.navbar-header,
+    .container>.navbar-collapse,
+    .container>.navbar-header { padding-top: 4px; padding-bottom: 4px; }
+    
+    .navbar-default .navbar-nav>li>a { font-weight: normal }
+    
+    .navbar-nav>li { margin-left: 7px; margin-right: 7px; }
+    
+    .navbar>.container .navbar-brand,
+    .navbar>.container-fluid .navbar-brand { margin-left: 5px }
+    
+    .navbar-brand { padding-top: 13px; padding-left: 13px }
+    
+    .navbar-right { margin-right: 2px; margin-top: 5px }
+    
+    .navbar-default .navbar-nav>li>a:focus,
+    .navbar-default .navbar-nav>li>a:hover { color: #ff2b42; font-size: 14px; font-weight: 900;
+        background-color: transparent; }
+    
+    .Footer h4 { color: #FFF}
+    
+    .Scroll-top { bottom: 1% }
+    
+    .blog .blog-posts .myspan { bottom: 49.5%}
+    
+    /* ***************** */
+    
+    .about_us .left .My-Container div.yy { min-height: 300px }
+
+    .services .col-md-3 { margin-bottom: 30px }
+    
+    .work-right { margin-top: 15% }
+    
+    .projects p a { font-size: 18px }
+    
+    .customer img { margin-bottom: 35px }
+    
+    #name { margin-top: 50px }
+    
+    .btn.submit-btn { margin-left: 15px }
+    
+    .counter .count { font-size: 27px }
+    
+    .counter .inline_element p { font-size: 14px }
+    
+    .slick-next { right: 46% }
+    
+    .slick-prev { left: 46% }
+    
+    .MyBackground h1 { font-size: 35px }
+    
+    .MyBackground h2 { font-size: 25px }
+    
+    .MyBackground p { font-size: 22px }
+    
+    .MyBackground a { font-size: 20px ;padding: 4px 30px }
+    
+    .slick-dots { display: block !important; bottom: -50px; }
+    
+    .slick-dots li button:before { font-size: 15px }
+    
+    /* **************************** */
+    
+    .loading-overlay h1 { font-size: 40px;/*margin-top: 25% */}    
+    
+}
+
+
+@media (min-width: 768px) and (max-width: 900px) {
+
+    .navbar .logo h1 {
+        font-size: 20px;
+    }
+
+    .navbar .logo img {
+        width: 20px
+    }
+
+
+    .navbar > .container .navbar-brand,
+    .navbar > .container-fluid .navbar-brand {
+        margin-top: 6%
+    }
+}
+
+/* ******************************************************************************************************* */
+
+/*  Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    
+    .work-left ul li p a { font-size: 24px }
+    
+    .customer img { margin-bottom: 35px }
+    
+    .slick-next { right: 46% }
+    
+    .slick-prev { left: 46% }
+    
+}
+
+/* ******************************************************************************************************* */
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+
+
+
+
+}
+
+/* *************************************End Media Query*************************************************** */
+
+@media (min-width: 300px) and (max-width: 767px) {
+    
+    
+    .Contact-Us textarea , .Contact-Us .contact-button button { margin-left: 0;margin-top: 3px}
+    
+    .Footer h4 { color: #FFF}
+    
+    .Footer .copyright, .Footer .social-media { font-size: 20px; float: none !important; text-align: center; }
+    
+    .Footer .copyright a { display: block; margin-top: 10px !important; margin-bottom: 10px !important; }
+
+}

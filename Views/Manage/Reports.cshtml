@@ -1,0 +1,130 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_DashLayout.cshtml";
+}
+
+<!-- breadcrumbs -->
+<div class="w3l_agileits_breadcrumbs">
+    <div class="w3l_agileits_breadcrumbs_inner">
+        <ul>
+            <li><a href="@Url.Action("Dashboard","Manage")">@Appletindex.Index.applettopmenuhome</a><span>«</span></li>
+            <li>@AppletDashIndex.DashIndex.appletdashindexsidebarreports</li>
+        </ul>
+    </div>
+</div>
+<!-- //breadcrumbs -->
+
+
+<div class="inner_content_w3_agile_info two_in" id="reports">
+    <h2 class="w3_inner_tittle">@AppletDashIndex.DashIndex.appletdashindexsidebarreports</h2>
+
+    <!--/forms-->
+    <div class="forms-main_agileits">
+        <!--/forms-inner-->
+        <div class="forms-inner">
+            <!--/set-3-->
+
+            <div class="wthree_general">
+
+
+                <div class="grid-1 graph-form agile_info_shadow">
+
+
+                    <!-- /agile_top_w3_grids-->
+                    <div class="agile_top_w3_grids">
+                        <ul class="ca-menu">
+                            <li>
+                                <a href="@Url.Action("ReportProjects","Manage")">
+
+                                    <i class="fa fa-desktop" aria-hidden="true"></i>
+                                    <div class="ca-content">
+                                        <h4 class="ca-main">100</h4>
+                                        <h3 class="ca-sub">@AppletDashIndex.DashIndex.appletdashindexsidebardprojects</h3>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("ReportClients","Manage")">
+                                    <i class="fa fa-users" aria-hidden="true"></i>
+                                    <div class="ca-content">
+                                        <h4 class="ca-main one">200</h4>
+                                        <h3 class="ca-sub one">@AppletDashIndex.DashIndex.appletdashindexsidebarclients</h3>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("ReportTeams","Manage")">
+                                    <i class="fa fa-group" aria-hidden="true"></i>
+                                    <div class="ca-content">
+                                        <h4 class="ca-main two">300</h4>
+                                        <h3 class="ca-sub two">@AppletDashIndex.DashIndex.appletdashindexsidebarteams</h3>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("ReportNews","Manage")">
+                                    <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+                                    <div class="ca-content">
+                                        <h4 class="ca-main three">400</h4>
+                                        <h3 class="ca-sub three">@AppletDashIndex.DashIndex.appletdashindexsidebardnews</h3>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <div class="clearfix"></div>
+                        </ul>
+                        <ul class="ca-menu">
+                            <li>
+                                <a href="@Url.Action("ReportPlans","Manage")">
+
+                                    <i class="fa fa-laptop" aria-hidden="true"></i>
+                                    <div class="ca-content">
+                                        <h4 class="ca-main">500</h4>
+                                        <h3 class="ca-sub">@AppletDashIndex.DashIndex.appletdashindexsidebarplans</h3>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("ReportManagers","Manage")">
+                                    <i class="fa fa-user-secret" aria-hidden="true"></i>
+                                    <div class="ca-content">
+                                        <h4 class="ca-main one">600</h4>
+                                        <h3 class="ca-sub one">@AppletDashIndex.DashIndex.appletdashindexsidebarmanagers</h3>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-feed" aria-hidden="true"></i>
+                                    <div class="ca-content">
+                                        <h4 class="ca-main two">700</h4>
+                                        <h3 class="ca-sub two">@AppletDashIndex.DashIndex.appletdashindexsidebartestimonials</h3>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-apple" aria-hidden="true"></i>
+                                    <div class="ca-content">
+                                        <h4 class="ca-main three"><i class="fa fa-smile-o"></i></h4>
+                                        <h3 class="ca-sub three">@AppletDashIndex.DashIndex.appletdashindexsidebardclientorders</h3>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <div class="clearfix"></div>
+                        </ul>
+                        
+                    </div>
+                    <!-- //agile_top_w3_grids-->
+
+
+                </div>
+            </div>
+            <!--//set-3-->
+        </div>
+        <!--//forms-inner-->
+    </div>
+    <!--//forms-->
+
+

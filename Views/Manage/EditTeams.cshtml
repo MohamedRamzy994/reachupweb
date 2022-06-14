@@ -1,0 +1,573 @@
+﻿@model AppletSoftware.Models.TeamsViewModel
+
+@{
+
+    Layout = "~/Views/Shared/_DashLayout.cshtml";
+}
+
+<!-- breadcrumbs -->
+<div class="w3l_agileits_breadcrumbs">
+    <div class="w3l_agileits_breadcrumbs_inner">
+        <ul>
+            <li><a href="@Url.Action("Teams","Manage")">@AppletDashIndex.DashIndex.appletdashindexsidebarteams</a><span>«</span></li>
+            <li>@AppletDashIndex.DashIndex.appletdasheditteamsbreadcrumsb</li>
+        </ul>
+    </div>
+</div>
+<!-- //breadcrumbs -->
+
+<div class="inner_content_w3_agile_info two_in">
+    <h2 class="w3_inner_tittle">@AppletDashIndex.DashIndex.appletdasheditteamsbreadcrumsb</h2>
+
+    <!--/forms-->
+    <div class="forms-main_agileits">
+        <!--/forms-inner-->
+        <div class="forms-inner">
+            <!--/set-3-->
+
+            <div class="wthree_general">
+
+
+                <div class="grid-1 graph-form agile_info_shadow">
+                    <h3 class="w3_inner_tittle two">@AppletDashIndex.DashIndex.appletdasheditteamsdetails </h3>
+
+                    <div class="row">
+
+
+                        <div class="col-md-4 col-md-offset-0">
+                            <div class="form-group has-success">
+
+
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">  @Html.Label(AppletDashIndex.DashIndex.appletdashnewteamfnameen)</div>
+                                    <div class="panel-body"> @Html.DisplayFor(m => m.Team_Fname_En, new { @class = "" })</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-md-offset-0">
+                            <div class="form-group has-success">
+
+
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">  @Html.Label(AppletDashIndex.DashIndex.appletdashnewteamfnamear)</div>
+                                    <div class="panel-body"> @Html.DisplayFor(m => m.Team_Fname_Ar, new { @class = "" })</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-md-offset-0">
+                            <div class="form-group has-success">
+
+
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">  @Html.Label(AppletDashIndex.DashIndex.appletdashprojectsdatetime)</div>
+                                    <div class="panel-body"> @Html.DisplayFor(m => m.Team_DateTime, new { @class = "" })</div>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+
+
+                        <div class="col-md-4 col-md-offset-0">
+                            <div class="form-group has-success">
+
+
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">  @Html.Label(AppletDashIndex.DashIndex.appletdashnewteamlnameen)</div>
+                                    <div class="panel-body"> @Html.DisplayFor(m => m.Team_Lname_En, new { @class = "" })</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-md-offset-0">
+                            <div class="form-group has-success">
+
+
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">  @Html.Label(AppletDashIndex.DashIndex.appletdashnewteamlnamear)</div>
+                                    <div class="panel-body"> @Html.DisplayFor(m => m.Team_Lname_Ar, new { @class = "" })</div>
+                                </div>
+
+
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-md-offset-0">
+                            <div class="form-group has-success">
+
+                                <div class="panel panel-info">
+                                    <div class="panel-heading">  @Html.Label(AppletDashIndex.DashIndex.appletdashprojectcategoriespublisher)</div>
+
+                                    @{
+                AppletSoftware.Models.AppletSoftwareEntities Context = new AppletSoftware.Models.AppletSoftwareEntities();
+
+                string Fname_En = Context.AspNetUsersInfoPlus.Where(m => m.Id == Model.Id).SingleOrDefault().UInfoPlus_Fname_En;
+                string Lname_En = Context.AspNetUsersInfoPlus.Where(m => m.Id == Model.Id).SingleOrDefault().UInfo_Lname_En;
+
+                string Publisher = Fname_En + " " + Lname_En;
+
+                                    }
+
+                                    <div class="panel-body"> @Html.DisplayFor(m => Publisher, new { @class = "" })</div>
+                                </div>
+
+
+
+
+
+
+                            </div>
+
+
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="row">
+
+                        @{
+
+
+        string Category = Context.AspNetTeamsCategories.Find(Model.TCat_Id).TCat_Name_En;
+
+                        }
+
+
+
+                        <div class="col-md-4 col-md-offset-0">
+
+                            <div class="panel panel-info">
+                                <div class="panel-heading">  @Html.Label(AppletDashIndex.DashIndex.appletdashprojectscategory)</div>
+                                <div class="panel-body"> @Html.DisplayFor(m => Category)</div>
+                            </div>
+
+
+
+
+
+
+
+
+
+                        </div>
+
+
+                        <div class="col-md-4 col-md-offset-0">
+
+                            <div class="panel panel-info">
+                                <div class="panel-heading">  @Html.Label(AppletDashIndex.DashIndex.appletdashnewteamhemail)</div>
+                                <div class="panel-body"> @Html.Raw(Model.Team_Email)</div>
+                            </div>
+
+
+
+
+
+
+
+
+
+                        </div>
+
+
+                        <div class="col-md-4 col-md-offset-0">
+
+                            <div class="panel panel-info">
+                                <div class="panel-heading">  @Html.Label(AppletDashIndex.DashIndex.appletdashnewteamphonenumber)</div>
+                                <div class="panel-body"> @Html.Raw(Model.Team_Phone)</div>
+                            </div>
+
+
+
+
+
+
+
+
+
+                        </div>
+
+
+
+                    </div>
+                    
+
+                    <div class="row">
+
+                        <div class="col-md-4 col-md-offset-4">
+
+
+
+                            <div class="panel panel-info">
+                                <div class="panel-heading">  @Html.Label(AppletDashIndex.DashIndex.appletdasheditteamseditphoto)</div>
+                                <div class="panel-body"> <img src="@Url.Content("~/Images/resizedteams/"+Model.Team_Photo)" class="img-thumbnail" /></div>
+                            </div>
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+
+            </div>
+
+            @using (Html.BeginForm("EditTeams", "Manage", FormMethod.Post, new { id = "EditTeamsForm", role = "form", enctype = "multipart/form-data" }))
+            {
+
+
+                @Html.AntiForgeryToken()
+
+
+            <div class="wthree_general">
+
+
+                <div class="grid-1 graph-form agile_info_shadow">
+                    <h3 class="w3_inner_tittle two">@AppletDashIndex.DashIndex.appletdasheditteamsbreadcrumsb</h3>
+                 
+                        <div class="row">
+                            @Html.HiddenFor(m=>Model.Team_Id)
+
+                            <div class="col-md-5 col-md-offset-1">
+                                <div class="form-group has-warning">
+                                    @Html.ValidationMessageFor(m => m.Team_Fname_En, "", new { @class = "text-danger" })
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                        @Html.TextBoxFor(m => m.Team_Fname_En, new { @class = "form-control", placeholder = AppletDashIndex.DashIndex.appletdashnewteamfnameen })
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-5 col-md-offset-1">
+                                <div class="form-group has-warning">
+                                    @Html.ValidationMessageFor(m => m.Team_Fname_Ar, "", new { @class = "text-danger" })
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                        @Html.TextBoxFor(m => m.Team_Fname_Ar, new { @class = "form-control", placeholder = AppletDashIndex.DashIndex.appletdashnewteamfnamear })
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+
+                            <div class="col-md-5 col-md-offset-1">
+                                <div class="form-group has-warning">
+                                    @Html.ValidationMessageFor(m => m.Team_Lname_En, "", new { @class = "text-danger" })
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                        @Html.TextBoxFor(m => m.Team_Lname_En, new { @class = "form-control", placeholder = AppletDashIndex.DashIndex.appletdashnewteamlnameen })
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-5 col-md-offset-1">
+                                <div class="form-group has-warning">
+                                    @Html.ValidationMessageFor(m => m.Team_Lname_Ar, "", new { @class = "text-danger" })
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-user"></i>
+                                        </span>
+                                        @Html.TextBoxFor(m => m.Team_Lname_Ar, new { @class = "form-control", placeholder = AppletDashIndex.DashIndex.appletdashnewteamlnamear })
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+
+                            <div class="col-md-5 col-md-offset-1">
+                                <div class="form-group has-warning">
+                                    @Html.ValidationMessageFor(m => m.Team_JobTitle_En, "", new { @class = "text-danger" })
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-keyboard-o"></i>
+                                        </span>
+                                        @Html.TextBoxFor(m => m.Team_JobTitle_En, new { @class = "form-control", placeholder = AppletDashIndex.DashIndex.appletdashnewteamhjobtitleen })
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-5 col-md-offset-1">
+                                <div class="form-group has-warning">
+                                    @Html.ValidationMessageFor(m => m.Team_JobTitle_Ar, "", new { @class = "text-danger" })
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-keyboard-o"></i>
+                                        </span>
+                                        @Html.TextBoxFor(m => m.Team_JobTitle_Ar, new { @class = "form-control", placeholder = AppletDashIndex.DashIndex.appletdashnewteamhjobtitlear })
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+
+                            <div class="col-md-5 col-md-offset-1">
+                                <div class="form-group has-warning">
+                                    @Html.ValidationMessageFor(m => m.Team_Email, "", new { @class = "text-danger" })
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-envelope-o"></i>
+                                        </span>
+                                        @Html.TextBoxFor(m => m.Team_Email, new { @class = "form-control", placeholder = AppletDashIndex.DashIndex.appletdashnewteamhemail })
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-5 col-md-offset-1">
+                                <div class="form-group has-warning">
+                                    @Html.ValidationMessageFor(m => m.Team_Phone, "", new { @class = "text-danger" })
+
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-keyboard-o"></i>
+                                        </span>
+                                        @Html.TextBoxFor(m => m.Team_Phone, new { @class = "form-control", placeholder = AppletDashIndex.DashIndex.appletdashnewteamphonenumber })
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row">
+
+
+                            <div class="col-md-5 col-md-offset-1">
+                                <div class="form-group has-warning">
+                                    @Html.ValidationMessageFor(m => m.Team_Salary, "", new { @class = "text-danger" })
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-money"></i>
+                                        </span>
+                                        @Html.TextBoxFor(m => m.Team_Salary, new { @class = "form-control", placeholder = AppletDashIndex.DashIndex.appletdashnewteamsalary })
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-5 col-md-offset-1">
+                                <div class="form-group has-warning">
+                                    @Html.ValidationMessageFor(m => m.TCat_Id, "", new { @class = "text-danger" })
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-bitbucket"></i>
+                                        </span>
+
+                                        @Html.DropDownListFor(m => m.TCat_Id, Model.Categories, AppletDashIndex.DashIndex.appletdashnewprojectplaceholdercategory, new { @class = "form-control" })
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-8 col-md-offset-3 ">
+                                <!-- FONT AWESOME THEME -->
+                                <!-- load the JS files in the right order -->
+
+                                @Html.ValidationMessageFor(m => m.Team_Photo, "", new { @class = "text-danger" })
+                                <div class="has-warning">
+                                    <div class="file-loading">
+
+                                        @Html.TextBoxFor(m => m.Team_Photo, new { type = "file", multiple = true })
+                                    </div>
+                                    <script>
+
+
+                                        $(document).on('ready', function () {
+
+                                            $("#Team_Photo").fileinput({
+                                                showUpload: false,
+                                                maxFileCount: 1,
+                                                mainClass: "input-group-lg",
+                                                theme: "fa",
+                                                initialPreview: [
+                                                    "<img src='/Images/images/logo.png' class='file-preview-image' alt='Desert' title='Desert' height='50'>",
+
+                                                ],
+                                                // initial preview configuration
+                                                initialPreviewConfig: [
+                                                    {
+                                                        caption: 'appletsoftware',
+                                                        width: '120px',
+                                                        url: '/Images/images/logo.png',
+                                                        key: 100,
+                                                        extra: { id: 100 }
+                                                    }
+
+
+
+                                                ]
+
+                                            });
+
+
+                                        });
+
+                                    </script>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="button">
+
+                            <p class="btnText">@AppletDashIndex.DashIndex.appletdashnewprojectreadybutton</p>
+                            <div class="btnTwo">
+                                <input type="submit" class="btnText2 btn-submit" value="@AppletDashIndex.DashIndex.appletdashnewprojectsavebutton">
+                            </div>
+
+
+                        </div>
+
+                    
+
+                </div>
+            </div>
+
+
+                <!--//set-3-->
+            }
+        </div>
+
+        <!--//forms-inner-->
+    </div>
+    <!--//forms-->
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var modelStatus =@string.IsNullOrEmpty(Model.TeamsStatus).ToString().ToLower();
+
+        if (status == false) {
+
+            var modelMessage =@string.Compare(Model.TeamsStatus, "Success");
+
+
+            if (modelMessage == 0) {
+
+
+
+                $.toast({
+                    text: " Teams Edited Successfuly Thank you :) !", // Text that is to be shown in the toast
+                    heading: 'APPLET Software', // Optional heading to be shown on the toast
+                    icon: 'success', // Type of toast icon
+                    showHideTransition: 'slide', // fade, slide or plain
+                    allowToastClose: true, // Boolean value true or false
+                    hideAfter: 10000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
+                    stack: 5, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
+                    position: { left: '0', right: '0', top: '0', bottom: 'auto' }, // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+
+
+
+                    textAlign: 'center',  // Text alignment i.e. left, right or center
+                    loader: true,  // Whether to show loader or not. True by default
+                    loaderBg: '#9EC600',  // Background color of the toast loader
+                    beforeShow: function () { }, // will be triggered before the toast is shown
+                    afterShown: function () { }, // will be triggered after the toat has been shown
+                    beforeHide: function () { }, // will be triggered before the toast gets hidden
+                    afterHidden: function () { }  // will be triggered after the toast has been hidden
+                });
+
+
+
+
+            }
+
+
+
+        }
+
+
+
+
+    });
+
+</script>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

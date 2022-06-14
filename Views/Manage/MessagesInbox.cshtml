@@ -1,0 +1,214 @@
+﻿@using AppletSoftware.Models
+@model MessagesInboxViewModel
+@{
+
+    Layout = "~/Views/Shared/_DashLayout.cshtml";
+}
+
+<!-- /inner_content_w3_agile_info-->
+<!-- breadcrumbs -->
+<div class="w3l_agileits_breadcrumbs">
+    <div class="w3l_agileits_breadcrumbs_inner">
+        <ul>
+            <li><a href="@Url.Action("ActiveMessages","Manage")">APPLET Messages</a><span>«</span></li>
+
+            <li>APPLET Compose Message</li>
+        </ul>
+    </div>
+</div>
+<!-- //breadcrumbs -->
+<!-- ------------------------------------------------------------------------------ -->
+
+
+<div class="inner_content_w3_agile_info codeHtml code_blog two_in">
+
+    <!-- tables -->
+    <div class="agile-tables">
+
+        <!-- start my-panel -->
+        <div class="my-panel w3l-table-info agile_info_shadow y">
+
+
+            <div class="col-xs-12">
+
+                <div class="panel panel-default">
+
+                    <div class="panel-heading">APPLET Client Messages</div>
+
+                    <div class="btn-block">
+
+                        <div class="xpanel-body">
+
+
+                            <div class="col-md-8 compose-right widget-shadow">
+                                <div class="panel-default">
+                                    <div class="panel-heading">
+                                        Compose New Message
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="alert alert-info">
+                                            Please fill details to send a new message
+                                        </div>
+                                        @using (Html.BeginForm("ComposeMessage", "Manage", FormMethod.Post, new { @class = "com-mail", id = "ComposeMessagesForm", role = "form", enctype = "multipart/form-data" }))
+                                        {
+
+
+                                            @Html.AntiForgeryToken()
+                                            @Html.HiddenFor(m=>m.Message_Id)
+
+                                            <div class="form-group has-warning">
+                                                @Html.ValidationMessageFor(m => m.Message_Email, "", new { @class = "text-danger" })
+
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-keyboard-o"></i>
+                                                    </span>
+                                                    @Html.TextBoxFor(m => m.Message_Email, new { @class = "form-control form-control1 control3", placeholder = "TO:" })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group has-warning">
+                                                @Html.ValidationMessageFor(m => m.Message_Subject, "", new { @class = "text-danger" })
+
+                                                <div class="input-group">
+                                                    <span class="input-group-addon">
+                                                        <i class="fa fa-keyboard-o"></i>
+                                                    </span>
+                                                    @Html.TextBoxFor(m => m.Message_Subject, new { @class = "form-control form-control1 control3", placeholder = "Subject :" })
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group has-success">
+                                                @Html.ValidationMessageFor(m => m.Message_Content, "", new { @class = "text-danger" })
+
+
+                                                @Html.TextAreaFor(m => m.Message_Content, new { placeholder = "Message:" })
+                                                <script>
+                                                    CKEDITOR.replace('Message_Content');
+                                                </script>
+
+                                            </div>
+
+
+                                            <script>
+                                                CKEDITOR.replace('Message');
+                                            </script>
+
+                                            <div class="button">
+
+                                                <p class="btnText">READY?</p>
+                                                <div class="btnTwo">
+                                                    <input type="submit" class="btnText2 btn-submit" value="Send">
+                                                </div>
+
+
+                                            </div>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="panel-default">
+                                    <div class="panel-heading">
+                                        User Message
+                                    </div>
+
+                                    <div class="panel-body">
+                                        <div class="alert alert-info alert-dismissable">
+                                           @Html.DisplayFor(m=>m.Message_Content)
+
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <!-- /.table-responsive -->
+
+                            </div>
+
+
+
+                        </div>
+                        <!-- End btn-block -->
+
+                    </div>
+                    <!-- End panel -->
+
+                </div>
+                <!-- End col -->
+
+
+
+            </div>
+            <!-- End My panel -->
+            <!-- --------------------------------------------------------------------------- -->
+            <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+        </div>
+        <!-- //tables agile-tables -->
+
+    </div>
+    <!-- codeHtml -->
+    <!-- ------------------------------------------------------------------------------- -->
+
+    <script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var modelStatus =@string.IsNullOrEmpty(ViewBag.alertMessage).ToString().ToLower();
+
+        if (status == false) {
+
+            var modelMessage =@string.Compare(ViewBag.alertMessage, "Success");
+
+
+            if (modelMessage == 0) {
+
+
+
+                $.toast({
+                    text: " Message  Seen Successfuly Thank you :) !", // Text that is to be shown in the toast
+                    heading: 'APPLET Software', // Optional heading to be shown on the toast
+                    icon: 'success', // Type of toast icon
+                    showHideTransition: 'slide', // fade, slide or plain
+                    allowToastClose: true, // Boolean value true or false
+                    hideAfter: 10000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
+                    stack: 5, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
+                    position: { left: '0', right: '0', top: '0', bottom: 'auto' }, // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+
+
+
+                    textAlign: 'center',  // Text alignment i.e. left, right or center
+                    loader: true,  // Whether to show loader or not. True by default
+                    loaderBg: '#9EC600',  // Background color of the toast loader
+                    beforeShow: function () { }, // will be triggered before the toast is shown
+                    afterShown: function () { }, // will be triggered after the toat has been shown
+                    beforeHide: function () { }, // will be triggered before the toast gets hidden
+                    afterHidden: function () { }  // will be triggered after the toast has been hidden
+                });
+
+
+
+
+            }
+
+
+
+        }
+
+
+
+
+    });
+
+    </script>
+
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+
+

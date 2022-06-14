@@ -1,0 +1,446 @@
+.features-top h3 {
+	color:#282828;
+	font-size:36px;
+	font-weight:400;
+	margin:0;
+}
+
+.features-top span {
+  	width: 4%;
+  	height: 4px;
+  	display: block;
+  	margin: 15px auto 0;
+}
+
+
+/*--features-starts--*/
+.features {
+    padding: 6em 0px;
+    background: url(../../Images/images/banner-png.png) no-repeat center;
+    -ms-background-size: cover;
+    background-size: cover;
+    z-index: 0;
+    position: relative;
+    min-height: 800px;
+    min-height: 100vh;
+}
+.features-top{
+	text-align:center;
+}
+.features-bottom{
+	margin-top:8%;
+}
+.feature-middle{
+	text-align:center;
+}
+.feature-left ul,.feature-right ul{
+	padding:0;
+}
+.feature-left ul li{
+	text-align: right;
+}
+.feature-left ul li,.feature-right ul li{
+	list-style:none;
+	margin-bottom:17px;
+}
+.feature-left ul li:nth-child(5),.feature-right ul li:nth-child(5){
+	margin-bottom:0px;
+}
+.feature-right ul li{
+	text-align: left;
+}
+.feature-left,.feature-right{
+	position:relative;
+}
+.feature-left ul li span.one,.feature-right ul li span.six{
+  	top: 8.3%;
+}
+.feature-left ul li span.two,.feature-right ul li span.seven{
+  	top: 28.2%;
+}
+.feature-left ul li span.three,.feature-right ul li span.eght{
+  	top: 48.2%;
+}
+.feature-left ul li span.four,.feature-right ul li span.nine{
+  	top: 68.2%;
+}
+.feature-left ul li span.five{
+  	top: 78.2%;
+  	background:url(../images/line-2.png) no-repeat;
+  	width:150px;
+  	height:80px;
+}
+.feature-right ul li span.ten{
+	top: 78.2%;
+  	background:url(../images/line-3.png) no-repeat;
+  	width:150px;
+  	height:80px;
+}
+.feature-right ul li span.six, .feature-right ul li span.seven, 
+.feature-right ul li span.eght, .feature-right ul li span.nine,
+ .feature-right ul li span.ten {
+  right: -15.5%;
+}
+.feature-left ul li span.five, .feature-left ul li span.four,
+ .feature-left ul li span.three, .feature-left ul li span.two, 
+ .feature-left ul li span.one {
+  right: 76.4%;
+}
+.feature-left ul li span,.feature-right ul li span{
+	background:url(../images/line-1.png) no-repeat;
+	width:150px;
+	height:2px;
+	display:block;
+	position: absolute;
+}
+.feature-left ul li p{
+	margin-left: 10px;
+}
+.feature-left ul li p, .feature-right ul li p {
+  	color: #000;
+  	font-size: 22px;
+  	font-weight: 300;
+  	display: inline-block;
+  	width: 39%;
+  	text-align: left;
+  	vertical-align: middle;
+}
+.feature-right ul li p{
+	margin-right:10px;
+}
+.feature-left ul li img,.feature-right ul li img{
+  	display: inline-block;
+  	vertical-align: middle;
+}
+.feature-middle img {
+  	width: 70%;
+  	margin-top: 33px;
+}
+.feature-right{
+	text-align:left;
+}
+.feature-right ul li p{
+	text-align:right;
+}
+
+.feature-right ul li span.ten { right: -125% }
+
+.feature-left ul li span.five { right: 185% }
+
+/*--features-ends*/
+
+
+/* Self Clearing Goodness */
+.container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+.clearfix:before,
+.clearfix:after,
+.row:before,
+.row:after {
+  content: '\0020';
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+   }
+.row:after,
+.clearfix:after {
+  clear: both;
+   }
+.row,
+.clearfix {
+  zoom: 1;
+   }
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+/*---------------*/
+
+
+
+/*--media-quaries-starts--*/
+    
+@media (max-width:1366px){
+    
+.features { padding: 5em 0px; }
+    
+.features-bottom { 	margin-top: 6%; }
+    
+}
+
+/* ************************************************************************* */
+
+@media (max-width:1280px){
+        
+.features-top h3  {  font-size: 33px; }
+    
+.features-bottom { margin-top: 5%; }
+    
+.feature-left ul li img, .feature-right ul li img { width: 31%; }
+    
+.feature-left ul li p, .feature-right ul li p { font-size: 20px; }
+    
+.feature-left ul li, .feature-right ul li { margin-bottom: 30px; }
+    
+}
+
+/* ************************************************************************* */
+
+@media (max-width:1024px){
+    
+.features-top h3 {
+  	font-size: 31px;
+}
+    
+    
+.features {
+  	padding: 4em 0px;
+}
+.feature-left ul li span.five, .feature-left ul li span.four,
+ .feature-left ul li span.three, .feature-left ul li span.two, 
+ .feature-left ul li span.one {
+  	right: 74.4%;
+}
+    
+.feature-left ul li span, .feature-right ul li span {
+  	width: 130px;
+  	background-size: 100%;
+}
+.feature-left ul li span.two, .feature-right ul li span.seven {
+  	top: 29.2%;
+}
+.feature-left ul li span.three, .feature-right ul li span.eght {
+  	top: 50.2%;
+}
+.feature-left ul li span.four, .feature-right ul li span.nine {
+  	top: 71.2%;
+}
+.feature-left ul li span.five,.feature-right ul li span.ten{
+  	top: 80.2%;
+  	width: 130px;
+  	height: 70px;
+  	background-size: 100%;
+}
+.feature-left ul li, .feature-right ul li {
+  	margin-bottom: 25px;
+}
+    
+}
+
+/* ************************************************************************* */
+
+@media (max-width:768px){
+
+.features-top span {
+  margin: 10px auto 0;
+}
+
+.features-top h3 {
+  font-size: 28px;
+}
+    
+.feature-left, .feature-middle, .feature-right {
+  width: 33.33%;
+  float: right;
+}
+.feature-left ul li p {
+  margin-left: 6px;
+}
+.feature-left ul li p, .feature-right ul li p {
+  font-size: 16px;
+  width: 50%;
+}
+.feature-right ul li p {
+  margin-right: 6px;
+}
+.feature-left ul li span, .feature-right ul li span {
+  width: 70px;
+}
+.feature-left ul li span.five, .feature-right ul li span.ten {
+  top: 84.2%;
+  width: 70px;
+  height: 38px;
+}
+.feature-left ul li span.five, .feature-left ul li span.four, .feature-left ul li span.three, .feature-left ul li span.two, .feature-left ul li span.one {
+  right: 84.7%;
+}
+.feature-left ul li span.one, .feature-right ul li span.six {
+  top: 7.5%;
+}
+.feature-left ul li span.four, .feature-right ul li span.nine {
+  top: 72.2%;
+}
+.feature-right ul li span.six, .feature-right ul li span.seven, .feature-right ul li span.eght, .feature-right ul li span.nine, .feature-right ul li span.ten {
+  right: -14.5%;
+}
+.feature-middle img {
+  width: 74%;
+  margin-top: 28px;
+}
+.test-bottom p {
+  font-size: 15px;
+  margin: 1.3em auto 0;
+}
+    
+ul.callbacks_tabs.callbacks2_tabs li a:after {
+  height: 16px;
+  width: 16px;
+}
+.features {
+  padding: 3em 0px;
+}
+    
+}
+
+/* ************************************************************************* */
+
+@media (max-width:640px){
+    
+.features-top h3 {
+  font-size: 26px;
+}
+    
+    
+.feature-left ul li img, .feature-right ul li img {
+  width: 33%;
+}
+.feature-left ul li p, .feature-right ul li p {
+  font-size: 15px;
+}
+.feature-left ul li p {
+  margin-left: 4px;
+}
+.feature-right ul li p {
+  margin-right: 4px;
+}
+.feature-left ul li span, .feature-right ul li span {
+  width: 65px;
+}
+.feature-left ul li span.five, .feature-right ul li span.ten {
+  top: 84.2%;
+  width: 65px;
+  height: 35px;
+}
+.feature-left ul li span.five, .feature-left ul li span.four, .feature-left ul li span.three, .feature-left ul li span.two, .feature-left ul li span.one {
+  right: 82.8%;
+}
+.feature-left ul li span.one, .feature-right ul li span.six {
+  top: 8%;
+}
+.feature-left ul li span.two{
+  top: 30%;
+}
+.feature-right ul li span.seven {
+ top: 29.5%;	
+}
+.feature-left ul li span.three{
+  top: 51%;
+}
+.feature-right ul li span.eght {
+	top: 50%;
+}
+.price-one {
+  margin: 0 auto 1.5em;
+}
+.feature-right ul li span.six, .feature-right ul li span.seven, 
+.feature-right ul li span.eght, .feature-right ul li span.nine, 
+.feature-right ul li span.ten {
+  right: -15.8%;
+}
+.feature-left ul li span.four, .feature-right ul li span.nine {
+  top: 71.5%;
+}
+.feature-left ul li, .feature-right ul li {
+  margin-bottom: 20px;
+}
+    
+    
+}
+
+/* ************************************************************************* */
+
+@media (max-width:480px){
+    
+    
+.feature-left, .feature-middle, .feature-right {
+  width: 100%;
+  float: none;
+}
+.feature-left ul li span, .feature-right ul li span {
+  display: none;
+}
+.feature-left ul li img, .feature-right ul li img {
+  width: 17%;
+}
+.feature-left ul li p, .feature-right ul li p {
+  font-size: 16px;
+}
+.feature-left ul li, .feature-right ul li {
+  margin-bottom: 13px;
+}
+.feature-middle img {
+  width: 35%;
+  margin-top: 25px;
+}
+.feature-right{
+	margin-top:25px;	
+}
+    
+    
+}
+
+/* ************************************************************************* */
+
+@media (max-width:320px){
+    
+.features-top h3 {
+  font-size: 20px;
+  line-height: 1.3em;
+}
+    
+.features-top span {
+  margin: 7px auto 0;
+  width: 10%;
+  height: 3px;
+}
+    
+.feature-left ul li img, .feature-right ul li img {
+  width: 22%;
+}
+    
+.feature-left ul li p {
+  margin-left: 6px;
+}
+.feature-right ul li p {
+  margin-right: 6px;
+}
+.feature-middle img {
+  width: 38%;
+  margin-top: 17px;
+}
+    
+.feature-right {
+  margin-top: 20px;
+}
+    
+}
+
+/*--media-quaries-end--*/
+
+
+/* *********************************************************************** */
+
+
+.line {
+    width: 15%;
+    height: 4px;
+    display: block;
+    margin: 15px auto 0;
+    background-color: #00ccff;
+}

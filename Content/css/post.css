@@ -1,0 +1,183 @@
+.post_left , .post_right { margin-top: 13px }
+
+.post .myimg {
+    background-color: #f0f0f0;
+    margin: 0 15px 30px;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 1px #ddd;
+}
+
+.post .myimg img { width: 100% }
+
+.post .post-text {
+    color: #555;
+    font-size: 14px;
+    margin: 10px 15px 40px;
+}
+
+.post .share-buttons { cursor: default; }
+
+.post .post-title { margin-top: 12% }
+
+.post .post-title h2 { font-size: 22px;font-weight: 600 }
+
+.post .post-title h2 i { font-size: 15px }
+
+.post .icon { margin-left: 30px }
+
+.post .icon span { font-size: 13px;color: #aaa }
+/* **************************************** */
+
+
+.post .share-buttons a {
+    width: 75px;
+    color: #fff;
+    font-size: 12px;
+    padding: 2px 3px;
+    margin: 10px 2px;
+    border-radius: 4px;
+    display:-webkit-inline-box;
+    display:-webkit-inline-flex;
+    display:-ms-inline-flexbox;
+    display:inline-flex;
+    -webkit-justify-content: space-around;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.post .share-buttons a i {
+    font-size: 18px
+}
+
+.post .share-buttons a:first-of-type {
+    background-color: #3b5998
+}
+
+.post .share-buttons a:nth-of-type(2) {
+    background-color: #55acee
+}
+
+.post .share-buttons a:last-of-type {
+    background-color: #db4437
+}
+
+.post .share-buttons .hvr-bounce-to-right:before {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 4px
+}
+
+/* ****************************** */
+
+.post .myform h4 {
+    font-size: 19px;
+    color: #2e343f;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.post .myform textarea {
+    height: 110px;
+    resize: none;
+    display: block;
+    margin-bottom: 30px
+}
+
+.post .myform textarea , .post .myform  input[type=submit] {
+    display: block;
+    padding: 8px 10px;
+    outline: 0;
+    width: calc(100% - 20px);
+    font-size: 12px;
+    margin: 5px 10px;
+    border-radius: 4px;
+    color: #2e343f;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    transition: all .3s ease-in-out
+}
+
+.post .myform  input[type=submit] { margin-top: 10px}
+
+.post .myform  input[type=submit]:hover {
+    color: #FFF;
+    background-color: #8E9197;
+    transition: all .3s ease-in-out
+}
+
+
+.post .my_media {
+    border: 1px solid #eee;
+    border-radius: 0 0 5px 5px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    padding: 15px
+}
+
+.post .media-body h4 { font-weight: 600;margin-bottom: -2px }
+
+.post .media-body h4 ~ span { font-size: 12px;color: #aaa }
+
+.post .media-body p { margin: 10px 0 30px 15px;color: #555;font-size: 15px  }
+
+.post .media-body form input {
+    display: block;
+    width: 100%;
+    background-color: #f8f8f8;
+    font-size: 12px;
+    padding: 5px 8px;
+    border: 1px solid #ddd;
+    outline: none;
+    border-radius: 5px;
+    margin-bottom: 40px
+}
+
+/* ********************************************************************** */
+
+.post .post_right { 
+    border: 1px solid #eee;
+    padding: 20px;
+    padding-top: 0;
+    border-radius: 6px
+}
+
+.post .post_right li {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.post .post_right li:last-of-type { border-bottom: 0;padding-bottom: 0 }
+
+.post .post_right .media-body p { 
+    margin-left: 0;
+    margin-bottom: 0;
+    margin-top: -5px;
+    font-weight: 600
+}
+
+.post .post_right .media-body p ~ span {
+    font-size: 12px;color: #aaa
+}
+
+.post .post_right h2 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #eee;
+    margin-left: -20px;
+    margin-right: -20px;
+    text-align: center;
+    color: #2e343f;
+    font-size: 19px;
+    font-weight: 600;
+    margin-bottom: 15px
+}
+
+.post .col-md-3 { width: 32% }
+
+.post .col-md-9 { width: 68% }
+

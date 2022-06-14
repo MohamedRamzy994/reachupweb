@@ -1,0 +1,106 @@
+﻿
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.currentabout = "active";
+}
+
+<link href="~/Content/css/about.css" rel="stylesheet" />
+
+<!-- --------------------------- Start Projects ------------------------------ -->
+
+<section class="About2 text-center" id="Projects">
+    <div class="container">
+        <h1>@Appletindex.Index.appletaboutustitle</h1>
+        <hr>
+        <p class="lead">
+            @Appletindex.Index.appletaboutusparagraph
+        </p>
+    </div>
+</section>
+
+<!-- End FAQ Intro -->
+<!-- Start FAQ Accordion -->
+
+<section class="About_us text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="about_img">
+                    <img src="~/Images/images/about2.jpg" class="img-responsive" style="width:100%">
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="about_us_content">
+                    <i class="fa fa-code fa-5x"></i>
+                    <h3>@Appletindex.Index.appletaboutusdevelopmenttitle</h3>
+                    <p>
+                        @Appletindex.Index.appletaboutusdevelopmentparagraph
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="about_us_content">
+                    <i class="fa fa-child fa-5x"></i>
+                    <h3>@Appletindex.Index.appletaboutusclienttitle</h3>
+                    <p>
+                        @Appletindex.Index.appletaboutusclientparagraph
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+                <div class="about_us_content">
+                    <i class="fa fa-group fa-5x"></i>
+                    <h3>@Appletindex.Index.appletaboutussolutiontitle</h3>
+                    <p>
+                        @Appletindex.Index.appletaboutussolutionparagraph
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- End FAQ Accordion -->
+
+
+<section class="about_x">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-5">
+                <div class="about_x_content">
+                    <img src="~/Images/images/laptop.jpg" class="img-responsive">
+                </div>
+            </div>
+            <div class="col-sm-7">
+                <div class="about_x_content">
+                    <h2 class="h1">@Appletindex.Index.appletaboutusmissiontitle</h2>
+                    <p class="lead">
+
+                        @Appletindex.Index.appletaboutusmissionparagrph1
+
+                    </p>
+                    <br>
+                    <p class="lead">
+
+
+                        @Appletindex.Index.appletaboutusmissionparagrph2
+                    </p>
+                    <br>
+                    <a href="@Url.Action("Contact","Home")" class="btn btn-primary" style="background:#333">
+                        @Appletindex.Index.appletaboutuscontactusbutton
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- -----------------------------Start Section Footer------------------------------------- -->
+
+ 

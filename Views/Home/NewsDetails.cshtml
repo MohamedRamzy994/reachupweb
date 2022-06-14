@@ -1,0 +1,389 @@
+﻿@model AppletSoftware.Models.AspNetNew
+    @using System.Threading
+@using System.Globalization
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="@Appletindex.Index.appletpostscss" rel="stylesheet" />
+<!-- ---------------------------End Navbar----------------------------------- -->
+
+
+<section class="post" id="posts">
+
+    <div class="container">
+        @if (CultureInfo.CurrentCulture.Name == "en-US")
+    {
+
+        <div class="row">
+
+            <div class="post-title">
+                <h2>
+                    <i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp;
+                    @Html.DisplayFor(m => Model.News_Title_En)
+                </h2>
+            </div>
+
+            <div class="icon">
+                <span>
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                    @{
+
+                    AppletSoftware.Models.AppletSoftwareEntities Context = new AppletSoftware.Models.AppletSoftwareEntities();
+                    string Fname = Context.AspNetUsersInfoPlus.Where(m => m.Id == Model.Id).SingleOrDefault().UInfoPlus_Fname_En;
+                    string Lname = Context.AspNetUsersInfoPlus.Where(m => m.Id == Model.Id).SingleOrDefault().UInfo_Lname_En;
+
+                    string FullName = Fname + " " + Lname;
+
+                    }
+
+                    @Appletindex.Index.appletnewsdetailspostedby :@Html.DisplayFor(m => FullName)&nbsp;&nbsp;&nbsp;
+                </span>
+                <span>
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                    @{
+
+                    string Ago = DateTime.Now.Subtract(Model.News_DateTime).Days.ToString();
+
+
+                    }
+
+                    @Html.DisplayFor(m => Ago) @Appletindex.Index.appletnewsdetailsdaysago&nbsp;&nbsp;&nbsp;
+                </span>
+
+            </div>
+
+            <!-- ---------------------------------------------------- -->
+
+            <div class="col-md-9">
+
+                <div class="post_left">
+
+                    <div class="myimg">
+                        <img src="@Url.Content("~/Images/resizednews/"+Model.News_Photo)" class="img-responsive">
+                    </div>
+                    <p class="post-text">
+
+
+                        @Html.Raw(Model.News_Long_En)
+
+
+                    </p>
+
+                    <div class="share-buttons" style="margin-top:30px;">
+                        <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5a9d222e2326af0013ae40ec&product=inline-share-buttons"></script>
+                        <div class="sharethis-inline-share-buttons"></div>
+
+                    </div>
+
+
+                    <!-- Start -->
+                    <div class="my_media">
+
+                        <div id="disqus_thread"></div>
+                        <script>
+
+                            /**
+                            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                            /*
+                            var disqus_config = function () {
+                            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                            };
+                            */
+                            (function () { // DON'T EDIT BELOW THIS LINE
+                                var d = document, s = d.createElement('script');
+                                s.src = 'https://http-localhost-50081.disqus.com/embed.js';
+                                s.setAttribute('data-timestamp', +new Date());
+                                (d.head || d.body).appendChild(s);
+                            })();
+                        </script>
+                        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+                        <script id="dsq-count-scr" src="//http-localhost-50081.disqus.com/count.js" async></script>
+
+
+
+
+
+                    </div>
+                    <!-- End my_media -->
+
+                </div>
+                <!-- End of post-left -->
+
+            </div>
+            <!-- End Col -->
+            <!-- ---------------------------------------------------- -->
+
+            <div class="col-md-3 hidden-sm hidden-xs">
+
+                <!-- start feedwind code -->
+                <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="68747/"></script>
+
+
+                <!-- end feedwind code -->
+
+            </div>
+
+            <!-- ---------------------------------------------------- -->
+
+
+        </div>
+}
+else if (CultureInfo.CurrentCulture.Name == "ar-SA")
+{
+
+    <div class="row">
+
+        <div class="post-title">
+            <h2>
+                <i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp;
+                @Html.DisplayFor(m => Model.News_Title_Ar)
+            </h2>
+        </div>
+
+        <div class="icon">
+            <span>
+                <i class="fa fa-user" aria-hidden="true"></i>
+                @{
+
+                AppletSoftware.Models.AppletSoftwareEntities Context = new AppletSoftware.Models.AppletSoftwareEntities();
+                string Fname = Context.AspNetUsersInfoPlus.Where(m => m.Id == Model.Id).SingleOrDefault().UInfoPlus_Fname_En;
+                string Lname = Context.AspNetUsersInfoPlus.Where(m => m.Id == Model.Id).SingleOrDefault().UInfo_Lname_En;
+
+                string FullName = Fname + " " + Lname;
+
+                }
+
+                @Appletindex.Index.appletnewsdetailspostedby :@Html.DisplayFor(m => FullName)&nbsp;&nbsp;&nbsp;
+            </span>
+            <span>
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                @{
+
+                string Ago = DateTime.Now.Subtract(Model.News_DateTime).Days.ToString();
+
+
+                }
+
+                @Html.DisplayFor(m => Ago) @Appletindex.Index.appletnewsdetailsdaysago&nbsp;&nbsp;&nbsp;
+            </span>
+
+        </div>
+
+        <!-- ---------------------------------------------------- -->
+
+        <div class="col-md-9">
+
+            <div class="post_left">
+
+                <div class="myimg">
+                    <img src="@Url.Content("~/Images/resizednews/"+Model.News_Photo)" class="img-responsive">
+                </div>
+                <p class="post-text">
+
+
+                    @Html.Raw(Model.News_Long_Ar)
+
+
+                </p>
+
+                <div class="share-buttons" style="margin-top:30px;">
+                    <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5a9d222e2326af0013ae40ec&product=inline-share-buttons"></script>
+                    <div class="sharethis-inline-share-buttons"></div>
+
+                </div>
+
+
+                <!-- Start -->
+                <div class="my_media">
+
+                    <div id="disqus_thread"></div>
+                    <script>
+
+                        /**
+                        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                        /*
+                        var disqus_config = function () {
+                        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        };
+                        */
+                        (function () { // DON'T EDIT BELOW THIS LINE
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://http-localhost-50081.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+                    <script id="dsq-count-scr" src="//http-localhost-50081.disqus.com/count.js" async></script>
+
+
+
+
+
+                </div>
+                <!-- End my_media -->
+
+            </div>
+            <!-- End of post-left -->
+
+        </div>
+        <!-- End Col -->
+        <!-- ---------------------------------------------------- -->
+
+        <div class="col-md-3 hidden-sm hidden-xs">
+
+            <!-- start feedwind code -->
+            <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="68747/"></script>
+
+
+            <!-- end feedwind code -->
+
+        </div>
+
+        <!-- ---------------------------------------------------- -->
+
+
+    </div>
+}
+else
+{
+
+    <div class="row">
+
+        <div class="post-title">
+            <h2>
+                <i class="fa fa-file-text-o" aria-hidden="true"></i>&nbsp;
+                @Html.DisplayFor(m => Model.News_Title_En)
+            </h2>
+        </div>
+
+        <div class="icon">
+            <span>
+                <i class="fa fa-user" aria-hidden="true"></i>
+                @{
+
+                AppletSoftware.Models.AppletSoftwareEntities Context = new AppletSoftware.Models.AppletSoftwareEntities();
+                string Fname = Context.AspNetUsersInfoPlus.Where(m => m.Id == Model.Id).SingleOrDefault().UInfoPlus_Fname_En;
+                string Lname = Context.AspNetUsersInfoPlus.Where(m => m.Id == Model.Id).SingleOrDefault().UInfo_Lname_En;
+
+                string FullName = Fname + " " + Lname;
+
+                }
+
+                @Appletindex.Index.appletnewsdetailspostedby :@Html.DisplayFor(m => FullName)&nbsp;&nbsp;&nbsp;
+            </span>
+            <span>
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                @{
+
+                string Ago = DateTime.Now.Subtract(Model.News_DateTime).Days.ToString();
+
+
+                }
+
+                @Html.DisplayFor(m => Ago) @Appletindex.Index.appletnewsdetailsdaysago&nbsp;&nbsp;&nbsp;
+            </span>
+
+        </div>
+
+        <!-- ---------------------------------------------------- -->
+
+        <div class="col-md-9">
+
+            <div class="post_left">
+
+                <div class="myimg">
+                    <img src="@Url.Content("~/Images/resizednews/"+Model.News_Photo)" class="img-responsive">
+                </div>
+                <p class="post-text">
+
+
+                    @Html.Raw(Model.News_Long_En)
+
+
+                </p>
+
+                <div class="share-buttons" style="margin-top:30px;">
+                    <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5a9d222e2326af0013ae40ec&product=inline-share-buttons"></script>
+                    <div class="sharethis-inline-share-buttons"></div>
+
+                </div>
+
+
+                <!-- Start -->
+                <div class="my_media">
+
+                    <div id="disqus_thread"></div>
+                    <script>
+
+                        /**
+                        *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                        *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+                        /*
+                        var disqus_config = function () {
+                        this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        };
+                        */
+                        (function () { // DON'T EDIT BELOW THIS LINE
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://http-localhost-50081.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+                    <script id="dsq-count-scr" src="//http-localhost-50081.disqus.com/count.js" async></script>
+
+
+
+
+
+                </div>
+                <!-- End my_media -->
+
+            </div>
+            <!-- End of post-left -->
+
+        </div>
+        <!-- End Col -->
+        <!-- ---------------------------------------------------- -->
+
+        <div class="col-md-3 hidden-sm hidden-xs">
+
+            <!-- start feedwind code -->
+            <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="68747/"></script>
+
+
+            <!-- end feedwind code -->
+
+        </div>
+
+        <!-- ---------------------------------------------------- -->
+
+
+    </div>
+}
+
+
+        <!-- End Row -->
+
+    </div>
+
+</section>
+
+
+
+
+
+<!-- ---------------------------- Start Footer------------------------------- -->

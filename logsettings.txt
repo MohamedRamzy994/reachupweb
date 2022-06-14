@@ -1,0 +1,14 @@
+General Logging Settings:
+Enabled: 1
+UseApp: 1
+UsePid: 1
+UseFlush: 1
+
+Interop Logging:
+Enabled: 1
+
+Loader Logging:
+Enabled: 1
+
+Networking Logging:
+Enabled: 1

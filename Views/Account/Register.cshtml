@@ -1,0 +1,175 @@
+﻿@model AppletSoftware.Models.ManagersViewModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ReachUp Marketing Agency</title>
+
+
+    <!-- icon Css -->
+    <link rel="icon" href="~/Images/images/logo.png">
+    <!-- custom-theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //custom-theme -->
+    <link href="~/Content/dashcss/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Content/dashcss/snow.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Content/dashcss/component.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Content/dashcss/style_grid.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Content/dashcss/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- font-awesome-icons -->
+    <link href="~/Content/dashcss/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome-icons -->
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
+
+    <style>
+
+        .registration h6 a {
+            letter-spacing: 0px;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- /pages_agile_info_w3l -->
+
+    <div class="pages_agile_info_w3l">
+        <!-- /login -->
+        
+            <div class="registration">
+
+                <div class="signin-form profile">
+                    <h2>@AppletDashIndex.DashIndex.appletdashaddmanagertitle</h2>
+                    <div class="login-form">
+                        @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { id = "RegisterForm", role = "form" }))
+    {
+
+
+                    @Html.AntiForgeryToken()
+                    @Html.ValidationSummary("", new { @class = "text-danger" })
+
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-0">
+                                @Html.TextBoxFor(m => m.UInfoPlus_Fname_En, new { placeholder = AppletDashIndex.DashIndex.appletdashnewteamfnameen, required = "" })
+                                @Html.ValidationMessageFor(m => m.UInfoPlus_Fname_En, null, new { @class = "text-danger" })
+
+                                @Html.TextBoxFor(m => m.UInfoPlus_Fname_Ar, new { placeholder = AppletDashIndex.DashIndex.appletdashnewteamfnamear, required = "" })
+                                @Html.ValidationMessageFor(m => m.UInfoPlus_Fname_En, null, new { @class = "text-danger" })
+
+
+                            </div>
+
+                            <div class="col-md-6 col-md-offset-0">
+
+                                @Html.TextBoxFor(m => m.UInfo_Lname_En, new { placeholder = AppletDashIndex.DashIndex.appletdashnewteamlnameen, required = "" })
+                                @Html.ValidationMessageFor(m => m.UInfo_Lname_En, null, new { @class = "text-danger" })
+
+                                @Html.TextBoxFor(m => m.UInfo_Lname_Ar, new { placeholder = AppletDashIndex.DashIndex.appletdashnewteamlnamear, required = "" })
+                                @Html.ValidationMessageFor(m => m.UInfo_Lname_Ar, null, new { @class = "text-danger" })
+                            </div>
+
+                        </div>
+                   
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-0">
+                                @Html.TextBoxFor(m => m.Email, new { placeholder = AppletDashIndex.DashIndex.appletdashnewteamhemail, required = "" })
+                                @Html.ValidationMessageFor(m => m.Email, null, new { @class = "text-danger" })
+
+                                @Html.TextBoxFor(m => m.PhoneNumber, new { placeholder = AppletDashIndex.DashIndex.appletdashnewteamphonenumber, required = "" })
+                                @Html.ValidationMessageFor(m => m.PhoneNumber, null, new { @class = "text-danger" })
+
+                            </div>
+                            <div class="col-md-6 col-md-offset-0">
+
+                                @Html.PasswordFor(m => m.Password, new { placeholder = AppletDashIndex.DashIndex.appletdasheditmanagerpassword, required = "" })
+                                @Html.ValidationMessageFor(m => m.Password, null, new { @class = "text-danger" })
+
+                                @Html.PasswordFor(m => m.ConfirmPassword, new { placeholder = AppletDashIndex.DashIndex.appletdasheditmanagerpassword, required = "" })
+                                @Html.ValidationMessageFor(m => m.ConfirmPassword, null, new { @class = "text-danger" })
+                            </div>
+
+
+                        </div>
+
+                       
+                      
+
+                        <div class="tp">
+                            <input type="submit" value="@AppletDashIndex.DashIndex.appletdashaddmanagerbutton">
+                        </div>
+                        }
+                    </div>
+
+                    <h6><a href="@Url.Action("Index","Home")">@Appletindex.Index.appletloginbacktohome</a><h6>
+                    </div>
+            </div>
+            <!--copy rights start here-->
+            <div class="copyrights_agile two">
+                <p>@Appletindex.Index.appletindexfootercopyright <a href="#" target="_blank">@Appletindex.Index.appletindexfooterbrand</a> </p>
+            </div>
+            <!--copy rights end here-->
+   
+    </div>
+    <!-- /login -->
+    <!-- //pages_agile_info_w3l -->
+    <!-- js -->
+
+    <script type="text/javascript" src="~/Scripts/dashjs/jquery-2.1.4.min.js"></script>
+    <script src="~/Scripts/dashjs/modernizr.custom.js"></script>
+
+    <script src="~/Scripts/dashjs/classie.js"></script>
+    <script src="~/Scripts/dashjs/gnmenu.js"></script>
+    <script>
+        new gnMenu(document.getElementById('gn-menu'));
+    </script>
+
+    <!-- //js -->
+
+    <script src="~/Scripts/dashjs/screenfull.js"></script>
+    <script>
+        $(function () {
+            $('#supported').text('Supported/allowed: ' + !!screenfull.enabled);
+
+            if (!screenfull.enabled) {
+                return false;
+            }
+
+
+
+            $('#toggle').click(function () {
+                screenfull.toggle($('#container')[0]);
+            });
+        });
+    </script>
+    <script src="~/Scripts/dashjs/jquery.nicescroll.js"></script>
+    <script src="~/Scripts/dashjs/scripts.js"></script>
+    <script src="~/Scripts/dashjs/snow.js"></script>
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-36251023-1']);
+        _gaq.push(['_setDomainName', 'jqueryscript.net']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    <script type="text/javascript" src="~/Scripts/dashjs/bootstrap-3.1.1.min.js"></script>
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+</body>
+</html>
+
+

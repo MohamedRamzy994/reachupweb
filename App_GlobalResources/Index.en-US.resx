@@ -1,0 +1,548 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="appletaboutusclientparagraph" xml:space="preserve">
+    <value>Launching the client's hand in adapting the programs to suit his needs without the need for company intervention</value>
+  </data>
+  <data name="appletaboutusclienttitle" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="appletaboutuscontactusbutton" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="appletaboutusdevelopmentparagraph" xml:space="preserve">
+    <value>Easy to develop, link and update applications to meet the evolution of activity and changing needs</value>
+  </data>
+  <data name="appletaboutusdevelopmenttitle" xml:space="preserve">
+    <value>Development</value>
+  </data>
+  <data name="appletaboutusmissionparagrph1" xml:space="preserve">
+    <value>ReachUpSoftware was founded in 2017. Since then, the company has been providing the best support in the field of building and designing programs and websites to provide solutions of a distinctive nature by using the latest technology and follow up everything that is new in the world of design, programming and development to maintain the forefront and enjoy the advantages of technology To obtain maximum customer satisfaction. ReachUpSoftware is one of the largest Arab companies in the field of the Internet thanks to God and thanks to the efforts of the team that we have chosen and thank God. The company's products and services have varied in the design and development of websites and programs.</value>
+  </data>
+  <data name="appletaboutusmissionparagrph2" xml:space="preserve">
+    <value>If you already own a website we would be happy to develop it for you either if you do not have a website, we are honored to build your site. If you need a program to run your business, such as supermarket management program or coffee ..... etc, whatever the nature of your activity we have your request, God willing, and the highest specifications and the latest techniques.</value>
+  </data>
+  <data name="appletaboutusmissiontitle" xml:space="preserve">
+    <value>We Are Happy To Help You</value>
+  </data>
+  <data name="appletaboutusparagraph" xml:space="preserve">
+    <value>When you believe in your ability to change cultures and make the world a better place to do, this is what we are trying to do with high quality products that carry the values that we influence in society.</value>
+  </data>
+  <data name="appletaboutussolutionparagraph" xml:space="preserve">
+    <value>Provide more flexible solutions to meet the different needs of customers within the same activity</value>
+  </data>
+  <data name="appletaboutussolutiontitle" xml:space="preserve">
+    <value>Solution</value>
+  </data>
+  <data name="appletaboutustitle" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+  <data name="appletajaxloadericon" xml:space="preserve">
+    <value>/Content/css/slick/ajax-loader.gif</value>
+  </data>
+  <data name="appletanimatecss" xml:space="preserve">
+    <value>/Content/css/animate.min.css</value>
+  </data>
+  <data name="appletbootstrapcss" xml:space="preserve">
+    <value>/Content/css/bootstrap.min.css</value>
+  </data>
+  <data name="appletbootstraprtlcss" xml:space="preserve">
+    <value />
+  </data>
+  <data name="appletchangelanguagebutton" xml:space="preserve">
+    <value>عربى</value>
+  </data>
+  <data name="appletfancyboxcss" xml:space="preserve">
+    <value>/Content/css/jquery.fancybox.min.css</value>
+  </data>
+  <data name="appletfontawesomcss" xml:space="preserve">
+    <value>/Content/css/font-awesome.min.css</value>
+  </data>
+  <data name="appletgooglefonts" xml:space="preserve">
+    <value>http://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900</value>
+  </data>
+  <data name="appletgooglefonts2" xml:space="preserve">
+    <value>http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800</value>
+  </data>
+  <data name="applethovercss" xml:space="preserve">
+    <value>/Content/css/hover-min.css</value>
+  </data>
+  <data name="appleticoncloseicon" xml:space="preserve">
+    <value>/Content/css/icon-close-white.png</value>
+  </data>
+  <data name="appletindexcontactusemail" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="appletindexcontactusemailvalue" xml:space="preserve">
+    <value>info@reachup.com</value>
+  </data>
+  <data name="appletindexcontactusinfoaddress" xml:space="preserve">
+    <value>Address:</value>
+  </data>
+  <data name="appletindexcontactusinfoaddressvalue" xml:space="preserve">
+    <value>Kolayet Adab Street  - Mansoura - Dakahlia Governorate -Egypt</value>
+  </data>
+  <data name="appletindexcontactusinfophone" xml:space="preserve">
+    <value>Phone:</value>
+  </data>
+  <data name="appletindexcontactusinfophonevalue" xml:space="preserve">
+    <value>+201016740846 - +201016740846</value>
+  </data>
+  <data name="appletindexcontactusplaceholderemail" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="appletindexcontactusplaceholdermessage" xml:space="preserve">
+    <value>Your Message *</value>
+  </data>
+  <data name="appletindexcontactusplaceholdersubject" xml:space="preserve">
+    <value>Subject</value>
+  </data>
+  <data name="appletindexcontactussendbutton" xml:space="preserve">
+    <value>Send Now</value>
+  </data>
+  <data name="appletindexcontactussmallhint" xml:space="preserve">
+    <value>We will contact you by your Email and our team will reply to your Message .</value>
+  </data>
+  <data name="appletindexcontactustitle" xml:space="preserve">
+    <value>Get in touch with us!</value>
+  </data>
+  <data name="appletindexcounterapps" xml:space="preserve">
+    <value>APPS</value>
+  </data>
+  <data name="appletindexcounterclients" xml:space="preserve">
+    <value>Clients</value>
+  </data>
+  <data name="appletindexcounterplans" xml:space="preserve">
+    <value>PLans</value>
+  </data>
+  <data name="appletindexcountertestmonials" xml:space="preserve">
+    <value>Testmonials</value>
+  </data>
+  <data name="appletindexfooteraboutparagraph" xml:space="preserve">
+    <value>Our core expertise lies in connecting your brand to your business with the great opportunities the web offers. Creative branding of your brand involves your website in an integrated process to enhance your presence among competitors. ReachUp is designed for elegance, simplicity and clarity, with an emphasis on improving the user experience for our applications</value>
+  </data>
+  <data name="appletindexfooterabouttitle" xml:space="preserve">
+    <value>About ReachUp Agency</value>
+  </data>
+  <data name="appletindexfooterbrand" xml:space="preserve">
+    <value>ReachUp Agency</value>
+  </data>
+  <data name="appletindexfootercopyright" xml:space="preserve">
+    <value>Copyright © 2020 by</value>
+  </data>
+  <data name="appletindexfooterdemos" xml:space="preserve">
+    <value>Mock Up</value>
+  </data>
+  <data name="appletindexfooterquicklinksli1" xml:space="preserve">
+    <value>Projects</value>
+  </data>
+  <data name="appletindexfooterquicklinksli2" xml:space="preserve">
+    <value>Plans</value>
+  </data>
+  <data name="appletindexfooterquicklinksli3" xml:space="preserve">
+    <value>News</value>
+  </data>
+  <data name="appletindexfooterquicklinksli4" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="appletindexfooterquicklinksli5" xml:space="preserve">
+    <value>Team</value>
+  </data>
+  <data name="appletindexfooterquicklinksli6" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="appletindexfooterquicklinksli7" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="appletindexfooterquicklinkstitle" xml:space="preserve">
+    <value>Quick Links</value>
+  </data>
+  <data name="appletindexhowitworksmenuli1" xml:space="preserve">
+    <value>Flexible solutions to meet customers needs</value>
+  </data>
+  <data name="appletindexhowitworksmenuli2" xml:space="preserve">
+    <value>Build confidence through good technical support</value>
+  </data>
+  <data name="appletindexhowitworksmenuli3" xml:space="preserve">
+    <value>Adapting the programs to suit client needs</value>
+  </data>
+  <data name="appletindexhowitworksmenuli4" xml:space="preserve">
+    <value>Easy to develop and update applications</value>
+  </data>
+  <data name="appletindexhowitworksmenuli5" xml:space="preserve">
+    <value>Scalability applications for modernization</value>
+  </data>
+  <data name="appletindexhowitworkstitle" xml:space="preserve">
+    <value>How It Works</value>
+  </data>
+  <data name="appletindexnewsletterstemailplaceholder" xml:space="preserve">
+    <value>Enter Your Email Here</value>
+  </data>
+  <data name="appletindexnewsletterstitle" xml:space="preserve">
+    <value>NewsLetters</value>
+  </data>
+  <data name="appletindexnewsletterstsmallhint" xml:space="preserve">
+    <value>Get Latest news and offers of ReachUpover  24 Hours</value>
+  </data>
+  <data name="appletindexnewsreadmore" xml:space="preserve">
+    <value>Read More</value>
+  </data>
+  <data name="appletindexnewsshowmore" xml:space="preserve">
+    <value>Show More</value>
+  </data>
+  <data name="appletindexnewstitle" xml:space="preserve">
+    <value>Our News</value>
+  </data>
+  <data name="appletindexourfeaturesli1" xml:space="preserve">
+    <value>Professional</value>
+  </data>
+  <data name="appletindexourfeaturesli2" xml:space="preserve">
+    <value>Trustworthy</value>
+  </data>
+  <data name="appletindexourfeaturesli3" xml:space="preserve">
+    <value>Friendly</value>
+  </data>
+  <data name="appletindexourfeaturesli4" xml:space="preserve">
+    <value>Efficient</value>
+  </data>
+  <data name="appletindexourfeaturesli5" xml:space="preserve">
+    <value>Valuable Partner</value>
+  </data>
+  <data name="appletindexourfeaturesli6" xml:space="preserve">
+    <value>Accurate</value>
+  </data>
+  <data name="appletindexourfeaturesli7" xml:space="preserve">
+    <value>Interesting</value>
+  </data>
+  <data name="appletindexourfeaturesli8" xml:space="preserve">
+    <value>Reusable</value>
+  </data>
+  <data name="appletindexourfeaturestitle" xml:space="preserve">
+    <value>Our Features</value>
+  </data>
+  <data name="appletindexplansorderplan" xml:space="preserve">
+    <value>Order this Plan</value>
+  </data>
+  <data name="appletindexplansshowmore" xml:space="preserve">
+    <value>Show More</value>
+  </data>
+  <data name="appletindexplanstitle" xml:space="preserve">
+    <value>Pricing Plans</value>
+  </data>
+  <data name="appletindexprojectsshowmore" xml:space="preserve">
+    <value>Show More</value>
+  </data>
+  <data name="appletindexprojectstitle" xml:space="preserve">
+    <value>Recent Projects</value>
+  </data>
+  <data name="appletindexservicesboxesdevelopmentparagrapg" xml:space="preserve">
+    <value>Special programming services,  Programming of Web and Desktop applications.</value>
+  </data>
+  <data name="appletindexservicesboxesdevelopmenttitle" xml:space="preserve">
+    <value>Development</value>
+  </data>
+  <data name="appletindexservicesboxesdigitalmarketingparagraph" xml:space="preserve">
+    <value>Build a strong relationship with your audience and fans through a strategic planning for your social networks</value>
+  </data>
+  <data name="appletindexservicesboxesdigitalmarketingtitle" xml:space="preserve">
+    <value>Digital Marketing</value>
+  </data>
+  <data name="appletindexservicesboxesgraphicsparagraph" xml:space="preserve">
+    <value>Creating your motion graphics with attractive visuals and interactive animations </value>
+  </data>
+  <data name="appletindexservicesboxesgraphicstitle" xml:space="preserve">
+    <value>Graphic Design</value>
+  </data>
+  <data name="appletindexservicesboxeshostingdomainsparagraph" xml:space="preserve">
+    <value>Cloud hosting services, servers, VPS, domain reservation services and technical support for hosting</value>
+  </data>
+  <data name="appletindexservicesboxeshostingdomainstitle" xml:space="preserve">
+    <value>Hosting &amp; Domains</value>
+  </data>
+  <data name="appletindexservicesboxesmobileappparagrapg" xml:space="preserve">
+    <value>We provide mobile application programming services for Android, IOS , Windows Phone</value>
+  </data>
+  <data name="appletindexservicesboxesmobileapptitle" xml:space="preserve">
+    <value>Mobile App</value>
+  </data>
+  <data name="appletindexservicesboxeswebdesignparagrapg" xml:space="preserve">
+    <value>Web design services, printed identity and design of mobile application interfaces.</value>
+  </data>
+  <data name="appletindexservicesboxeswebdesigntitle" xml:space="preserve">
+    <value>Web Design</value>
+  </data>
+  <data name="appletindexservicesparagraph" xml:space="preserve">
+    <value>Our core expertise lies in connecting your brand to your business with the great opportunities the web offers.
+                        Creative branding of your brand involves your website in an integrated process to enhance your presence among competitors.
+                        &lt;span class="emphase"&gt;ReachUp&lt;/span&gt; is designed for elegance, simplicity and clarity, with an emphasis on improving the user experience for our applications.</value>
+  </data>
+  <data name="appletindexservicestitle" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="appletindexteamshowmore" xml:space="preserve">
+    <value>Show More</value>
+  </data>
+  <data name="appletindexteamtitle" xml:space="preserve">
+    <value>MEET THE TEAM</value>
+  </data>
+  <data name="appletioniconscss" xml:space="preserve">
+    <value>/Content/css/ionicons.min.css</value>
+  </data>
+  <data name="appletlineariconcss" xml:space="preserve">
+    <value>/Content/css/linearicons.css</value>
+  </data>
+  <data name="appletloginbacktohome" xml:space="preserve">
+    <value>Back to Home</value>
+  </data>
+  <data name="appletloginemailplaceholder" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="appletloginhaveanaccount" xml:space="preserve">
+    <value>Don't have an account?</value>
+  </data>
+  <data name="appletloginpasswordplaceholder" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="appletloginsigninbutton" xml:space="preserve">
+    <value>Sign in</value>
+  </data>
+  <data name="appletloginsignintitle" xml:space="preserve">
+    <value>Sign in</value>
+  </data>
+  <data name="appletlogoicon" xml:space="preserve">
+    <value>/Images/images/logo.png</value>
+  </data>
+  <data name="appletmediacss" xml:space="preserve">
+    <value>/Content/css/media.css</value>
+  </data>
+  <data name="appletmybackgroundfeatures" xml:space="preserve">
+    <value>Features</value>
+  </data>
+  <data name="appletmybackgroundgetstart" xml:space="preserve">
+    <value>Get Start</value>
+  </data>
+  <data name="appletmybackgroundtyped1" xml:space="preserve">
+    <value>Software Design Services</value>
+  </data>
+  <data name="appletmybackgroundtyped2" xml:space="preserve">
+    <value>Software Development Services</value>
+  </data>
+  <data name="appletmybackgroundtyped3" xml:space="preserve">
+    <value>Mobile App Services</value>
+  </data>
+  <data name="appletmybackgroundtyped4" xml:space="preserve">
+    <value>Digital Marketing Services</value>
+  </data>
+  <data name="appletmybackgroundtyped5" xml:space="preserve">
+    <value>Motion Graphics Services</value>
+  </data>
+  <data name="appletmybackgroundtyped6" xml:space="preserve">
+    <value>Hosting &amp;Domains Services</value>
+  </data>
+  <data name="appletnewsdetailsdaysago" xml:space="preserve">
+    <value>Days ago</value>
+  </data>
+  <data name="appletnewsdetailspostedby" xml:space="preserve">
+    <value>Posted by</value>
+  </data>
+  <data name="appletordernowfillform" xml:space="preserve">
+    <value>Fill Order Form</value>
+  </data>
+  <data name="appletordernoworderemaillabel" xml:space="preserve">
+    <value>Email (Required) *</value>
+  </data>
+  <data name="appletordernoworderfirstnamelabel" xml:space="preserve">
+    <value>First Name (Required) *</value>
+  </data>
+  <data name="appletordernoworderlastnamelabel" xml:space="preserve">
+    <value>Last Name (Required) *</value>
+  </data>
+  <data name="appletordernowordermessageelabel" xml:space="preserve">
+    <value>Message(Required) *</value>
+  </data>
+  <data name="appletordernoworderphonenumberlabel" xml:space="preserve">
+    <value>Phone Number (Required) *</value>
+  </data>
+  <data name="appletordernoworderplanlabel" xml:space="preserve">
+    <value>Order Plan *</value>
+  </data>
+  <data name="appletordernowsubmitbutton" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="appletpopupboxcss" xml:space="preserve">
+    <value>/Content/css/popuo-box.css</value>
+  </data>
+  <data name="appletpostscss" xml:space="preserve">
+    <value>/Content/css/post.css</value>
+  </data>
+  <data name="appletslickcss" xml:space="preserve">
+    <value>/Content/css/slick/slick.css</value>
+  </data>
+  <data name="appletslickthemecss" xml:space="preserve">
+    <value>/Content/css/slick/slick-theme.css</value>
+  </data>
+  <data name="appletstyle2css" xml:space="preserve">
+    <value>/Content/css/style2.css</value>
+  </data>
+  <data name="appletstylecss" xml:space="preserve">
+    <value>/Content/css/style.css</value>
+  </data>
+  <data name="appletteamtitle" xml:space="preserve">
+    <value>ReachUpTeam is working for you</value>
+  </data>
+  <data name="appletthemifycss" xml:space="preserve">
+    <value>/Content/css/themify-icons.css</value>
+  </data>
+  <data name="applettopmenuabout" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="applettopmenublog" xml:space="preserve">
+    <value>Blog</value>
+  </data>
+  <data name="applettopmenucontact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="applettopmenuhome" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="applettopmenulogin" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="applettopmenulogoff" xml:space="preserve">
+    <value>Log off</value>
+  </data>
+  <data name="applettopmenuplans" xml:space="preserve">
+    <value>Plans</value>
+  </data>
+  <data name="applettopmenuprojects" xml:space="preserve">
+    <value>Projects</value>
+  </data>
+  <data name="applettopmenuservices" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="applettopmenuteams" xml:space="preserve">
+    <value>Team</value>
+  </data>
+  <data name="appletyoutubepopupcss" xml:space="preserve">
+    <value>/Content/css/grt-youtube-popup.css</value>
+  </data>
+  <data name="appletyoutubepopupvimocss" xml:space="preserve">
+    <value>/Content/css/YouTubePopUp.css</value>
+  </data>
+</root>

@@ -1,0 +1,255 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+@using AppletSoftware.Models
+@using System.Threading
+@using System.Globalization
+@model PagedList.IPagedList<AspNetPlan>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.currentplans = "active";
+}
+<style>
+
+    .Pricing .Pricing-content {
+        margin-bottom: 50px
+    }
+
+    .Pricing .spectial {
+        box-shadow: none !important
+    }
+
+    .Pricing .Pricing-content {
+        border: 1px solid #aaa
+    }
+</style>
+
+<!-- ------------------------------ Start Pricing ------------------------------ -->
+
+<section class="Pricing" id="Pricing">
+
+    <div class="container">
+
+
+        @if (CultureInfo.CurrentCulture.Name == "en-Us")
+    {
+        <div class="row">
+
+            <h1 class="text-center wow fadeInDown" data-wow-offset="400">
+                @Appletindex.Index.appletindexplanstitle
+            </h1>
+
+            @foreach (var item in Model)
+        {
+
+
+            <!-- Start First col-sm-3 -->
+            <div class="col-sm-4 col-sm-offset-0 col-xs-offset-2 col-xs-8">
+
+                <!-- Start Pricing-content -->
+                <div class="Pricing-content text-center wow flipInY" data-wow-offset="400" data-wow-duration="1s">
+
+                    <h3 class="emphase">@Html.DisplayFor(m => item.Plan_Name_En)</h3>
+                    <br />
+                    <h2>@Html.DisplayFor(m => item.AspNetPlansCategory.PlanCat_Name_En)</h2>
+                    <br />
+
+                    <h1>&#36;@Html.DisplayFor(m => item.Plan_Price)</h1>
+
+
+
+
+                    @*<p>10 Projects</p>
+
+                    <p>5 GB Storage</p>
+
+                    <p>Basic Support</p>
+
+                    <p>Collaboration</p>
+
+                    <p>Reports and analytics</p>*@
+
+
+                    @Html.Raw(item.Plan_Description_En)
+
+
+                    <a href="@Url.Action("OrderNow","Home",new {Plan_Id=item.Plan_Id})" class="btn btn-primary btn-lg btn-block">
+                        @Appletindex.Index.appletindexplansorderplan
+                    </a>
+
+                </div>
+                <!-- End Pricing-content -->
+
+            </div>
+            <!-- End First col-sm-3 -->
+
+
+
+    }
+
+
+
+            <div class="col-sm-12 col-xs-12 text-center">
+                <nav aria-label="Page navigation">
+
+
+                    @Html.PagedListPager(Model, page => Url.Action("Plans", new { page }))
+
+                </nav>
+            </div>
+
+        </div>
+
+}
+else if (CultureInfo.CurrentCulture.Name == "ar-SA")
+{
+    <h1 class="text-center wow fadeInDown" data-wow-offset="400">
+        @Appletindex.Index.appletindexplanstitle
+    </h1>
+    <div class="row">
+
+
+
+        @foreach (var item in Model)
+    {
+        bool renderRow = Model.ToList().IndexOf(item) % 3 == 0 ? true : false;
+
+        if (renderRow == true)
+        {
+            <div class="clearfix"></div>
+    }
+
+    <!-- Start First col-sm-3 -->
+    <div class="col-sm-4 col-sm-offset-0 col-xs-offset-2 col-xs-8 col-md-4">
+
+        <!-- Start Pricing-content -->
+        <div class="Pricing-content text-center wow flipInY" data-wow-offset="400" data-wow-duration="1s">
+
+            <h3 class="emphase">@Html.DisplayFor(m => item.Plan_Name_Ar)</h3>
+            <br />
+            <h2>@Html.DisplayFor(m => item.AspNetPlansCategory.PlanCat_Name_Ar)</h2>
+            <br />
+
+            <h1>&#36;@Html.DisplayFor(m => item.Plan_Price)</h1>
+
+
+
+
+            @*<p>10 Projects</p>
+
+            <p>5 GB Storage</p>
+
+            <p>Basic Support</p>
+
+            <p>Collaboration</p>
+
+            <p>Reports and analytics</p>*@
+
+
+            @Html.Raw(item.Plan_Description_Ar)
+
+
+            <a href="@Url.Action("OrderNow","Home",new {Plan_Id=item.Plan_Id})" class="btn btn-primary btn-lg btn-block">
+                @Appletindex.Index.appletindexplansorderplan
+            </a>
+
+        </div>
+        <!-- End Pricing-content -->
+
+    </div>
+    <!-- End First col-sm-3 -->
+
+
+
+}
+    </div>
+
+
+        <div class="col-sm-12 col-xs-12 text-center">
+            <nav aria-label="Page navigation">
+
+
+                @Html.PagedListPager(Model, page => Url.Action("Plans", new { page }))
+
+            </nav>
+        </div>
+
+   
+}
+else
+{
+    <div class="row">
+
+        <h1 class="text-center wow fadeInDown" data-wow-offset="400">
+            @Appletindex.Index.appletindexplanstitle
+        </h1>
+
+        @foreach (var item in Model)
+    {
+
+
+        <!-- Start First col-sm-3 -->
+        <div class="col-sm-4 col-sm-offset-0 col-xs-offset-2 col-xs-8">
+
+            <!-- Start Pricing-content -->
+            <div class="Pricing-content text-center wow flipInY" data-wow-offset="400" data-wow-duration="1s">
+
+                <h3 class="emphase">@Html.DisplayFor(m => item.Plan_Name_En)</h3>
+                <br />
+                <h2>@Html.DisplayFor(m => item.AspNetPlansCategory.PlanCat_Name_En)</h2>
+                <br />
+
+                <h1>&#36;@Html.DisplayFor(m => item.Plan_Price)</h1>
+
+
+
+
+                @*<p>10 Projects</p>
+
+                <p>5 GB Storage</p>
+
+                <p>Basic Support</p>
+
+                <p>Collaboration</p>
+
+                <p>Reports and analytics</p>*@
+
+
+                @Html.Raw(item.Plan_Description_En)
+
+
+                <a href="@Url.Action("OrderNow","Home",new {Plan_Id=item.Plan_Id})" class="btn btn-primary btn-lg btn-block">
+                    @Appletindex.Index.appletindexplansorderplan
+                </a>
+
+            </div>
+            <!-- End Pricing-content -->
+
+        </div>
+        <!-- End First col-sm-3 -->
+
+
+
+}
+
+
+
+        <div class="col-sm-12 col-xs-12 text-center">
+            <nav aria-label="Page navigation">
+
+
+                @Html.PagedListPager(Model, page => Url.Action("Plans", new { page }))
+
+            </nav>
+        </div>
+
+    </div>
+}
+
+
+
+    </div>
+
+</section>
+
+<!-- ------------------------------ End Pricing ------------------------------ -->

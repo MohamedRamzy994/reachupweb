@@ -1,0 +1,669 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="appletdashaddmanagerbutton" xml:space="preserve">
+    <value>اضافة مدير</value>
+  </data>
+  <data name="appletdashaddmanagertitle" xml:space="preserve">
+    <value>مدير جديد</value>
+  </data>
+  <data name="appletdashclientaddress" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="appletdashclientcompany" xml:space="preserve">
+    <value>الشركة</value>
+  </data>
+  <data name="appletdashclientcompanyaddressarabic" xml:space="preserve">
+    <value>عنوان الشركة  باللغة العربية</value>
+  </data>
+  <data name="appletdashclientcompanyaddressenglish" xml:space="preserve">
+    <value>عنوان الشركة باللغة الانجليزية</value>
+  </data>
+  <data name="appletdashclientcompanynamearabic" xml:space="preserve">
+    <value>اسم الشركة باللغة العربية</value>
+  </data>
+  <data name="appletdashclientcompanynameenglish" xml:space="preserve">
+    <value>اسم الشركة باللغة الانجليزية</value>
+  </data>
+  <data name="appletdashclientordersinbox" xml:space="preserve">
+    <value>تم الرد</value>
+  </data>
+  <data name="appletdashclientordersplanname" xml:space="preserve">
+    <value>اسم البرنامج</value>
+  </data>
+  <data name="appletdashclientorderssearchbyemail" xml:space="preserve">
+    <value>ابحث بالبريد الالكترونى</value>
+  </data>
+  <data name="appletdashclientphonenumber" xml:space="preserve">
+    <value>رقم الهاتف</value>
+  </data>
+  <data name="appletdashclientsearchbycompany" xml:space="preserve">
+    <value>ابحث باسم الشركة</value>
+  </data>
+  <data name="appletdashclientsearchbyphonenumber" xml:space="preserve">
+    <value>ابحث برقم الهاتف</value>
+  </data>
+  <data name="appletdasheditcategorybreadcrums" xml:space="preserve">
+    <value>تعديل بيانات الفئة</value>
+  </data>
+  <data name="appletdasheditcategorydetails" xml:space="preserve">
+    <value>تفاصيل الفئة</value>
+  </data>
+  <data name="appletdasheditclientdetails" xml:space="preserve">
+    <value>تفاصيل العميل</value>
+  </data>
+  <data name="appletdasheditclientphoto" xml:space="preserve">
+    <value>صورة العميل</value>
+  </data>
+  <data name="appletdasheditclientsbreadcrumbs" xml:space="preserve">
+    <value>تعديل بيانات العميل</value>
+  </data>
+  <data name="appletdasheditmanagerbreadcrumbs" xml:space="preserve">
+    <value>تعديل بيانات المدير</value>
+  </data>
+  <data name="appletdasheditmanagerdetails" xml:space="preserve">
+    <value>تفاصيل المدير</value>
+  </data>
+  <data name="appletdasheditmanagerpassword" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="appletdasheditmanagerphoto" xml:space="preserve">
+    <value>صورة المدير</value>
+  </data>
+  <data name="appletdasheditnewsbreadcrums" xml:space="preserve">
+    <value>تعديل المنشور</value>
+  </data>
+  <data name="appletdasheditnewsdetails" xml:space="preserve">
+    <value>تفاصيل المنشور</value>
+  </data>
+  <data name="appletdasheditnewsphoto" xml:space="preserve">
+    <value>صورة المنشور</value>
+  </data>
+  <data name="appletdasheditplansbreadcrumbs" xml:space="preserve">
+    <value>تعديل بيانات البرنامج</value>
+  </data>
+  <data name="appletdasheditplansdetails" xml:space="preserve">
+    <value>تفاصيل البرنامج</value>
+  </data>
+  <data name="appletdasheditprojectbreadcrumbe" xml:space="preserve">
+    <value>تعديل المشروع</value>
+  </data>
+  <data name="appletdasheditprojectdetails" xml:space="preserve">
+    <value>تفاصيل المشروع</value>
+  </data>
+  <data name="appletdasheditprojectphoto" xml:space="preserve">
+    <value>صورة المشروع</value>
+  </data>
+  <data name="appletdasheditteamsbreadcrumsb" xml:space="preserve">
+    <value>تعديل بيانات الموظف</value>
+  </data>
+  <data name="appletdasheditteamsdetails" xml:space="preserve">
+    <value>تفاصيل بيانات الموظف</value>
+  </data>
+  <data name="appletdasheditteamseditphoto" xml:space="preserve">
+    <value>صورة الموظف</value>
+  </data>
+  <data name="appletdashedittestmonialsanswerarabic" xml:space="preserve">
+    <value>الاجابة باللغة العربية</value>
+  </data>
+  <data name="appletdashedittestmonialsanswerenglish" xml:space="preserve">
+    <value>الاجابة باللغة الانجليزية</value>
+  </data>
+  <data name="appletdashedittestmonialsbreadcrumbs" xml:space="preserve">
+    <value>تعديل الاستطلاع</value>
+  </data>
+  <data name="appletdashedittestmonialscategoryenglish" xml:space="preserve">
+    <value>فئة الاستطلاع</value>
+  </data>
+  <data name="appletdashedittestmonialsclientnamearabic" xml:space="preserve">
+    <value>اسم العميل باللغة العربية</value>
+  </data>
+  <data name="appletdashedittestmonialsclientnameenglish" xml:space="preserve">
+    <value>اسم العميل باللغة الانجليزية</value>
+  </data>
+  <data name="appletdashedittestmonialsclientphoto" xml:space="preserve">
+    <value>صورة العميل</value>
+  </data>
+  <data name="appletdashedittestmonialsdatetime" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="appletdashedittestmonialsdetails" xml:space="preserve">
+    <value>تفاصيل الاستطلاع</value>
+  </data>
+  <data name="appletdashedittestmonialsjobtitlearabic" xml:space="preserve">
+    <value>المسىمى الوظيفى للعميل بالعربية</value>
+  </data>
+  <data name="appletdashedittestmonialsjobtitleenglish" xml:space="preserve">
+    <value>المسىمى الوظيفى للعميل بالانجليزية</value>
+  </data>
+  <data name="appletdashedittestmonialsPublisher" xml:space="preserve">
+    <value>الناشر</value>
+  </data>
+  <data name="appletdashedittestmonialsquestionarabic" xml:space="preserve">
+    <value>السؤال باللغة العربية</value>
+  </data>
+  <data name="appletdashedittestmonialsquestionenglish" xml:space="preserve">
+    <value>السؤال باللغة الانجليزية</value>
+  </data>
+  <data name="appletdashindexbaictablecss" xml:space="preserve">
+    <value>/Content/dashcss/basictable-ar.css</value>
+  </data>
+  <data name="appletdashindexbootstrapcss" xml:space="preserve">
+    <value>/Content/dashcss/bootstrap.css</value>
+  </data>
+  <data name="appletdashindexbootstraprtlcss" xml:space="preserve">
+    <value>/Content/dashcss/bootstrapRtl.css</value>
+  </data>
+  <data name="appletdashindexchartinsight" xml:space="preserve">
+    <value>احصائــيات الشركة</value>
+  </data>
+  <data name="appletdashindexcirclecss" xml:space="preserve">
+    <value>/Content/dashcss/circles-ar.css</value>
+  </data>
+  <data name="appletdashindexcomponentcss" xml:space="preserve">
+    <value>/Content/dashcss/component-ar.css</value>
+  </data>
+  <data name="appletdashindexexportcss" xml:space="preserve">
+    <value>/Content/dashcss/export-ar.css</value>
+  </data>
+  <data name="appletdashindexfileinputcss" xml:space="preserve">
+    <value>/Content/dashcss/fileinput.min.css</value>
+  </data>
+  <data name="appletdashindexflipclockcss" xml:space="preserve">
+    <value>/Content/dashcss/flipclock-ar.css</value>
+  </data>
+  <data name="appletdashindexfontawesomecss" xml:space="preserve">
+    <value>/Content/dashcss/font-awesome.css</value>
+  </data>
+  <data name="appletdashindexgooglefontcss" xml:space="preserve">
+    <value>https://fontlibrary.org/face/droid-arabic-kufi</value>
+  </data>
+  <data name="appletdashindexlogoicon" xml:space="preserve">
+    <value>/Images/images/logo.png</value>
+  </data>
+  <data name="appletdashindexnewmediacss" xml:space="preserve">
+    <value>/Content/dashcss/newMedia-ar.css</value>
+  </data>
+  <data name="appletdashindexnewstylecss" xml:space="preserve">
+    <value>/Content/dashcss/newStyle-ar.css</value>
+  </data>
+  <data name="appletdashindexrecentclientscompany" xml:space="preserve">
+    <value>الشركة</value>
+  </data>
+  <data name="appletdashindexrecentclientsemail" xml:space="preserve">
+    <value>البريد الالكترونى</value>
+  </data>
+  <data name="appletdashindexrecentclientsfname" xml:space="preserve">
+    <value>الاسم الاول</value>
+  </data>
+  <data name="appletdashindexrecentclientslname" xml:space="preserve">
+    <value>الاسم الاخير</value>
+  </data>
+  <data name="appletdashindexrecentclientsphonenumber" xml:space="preserve">
+    <value>رقم الهاتف</value>
+  </data>
+  <data name="appletdashindexrecentclientstitle" xml:space="preserve">
+    <value>أحدث العملاء</value>
+  </data>
+  <data name="appletdashindexsidebarclientcategories" xml:space="preserve">
+    <value>فئات العملاء</value>
+  </data>
+  <data name="appletdashindexsidebarclients" xml:space="preserve">
+    <value>العملاء</value>
+  </data>
+  <data name="appletdashindexsidebardashboard" xml:space="preserve">
+    <value>لوحة التحكم</value>
+  </data>
+  <data name="appletdashindexsidebardclientorders" xml:space="preserve">
+    <value>طلبات الشراء</value>
+  </data>
+  <data name="appletdashindexsidebardnewcategory" xml:space="preserve">
+    <value>فئة جديدة</value>
+  </data>
+  <data name="appletdashindexsidebardnewnews" xml:space="preserve">
+    <value>منشور جديد</value>
+  </data>
+  <data name="appletdashindexsidebardnewproject" xml:space="preserve">
+    <value>مشروع جديد</value>
+  </data>
+  <data name="appletdashindexsidebardnews" xml:space="preserve">
+    <value>المنشورات</value>
+  </data>
+  <data name="appletdashindexsidebardnewscategories" xml:space="preserve">
+    <value>فئات المنشورات</value>
+  </data>
+  <data name="appletdashindexsidebardprojectcategories" xml:space="preserve">
+    <value>فئات المشروعات</value>
+  </data>
+  <data name="appletdashindexsidebardprojects" xml:space="preserve">
+    <value>المشروعات</value>
+  </data>
+  <data name="appletdashindexsidebarmanagers" xml:space="preserve">
+    <value>المديرين</value>
+  </data>
+  <data name="appletdashindexsidebarnewclient" xml:space="preserve">
+    <value>عميل جديد</value>
+  </data>
+  <data name="appletdashindexsidebarnewmanager" xml:space="preserve">
+    <value>مدير جديد</value>
+  </data>
+  <data name="appletdashindexsidebarnewplans" xml:space="preserve">
+    <value>خطة برنامج جديد</value>
+  </data>
+  <data name="appletdashindexsidebarnewteam" xml:space="preserve">
+    <value>موظف جديد</value>
+  </data>
+  <data name="appletdashindexsidebarnewtestimonial" xml:space="preserve">
+    <value>استفسار جديد</value>
+  </data>
+  <data name="appletdashindexsidebarplancategories" xml:space="preserve">
+    <value>فئات  خطط البرامج</value>
+  </data>
+  <data name="appletdashindexsidebarplans" xml:space="preserve">
+    <value>خطط البرامج</value>
+  </data>
+  <data name="appletdashindexsidebarreports" xml:space="preserve">
+    <value>التقارير والاحصائيات</value>
+  </data>
+  <data name="appletdashindexsidebarteams" xml:space="preserve">
+    <value>فريق العمل</value>
+  </data>
+  <data name="appletdashindexsidebarteamscategories" xml:space="preserve">
+    <value>فئات الموظفين</value>
+  </data>
+  <data name="appletdashindexsidebartestimonialcategories" xml:space="preserve">
+    <value>فئات الاستفسارات</value>
+  </data>
+  <data name="appletdashindexsidebartestimonials" xml:space="preserve">
+    <value>دعم العملاء </value>
+  </data>
+  <data name="appletdashindexstylecss" xml:space="preserve">
+    <value>/Content/dashcss/style-ar.css</value>
+  </data>
+  <data name="appletdashindexstylegridcss" xml:space="preserve">
+    <value>/Content/dashcss/style_grid-ar.css</value>
+  </data>
+  <data name="appletdashindexstyletablecss" xml:space="preserve">
+    <value>/Content/dashcss/table-style-ar.css</value>
+  </data>
+  <data name="appletdashindextoastcss" xml:space="preserve">
+    <value>/Content/dashcss/jquery.toast.min.css</value>
+  </data>
+  <data name="appletdashindextopmenulanguage" xml:space="preserve">
+    <value>EN</value>
+  </data>
+  <data name="appletdashindextopmenumessagesseeall" xml:space="preserve">
+    <value>رؤية جميع الرسائل</value>
+  </data>
+  <data name="appletdashindextopmenumessagestitle" xml:space="preserve">
+    <value>الرسائل الواردة</value>
+  </data>
+  <data name="appletdashindextopmenunewslettersseeall" xml:space="preserve">
+    <value>رؤية جميع الطلبات</value>
+  </data>
+  <data name="appletdashindextopmenunewsletterstitle" xml:space="preserve">
+    <value>النشرة الاخبارية</value>
+  </data>
+  <data name="appletdashindextopmenunotificationsseeall" xml:space="preserve">
+    <value>رؤية جميع الاشعارات</value>
+  </data>
+  <data name="appletdashindextopmenunotificationstitle" xml:space="preserve">
+    <value>الاشعارات الواردة</value>
+  </data>
+  <data name="appletdashindextopmenuprofile" xml:space="preserve">
+    <value>حسابى الشخصى</value>
+  </data>
+  <data name="appletdashindextopmenuprologout" xml:space="preserve">
+    <value>تسجيل الخروج</value>
+  </data>
+  <data name="appletdashindextopmenusearchplaceholder" xml:space="preserve">
+    <value>ابحث هنا الان </value>
+  </data>
+  <data name="appletdashnewcategorydescriptionar" xml:space="preserve">
+    <value>وصف الفئة باللغة العربية</value>
+  </data>
+  <data name="appletdashnewcategorydescriptionen" xml:space="preserve">
+    <value>وصف الفئة باللغة الانجليزية</value>
+  </data>
+  <data name="appletdashnewcategorynamear" xml:space="preserve">
+    <value>اسم الفئة باللغة العربية</value>
+  </data>
+  <data name="appletdashnewcategorynameen" xml:space="preserve">
+    <value>اسم الفئة باللغة الانجليزية</value>
+  </data>
+  <data name="appletdashnewnewsbreadcrums" xml:space="preserve">
+    <value>منشور جديد</value>
+  </data>
+  <data name="appletdashnewnewsplaceholderlongarabic" xml:space="preserve">
+    <value>وصف المنشور الطويل باللغة العربية</value>
+  </data>
+  <data name="appletdashnewnewsplaceholderlongenglish" xml:space="preserve">
+    <value>وصف المنشور الطويل باللغة الانجليزية</value>
+  </data>
+  <data name="appletdashnewnewsplaceholdershortearabic" xml:space="preserve">
+    <value>وصف المنشور القصير باللغة العربية</value>
+  </data>
+  <data name="appletdashnewnewsplaceholdershortenglish" xml:space="preserve">
+    <value>وصف المنشور القصير باللغة الانجليزية</value>
+  </data>
+  <data name="appletdashnewnewsplaceholdertitleinarabic" xml:space="preserve">
+    <value>عنوان المنشور باللغة العربية</value>
+  </data>
+  <data name="appletdashnewnewsplaceholdertitleinenglish" xml:space="preserve">
+    <value>عنوان المنشور باللغة الانجليزية</value>
+  </data>
+  <data name="appletdashnewprojectplaceholdercategory" xml:space="preserve">
+    <value>- اختر فئة للمشروع -</value>
+  </data>
+  <data name="appletdashnewprojectplaceholdernamearabic" xml:space="preserve">
+    <value>اسم المشروع باللغة العربية</value>
+  </data>
+  <data name="appletdashnewprojectplaceholdernameenglish" xml:space="preserve">
+    <value>اسم المشروع باللغة الانجليزية</value>
+  </data>
+  <data name="appletdashnewprojectplaceholderurl" xml:space="preserve">
+    <value>رابط المشروع على شبكة الانترنت</value>
+  </data>
+  <data name="appletdashnewprojectreadybutton" xml:space="preserve">
+    <value>جاهز ؟</value>
+  </data>
+  <data name="appletdashnewprojectsavebutton" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="appletdashnewprojecttitle" xml:space="preserve">
+    <value>مشروع جديد</value>
+  </data>
+  <data name="appletdashnewsplaceholderseacbypublisher" xml:space="preserve">
+    <value>ابحث بالناشر</value>
+  </data>
+  <data name="appletdashnewsplaceholderseacbytitle" xml:space="preserve">
+    <value>ابحث بالعنوان</value>
+  </data>
+  <data name="appletdashnewstitle" xml:space="preserve">
+    <value>العنوان</value>
+  </data>
+  <data name="appletdashnewteamfnamear" xml:space="preserve">
+    <value>الاسم الاول باللغة العربية</value>
+  </data>
+  <data name="appletdashnewteamfnameen" xml:space="preserve">
+    <value>الاسم الاول باللغة الانجليزية</value>
+  </data>
+  <data name="appletdashnewteamhemail" xml:space="preserve">
+    <value>البريد الالكترونى</value>
+  </data>
+  <data name="appletdashnewteamhjobtitlear" xml:space="preserve">
+    <value>المسمى الوظيفى باللغة العربية</value>
+  </data>
+  <data name="appletdashnewteamhjobtitleen" xml:space="preserve">
+    <value>المسمى الوظيفى باللغة الانجليزية</value>
+  </data>
+  <data name="appletdashnewteamlnamear" xml:space="preserve">
+    <value>الاسم الاخير باللغة العربية</value>
+  </data>
+  <data name="appletdashnewteamlnameen" xml:space="preserve">
+    <value>الاسم الاخير باللغة الانجليزية</value>
+  </data>
+  <data name="appletdashnewteamphonenumber" xml:space="preserve">
+    <value>رقم الهاتف</value>
+  </data>
+  <data name="appletdashnewteamsalary" xml:space="preserve">
+    <value>الراتب الشهرى</value>
+  </data>
+  <data name="appletdashplansdescriptionarabic" xml:space="preserve">
+    <value>وصف البرنامج باللغة العربية</value>
+  </data>
+  <data name="appletdashplansdescriptionenglish" xml:space="preserve">
+    <value>وصف البرنامج باللغة الانجليزية</value>
+  </data>
+  <data name="appletdashplansnamearabic" xml:space="preserve">
+    <value>اسم البرنامج باللغة العربية</value>
+  </data>
+  <data name="appletdashplansnameenglish" xml:space="preserve">
+    <value>اسم البرنامج باللغة الانجليزية</value>
+  </data>
+  <data name="appletdashplansprice" xml:space="preserve">
+    <value>سعر البرنامج</value>
+  </data>
+  <data name="appletdashplanssearchbyplannamearabic" xml:space="preserve">
+    <value>ابحث باسم البرنامج باللغة العربية</value>
+  </data>
+  <data name="appletdashplanssearchbyplannameenglish" xml:space="preserve">
+    <value>ابحث باسم البرنامج باللغة الانجليزية</value>
+  </data>
+  <data name="appletdashprojectcategoriespublisher" xml:space="preserve">
+    <value>الناشر</value>
+  </data>
+  <data name="appletdashprojectcategoriessearchbynamear" xml:space="preserve">
+    <value>ابحث باسم الفئة باللغة العربية</value>
+  </data>
+  <data name="appletdashprojectcategoriessearchbynameen" xml:space="preserve">
+    <value>ابحث باسم الفئة باللغة الانجليزية</value>
+  </data>
+  <data name="appletdashprojectsadd" xml:space="preserve">
+    <value>اضافة</value>
+  </data>
+  <data name="appletdashprojectscategory" xml:space="preserve">
+    <value>الفئة</value>
+  </data>
+  <data name="appletdashprojectsdatetime" xml:space="preserve">
+    <value>التاريخ</value>
+  </data>
+  <data name="appletdashprojectsdelete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="appletdashprojectsedit" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="appletdashprojectsimage" xml:space="preserve">
+    <value>الصورة</value>
+  </data>
+  <data name="appletdashprojectsname" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="appletdashprojectssearchbycategoryname" xml:space="preserve">
+    <value>- اختر فئة -</value>
+  </data>
+  <data name="appletdashprojectssearchbyprojectname" xml:space="preserve">
+    <value>ابحث باسم المشروع</value>
+  </data>
+  <data name="appletdashprojectssearchbyprojecturl" xml:space="preserve">
+    <value>ابحث برابط المشروع</value>
+  </data>
+  <data name="appletdashprojectsurl" xml:space="preserve">
+    <value>الرابط</value>
+  </data>
+  <data name="appletdashteamsemail" xml:space="preserve">
+    <value>البريد الالكترونى</value>
+  </data>
+  <data name="appletdashteamsfname" xml:space="preserve">
+    <value> الاول</value>
+  </data>
+  <data name="appletdashteamslname" xml:space="preserve">
+    <value>الاخير</value>
+  </data>
+  <data name="appletdashteamsphone" xml:space="preserve">
+    <value>رقم الهاتف</value>
+  </data>
+  <data name="appletdashteamssearchbyname" xml:space="preserve">
+    <value>ابحث بالاسم</value>
+  </data>
+  <data name="appletdashteamssearchbyphonenumber" xml:space="preserve">
+    <value>ابحث برقم الهاتف</value>
+  </data>
+  <data name="appletdashtestmonialanswerarabic" xml:space="preserve">
+    <value>الاجابة باللغة العربية</value>
+  </data>
+  <data name="appletdashtestmonialanswerenglish" xml:space="preserve">
+    <value>الاجابة باللغة الانجليزية</value>
+  </data>
+  <data name="appletdashtestmonialclientnamearabic" xml:space="preserve">
+    <value>اسم العميل باللغة العربية</value>
+  </data>
+  <data name="appletdashtestmonialclientnameenglish" xml:space="preserve">
+    <value>اسم العميل باللغة الانجليزية</value>
+  </data>
+  <data name="appletdashtestmonialquestionarabic" xml:space="preserve">
+    <value>السؤال باللغة العربية</value>
+  </data>
+  <data name="appletdashtestmonialquestionenglish" xml:space="preserve">
+    <value>السؤال باللغة الانجليزية</value>
+  </data>
+  <data name="appletdashtestmonialsjobtitlearabic" xml:space="preserve">
+    <value>المسمى الوظيفى باللغة العربية</value>
+  </data>
+  <data name="appletdashtestmonialsjobtitleenglish" xml:space="preserve">
+    <value>المسمى الوظيفى باللغة الانجليزية</value>
+  </data>
+  <data name="appletdashtestmonialsquestion" xml:space="preserve">
+    <value>السؤال</value>
+  </data>
+  <data name="appletdashtestmonialssearchbyclientname" xml:space="preserve">
+    <value>ابحث باسم العميل</value>
+  </data>
+  <data name="appletdashtestmonialssearchbyquestion" xml:space="preserve">
+    <value>ابحث بالسؤال</value>
+  </data>
+  <data name="appletdashactive" xml:space="preserve">
+    <value>فعال</value>
+  </data>
+  <data name="appletdashclientsreport" xml:space="preserve">
+    <value>تقرير العملاء</value>
+  </data>
+  <data name="appletdashmanagersreport" xml:space="preserve">
+    <value>تقرير الادارة</value>
+  </data>
+  <data name="appletdashnewsreport" xml:space="preserve">
+    <value>تقرير الاخبار</value>
+  </data>
+  <data name="appletdashplansreport" xml:space="preserve">
+    <value>تقرير الاسعار</value>
+  </data>
+  <data name="appletdashprojectsreport" xml:space="preserve">
+    <value>تقرير المشروعات</value>
+  </data>
+  <data name="appletdashseen" xml:space="preserve">
+    <value>تم الرد</value>
+  </data>
+  <data name="appletdashteamsreport" xml:space="preserve">
+    <value>تقرير الموظفين</value>
+  </data>
+  <data name="appletdashindextopmenuappletbrand" xml:space="preserve">
+    <value>أبليت سوفت</value>
+  </data>
+</root>

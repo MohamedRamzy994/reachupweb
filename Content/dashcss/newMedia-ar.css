@@ -1,0 +1,111 @@
+@media (max-width: 660px) {
+    
+    .codeHtml .vendor-edit-content input[type="text"],
+    .codeHtml .vendor-edit-content textarea {
+        width: 92%
+    }
+    
+    .about-icon { width: 94% }
+
+    
+}
+
+
+@media (max-width: 630px) {
+    
+    .codeHtml .my-panel, .codeHtml .vendor-edit-content { margin-top: 100px }
+    li.second.admin-pic img {
+        width: 50px;
+        height: 50px;
+    }
+    .loading-overlay h1 {
+        font-size: 20px;
+        margin-bottom: 20px
+    }
+}
+
+@media (max-width: 877px) {
+    
+    li.full-screen { background: #007EE5;}
+        
+    .agile_top_w3_grids { margin-top: 80px }
+    li.second.admin-pic img {
+        width: 50px;
+        height: 50px;
+    }
+    .loading-overlay h1 {
+        font-size: 20px;
+        margin-bottom: 20px
+    }
+}
+
+@media (max-width: 626px) {
+            
+    .agile_top_w3_grids { margin-top: 170px }
+}
+
+@media (max-width:1355px){
+    li.second.admin-pic img {
+        width: 50px;
+        height: 50px;
+
+    }
+
+    .loading-overlay h1 {
+        font-size: 60px;
+        margin-bottom: 40px
+    }
+
+
+
+
+}
+@media (max-width:1920px) {
+    li.second.admin-pic img {
+        width: 50px;
+        height: 50px;
+
+
+    }
+    .loading-overlay h1 {
+        font-size: 60px;
+        margin-bottom: 40px
+    }
+}
+
+@media (max-width:355px) {
+    li.second.admin-pic img {
+        width: 50px;
+        height: 50px;
+        margin-left:10px;
+    }
+    .loading-overlay h1 {
+        font-size: 20px;
+        margin-bottom: 20px
+    }
+    li.second.top_bell_nav  ul.notifications{
+        width: 350px !important;
+        margin-right:-10px;
+    }
+    li.second.top_bell_nav  ul.messages {
+        width: 350px !important;
+        margin-right: -60px;
+    }
+    li.second.top_bell_nav  ul.newsletters {
+        width: 350px !important;
+        margin-right: -110px;
+    }
+}
+@media (max-width:600px) {
+    li.second.admin-pic img {
+        width: 50px;
+        height: 50px;
+        margin-left: 10px;
+    }
+
+    .loading-overlay h1 {
+        font-size: 20px;
+        margin-bottom: 20px
+    }
+}
+

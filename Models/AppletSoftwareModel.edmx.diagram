@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="81565e4b0f8f43b598c6f3bd17c68cfa" Name="Diagram1" ShowGrid="false" DisplayType="false" ZoomLevel="96">
+        <EntityTypeShape EntityType="AppletSoftwareModel.AspNetClient" Width="1.5" PointX="7.5" PointY="44" />
+        <EntityTypeShape EntityType="AppletSoftwareModel.AspNetClientsCategory" Width="1.5" PointX="5.25" PointY="63" />
+        <EntityTypeShape EntityType="AppletSoftwareModel.AspNetMessage" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AppletSoftwareModel.AspNetNew" Width="1.5" PointX="7.5" PointY="49.125" />
+        <EntityTypeShape EntityType="AppletSoftwareModel.AspNetNewsCategory" Width="1.5" PointX="5.25" PointY="66.5" />
+        <EntityTypeShape EntityType="AppletSoftwareModel.AspNetNewsLetter" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AppletSoftwareModel.AspNetNotification" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="AppletSoftwareModel.AspNetPlanOrder" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="AppletSoftwareModel.AspNetPlan" Width="1.5" PointX="5.25" PointY="28.125" />
+        <EntityTypeShape EntityType="AppletSoftwareModel.AspNetPlansCategory" Width="1.5" PointX="3" PointY="22.375" />
+        <EntityTypeShape EntityType="AppletSoftwareModel.AspNetProject" Width="1.5" PointX="7.5" PointY="30.75" />
+        <EntityTypeShape EntityType="AppletSoftwareModel.AspNetProjectsCategory" Width="1.5" PointX="5.25" PointY="35.5" />
+        <EntityTypeShape EntityType="AppletSoftwareModel.AspNetRole" Width="1.5" PointX="0.75" PointY="28.875" />
+        <EntityTypeShape EntityType="AppletSoftwareModel.AspNetTeam" Width="1.5" PointX="7.5" PointY="35.5" />
+        <EntityTypeShape EntityType="AppletSoftwareModel.AspNetTeamsCategory" Width="1.5" PointX="5.25" PointY="43.875" />
+        <EntityTypeShape EntityType="AppletSoftwareModel.AspNetTestmonial" Width="1.5" PointX="7.5" PointY="26.125" />
+        <EntityTypeShape EntityType="AppletSoftwareModel.AspNetTestmonialsCategory" Width="1.5" PointX="5.25" PointY="23.25" />
+        <EntityTypeShape EntityType="AppletSoftwareModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="60.375" />
+        <EntityTypeShape EntityType="AppletSoftwareModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="16.875" />
+        <EntityTypeShape EntityType="AppletSoftwareModel.AspNetUser" Width="1.5" PointX="3" PointY="26.625" />
+        <EntityTypeShape EntityType="AppletSoftwareModel.AspNetUsersInfoPlu" Width="1.5" PointX="5.25" PointY="56.625" />
+        <EntityTypeShape EntityType="AppletSoftwareModel.C__MigrationHistory" Width="1.5" PointX="4.75" PointY="4.75" />
+        <EntityTypeShape EntityType="AppletSoftwareModel.sysdiagram" Width="1.5" PointX="6.75" PointY="0.75" />
+        <AssociationConnector Association="AppletSoftwareModel.FK_AspNetClients_AspNetClientsCategories" />
+        <AssociationConnector Association="AppletSoftwareModel.FK_AspNetClients_AspNetUsers" />
+        <AssociationConnector Association="AppletSoftwareModel.FK_AspNetClientsCategories_AspNetUsers" />
+        <AssociationConnector Association="AppletSoftwareModel.FK_AspNetNews_AspNetNewsCategories" />
+        <AssociationConnector Association="AppletSoftwareModel.FK_AspNetNews_AspNetUsers" />
+        <AssociationConnector Association="AppletSoftwareModel.FK_AspNetNewsCategories_AspNetUsers" />
+        <AssociationConnector Association="AppletSoftwareModel.FK_AspNetPlans_AspNetPlansCategories" />
+        <AssociationConnector Association="AppletSoftwareModel.FK_AspNetPlans_AspNetUsers" />
+        <AssociationConnector Association="AppletSoftwareModel.FK_AspNetProjects_AspNetProjectsCategories" />
+        <AssociationConnector Association="AppletSoftwareModel.FK_AspNetProjects_AspNetUsers" />
+        <AssociationConnector Association="AppletSoftwareModel.FK_AspNetProjectsCategories_AspNetUsers" />
+        <AssociationConnector Association="AppletSoftwareModel.FK_AspNetTeams_AspNetTeamsCategories" />
+        <AssociationConnector Association="AppletSoftwareModel.FK_AspNetTeams_AspNetUsers" />
+        <AssociationConnector Association="AppletSoftwareModel.FK_AspNetTeamsCategories_AspNetUsers" />
+        <AssociationConnector Association="AppletSoftwareModel.FK_AspNetTestmonials_AspNetTestmonialsCategories" />
+        <AssociationConnector Association="AppletSoftwareModel.FK_AspNetTestmonials_AspNetUsers" />
+        <AssociationConnector Association="AppletSoftwareModel.FK_AspNetTestmonialsCategories_AspNetUsers" />
+        <AssociationConnector Association="AppletSoftwareModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="AppletSoftwareModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="AppletSoftwareModel.FK_AspNetUsersInfoPlus_AspNetUsers" />
+        <AssociationConnector Association="AppletSoftwareModel.AspNetUserRoles" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

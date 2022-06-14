@@ -1,0 +1,546 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="appletaboutusclientparagraph" xml:space="preserve">
+    <value>إطلاق يد العميل في تكييف البرامج لتناسب احتياجاته دون الحاجة إلى تدخل الشركة</value>
+  </data>
+  <data name="appletaboutusclienttitle" xml:space="preserve">
+    <value>العميل</value>
+  </data>
+  <data name="appletaboutuscontactusbutton" xml:space="preserve">
+    <value>اتصل بنا</value>
+  </data>
+  <data name="appletaboutusdevelopmentparagraph" xml:space="preserve">
+    <value>سهلة لتطوير وربط وتحديث التطبيقات لتلبية تطور النشاط وتغيير الاحتياجات</value>
+  </data>
+  <data name="appletaboutusdevelopmenttitle" xml:space="preserve">
+    <value>التطوير</value>
+  </data>
+  <data name="appletaboutusmissionparagrph1" xml:space="preserve">
+    <value>تأسست شركة ريتـشــــــأب سوفت في عام 2017. ومنذ ذلك الحين ، تقدم الشركة أفضل دعم في مجال تصميم وتصميم البرامج والمواقع الإلكترونية لتوفير حلول ذات طبيعة مميزة باستخدام أحدث التقنيات ومتابعة كل ما هو جديد في العالم من التصميم والبرمجة والتطوير للحفاظ على الصدارة والتمتع بمزايا التكنولوجيا للحصول على أقصى قدر من رضا العملاء. أبليت سوفت هي واحدة من أكبر الشركات العربية في مجال الإنترنت بفضل الله وبفضل جهود الفريق التي اخترناها ونشكر الله. تباينت منتجات وخدمات الشركة في تصميم وتطوير المواقع الإلكترونية والبرامج.</value>
+  </data>
+  <data name="appletaboutusmissionparagrph2" xml:space="preserve">
+    <value>إذا كنت تمتلك موقعا على الويب، سيكون من دواعي سرورنا تطويره لك إما إذا لم يكن لديك موقع ويب، يشرفنا أن نبني موقعك. إذا كنت بحاجة إلى برنامج لتشغيل عملك ، مثل برنامج إدارة السوبرماركت أو القهوة ..... الخ ، مهما كانت طبيعة نشاطك لدينا طلبك بإذن الله ، وأعلى المواصفات وأحدث التقنيات.</value>
+  </data>
+  <data name="appletaboutusmissiontitle" xml:space="preserve">
+    <value>نحن سعداء لمساعدتك</value>
+  </data>
+  <data name="appletaboutusparagraph" xml:space="preserve">
+    <value>عندما تؤمن بقدرتك على تغيير الثقافات وتجعل العالم مكانًا أفضل للقيام به ، فهذا هو ما نحاول القيام به مع المنتجات عالية الجودة التي تحمل القيم التي نؤثر عليها في المجتمع.</value>
+  </data>
+  <data name="appletaboutussolutionparagraph" xml:space="preserve">
+    <value>توفير حلول أكثر مرونة لتلبية الاحتياجات المختلفة للعملاء في نفس النشاط</value>
+  </data>
+  <data name="appletaboutussolutiontitle" xml:space="preserve">
+    <value>الحلول البرمجية</value>
+  </data>
+  <data name="appletaboutustitle" xml:space="preserve">
+    <value>عن الشركة</value>
+  </data>
+  <data name="appletajaxloadericon" xml:space="preserve">
+    <value>~/Content/css/slick/ajax-loader.gif</value>
+  </data>
+  <data name="appletanimatecss" xml:space="preserve">
+    <value>/Content/css/animate.min.css</value>
+  </data>
+  <data name="appletbootstrapcss" xml:space="preserve">
+    <value>/Content/css/bootstrap.min.css</value>
+  </data>
+  <data name="appletbootstraprtlcss" xml:space="preserve">
+    <value>/Content/css/bootstrapRtl.css</value>
+  </data>
+  <data name="appletchangelanguagebutton" xml:space="preserve">
+    <value>EN</value>
+  </data>
+  <data name="appletfancyboxcss" xml:space="preserve">
+    <value>/Content/css/jquery.fancybox.min.css</value>
+  </data>
+  <data name="appletfontawesomcss" xml:space="preserve">
+    <value>/Content/css/font-awesome.min.css</value>
+  </data>
+  <data name="appletgooglefonts" xml:space="preserve">
+    <value>https://fontlibrary.org/face/droid-arabic-kufi</value>
+  </data>
+  <data name="appletgooglefonts2" xml:space="preserve">
+    <value />
+  </data>
+  <data name="applethovercss" xml:space="preserve">
+    <value>/Content/css/hover-min.css</value>
+  </data>
+  <data name="appleticoncloseicon" xml:space="preserve">
+    <value>/Content/css/icon-close-white.png</value>
+  </data>
+  <data name="appletindexcontactusemail" xml:space="preserve">
+    <value>البريد الالكترونى:</value>
+  </data>
+  <data name="appletindexcontactusemailvalue" xml:space="preserve">
+    <value>info@reachup.com</value>
+  </data>
+  <data name="appletindexcontactusinfoaddress" xml:space="preserve">
+    <value>العنــوان:</value>
+  </data>
+  <data name="appletindexcontactusinfoaddressvalue" xml:space="preserve">
+    <value>- شارع كلية أداب - المنصورة - محافظة الدقهلية - مصر</value>
+  </data>
+  <data name="appletindexcontactusinfophone" xml:space="preserve">
+    <value>التليفون:</value>
+  </data>
+  <data name="appletindexcontactusinfophonevalue" xml:space="preserve">
+    <value>+201016740846 - +201016740846</value>
+  </data>
+  <data name="appletindexcontactusplaceholderemail" xml:space="preserve">
+    <value>البريد الالكترونى</value>
+  </data>
+  <data name="appletindexcontactusplaceholdermessage" xml:space="preserve">
+    <value>محتوى الرسالة</value>
+  </data>
+  <data name="appletindexcontactusplaceholdersubject" xml:space="preserve">
+    <value>موضوع الرسالة</value>
+  </data>
+  <data name="appletindexcontactussendbutton" xml:space="preserve">
+    <value>ارسل الان</value>
+  </data>
+  <data name="appletindexcontactussmallhint" xml:space="preserve">
+    <value>سوف نتصل بك عن طريق البريد الإلكتروني الخاص بك وسوف يقوم فريقنا بالرد على رسالتك.</value>
+  </data>
+  <data name="appletindexcontactustitle" xml:space="preserve">
+    <value>ابق على تواصل معنا!</value>
+  </data>
+  <data name="appletindexcounterapps" xml:space="preserve">
+    <value>تطبيقات</value>
+  </data>
+  <data name="appletindexcounterclients" xml:space="preserve">
+    <value>عملاء</value>
+  </data>
+  <data name="appletindexcounterplans" xml:space="preserve">
+    <value>برامج</value>
+  </data>
+  <data name="appletindexcountertestmonials" xml:space="preserve">
+    <value>داعمين</value>
+  </data>
+  <data name="appletindexfooteraboutparagraph" xml:space="preserve">
+    <value>لدينا الخبرة الأساسية تكمن في ربط العلامة التجارية الخاصة بك لعملك مع الفرص الكبيرة التي توفرها شبكة الإنترنت. تتضمن العلامة التجارية الإبداعية للعلامة التجارية موقعك على الويب في عملية متكاملة لتعزيز تواجدك بين المنافسين. تم تصميم ريتشـــأب للأناقة والبساطة والوضوح، مع التركيز على تحسين تجربة المستخدم لتطبيقاتنا</value>
+  </data>
+  <data name="appletindexfooterabouttitle" xml:space="preserve">
+    <value>عن الشركة</value>
+  </data>
+  <data name="appletindexfooterbrand" xml:space="preserve">
+    <value>ريتش أب</value>
+  </data>
+  <data name="appletindexfootercopyright" xml:space="preserve">
+    <value>جميع الحقوق محفوظة© 2020   </value>
+  </data>
+  <data name="appletindexfooterdemos" xml:space="preserve">
+    <value>نماذج اعمال</value>
+  </data>
+  <data name="appletindexfooterquicklinksli1" xml:space="preserve">
+    <value>المشروعـــات</value>
+  </data>
+  <data name="appletindexfooterquicklinksli2" xml:space="preserve">
+    <value>البرامـــــــــــــج</value>
+  </data>
+  <data name="appletindexfooterquicklinksli3" xml:space="preserve">
+    <value>الأخبـــــــــــــار</value>
+  </data>
+  <data name="appletindexfooterquicklinksli4" xml:space="preserve">
+    <value>الخدمـــــــات</value>
+  </data>
+  <data name="appletindexfooterquicklinksli5" xml:space="preserve">
+    <value>فريق العمل</value>
+  </data>
+  <data name="appletindexfooterquicklinksli6" xml:space="preserve">
+    <value>الاتــصـــال</value>
+  </data>
+  <data name="appletindexfooterquicklinksli7" xml:space="preserve">
+    <value>عن الشركة</value>
+  </data>
+  <data name="appletindexfooterquicklinkstitle" xml:space="preserve">
+    <value>روابط سريعة</value>
+  </data>
+  <data name="appletindexhowitworksmenuli1" xml:space="preserve">
+    <value>تقديم حلول أكثر مرونة لمقابلة احتياجات  للعملاء </value>
+  </data>
+  <data name="appletindexhowitworksmenuli2" xml:space="preserve">
+    <value>بناء الثقة المتبادلة من خلال الدعم الفني المتميز</value>
+  </data>
+  <data name="appletindexhowitworksmenuli3" xml:space="preserve">
+    <value>تطويع البرامج لتناسب احتياجات العميل بدون الحاجة لتدخل الشركة</value>
+  </data>
+  <data name="appletindexhowitworksmenuli4" xml:space="preserve">
+    <value>سهولة تطوير وتحديث التطبيقات</value>
+  </data>
+  <data name="appletindexhowitworksmenuli5" xml:space="preserve">
+    <value>تطبيقات قابلة  للتحديث والتوسع والمرونة</value>
+  </data>
+  <data name="appletindexhowitworkstitle" xml:space="preserve">
+    <value>كيف يعمل  </value>
+  </data>
+  <data name="appletindexnewsletterstemailplaceholder" xml:space="preserve">
+    <value>من فضلك قم بادخال البريد الالكترونى ليصلك الجديد</value>
+  </data>
+  <data name="appletindexnewsletterstitle" xml:space="preserve">
+    <value>النشرات الإخبارية</value>
+  </data>
+  <data name="appletindexnewsletterstsmallhint" xml:space="preserve">
+    <value>لحصول على آخر الأخبار والعروض من أبليت على مدار 24 ساعة</value>
+  </data>
+  <data name="appletindexnewsreadmore" xml:space="preserve">
+    <value>اقرأ المزيد</value>
+  </data>
+  <data name="appletindexnewsshowmore" xml:space="preserve">
+    <value>رؤية المزيد</value>
+  </data>
+  <data name="appletindexnewstitle" xml:space="preserve">
+    <value>الاخبــار</value>
+  </data>
+  <data name="appletindexourfeaturesli1" xml:space="preserve">
+    <value>محترف</value>
+  </data>
+  <data name="appletindexourfeaturesli2" xml:space="preserve">
+    <value>جدير بالثقة</value>
+  </data>
+  <data name="appletindexourfeaturesli3" xml:space="preserve">
+    <value>سهل الاستخدام</value>
+  </data>
+  <data name="appletindexourfeaturesli4" xml:space="preserve">
+    <value>فعال</value>
+  </data>
+  <data name="appletindexourfeaturesli5" xml:space="preserve">
+    <value>ذات قيمة</value>
+  </data>
+  <data name="appletindexourfeaturesli6" xml:space="preserve">
+    <value>دقيق</value>
+  </data>
+  <data name="appletindexourfeaturesli7" xml:space="preserve">
+    <value>مثير للإعجاب</value>
+  </data>
+  <data name="appletindexourfeaturesli8" xml:space="preserve">
+    <value>قابل لإعادة الاستخدام</value>
+  </data>
+  <data name="appletindexourfeaturestitle" xml:space="preserve">
+    <value>مميزات المنتجات</value>
+  </data>
+  <data name="appletindexplansorderplan" xml:space="preserve">
+    <value>اشتراك</value>
+  </data>
+  <data name="appletindexplansshowmore" xml:space="preserve">
+    <value>رؤية المزيد</value>
+  </data>
+  <data name="appletindexplanstitle" xml:space="preserve">
+    <value>البرامج الحالية</value>
+  </data>
+  <data name="appletindexprojectsshowmore" xml:space="preserve">
+    <value>رؤية المزيد</value>
+  </data>
+  <data name="appletindexprojectstitle" xml:space="preserve">
+    <value>الاعمال السابقة</value>
+  </data>
+  <data name="appletindexservicesboxesdevelopmentparagrapg" xml:space="preserve">
+    <value>خدمات البرمجة الخاصة ، برمجة تطبيقات الويب وبرمجة تطبيقات سطح المكتب الخاصة بالشركات  </value>
+  </data>
+  <data name="appletindexservicesboxesdevelopmenttitle" xml:space="preserve">
+    <value>تطوير البرمجيات</value>
+  </data>
+  <data name="appletindexservicesboxesdigitalmarketingparagraph" xml:space="preserve">
+    <value>بناء علاقة قوية مع جمهورك والمشجعين من خلال التخطيط الاستراتيجي للشبكات الاجتماعية الخاصة بك</value>
+  </data>
+  <data name="appletindexservicesboxesdigitalmarketingtitle" xml:space="preserve">
+    <value>التسويق الالكترونى</value>
+  </data>
+  <data name="appletindexservicesboxesgraphicsparagraph" xml:space="preserve">
+    <value>إنشاء الرسومات المتحركة الخاصة بك مع مرئيات جذابة والرسوم المتحركة التفاعلية </value>
+  </data>
+  <data name="appletindexservicesboxesgraphicstitle" xml:space="preserve">
+    <value>التصميم الجرافيكي</value>
+  </data>
+  <data name="appletindexservicesboxeshostingdomainsparagraph" xml:space="preserve">
+    <value>خدمات الحوسبة السحابية، الخوادم ، خدمات حجز الدومين وخدمات الاستضافة و الدعم الفني للاستضافة</value>
+  </data>
+  <data name="appletindexservicesboxeshostingdomainstitle" xml:space="preserve">
+    <value>الاستضافة والدومين</value>
+  </data>
+  <data name="appletindexservicesboxesmobileappparagrapg" xml:space="preserve">
+    <value>نحن نقدم خدمات برمجة تطبيقات الهواتف الذكية  والتى تعمل بنظام  Android ,IOS,Windows Phone</value>
+  </data>
+  <data name="appletindexservicesboxesmobileapptitle" xml:space="preserve">
+    <value>تطبيقات الجوال</value>
+  </data>
+  <data name="appletindexservicesboxeswebdesignparagrapg" xml:space="preserve">
+    <value>خدمات تصميم المواقع الإلكترونية، والهوية المطبوعة وتصميم واجهات تطبيقات الهاتف المتحرك.</value>
+  </data>
+  <data name="appletindexservicesboxeswebdesigntitle" xml:space="preserve">
+    <value>تصميم المواقع</value>
+  </data>
+  <data name="appletindexservicesparagraph" xml:space="preserve">
+    <value>لدينا الخبرة الأساسية تكمن في ربط العلامة التجارية الخاصة بك لعملك مع الفرص الكبيرة التي توفرها شبكة الإنترنت. تتضمن العلامة التجارية الإبداعية للعلامة التجارية موقعك على الويب في عملية متكاملة لتعزيز تواجدك بين المنافسين. تم تصميم ريتشــأب للأناقة والبساطة والوضوح، مع التركيز على تحسين تجربة المستخدم لتطبيقاتنا</value>
+  </data>
+  <data name="appletindexservicestitle" xml:space="preserve">
+    <value>خدماتنا</value>
+  </data>
+  <data name="appletindexteamshowmore" xml:space="preserve">
+    <value>رؤية المزيد</value>
+  </data>
+  <data name="appletindexteamtitle" xml:space="preserve">
+    <value>فريق العمل </value>
+  </data>
+  <data name="appletioniconscss" xml:space="preserve">
+    <value>/Content/css/ionicons.min.css</value>
+  </data>
+  <data name="appletlineariconcss" xml:space="preserve">
+    <value>/Content/css/linearicons.css</value>
+  </data>
+  <data name="appletloginbacktohome" xml:space="preserve">
+    <value>العودة للصفحة الرئيسية</value>
+  </data>
+  <data name="appletloginemailplaceholder" xml:space="preserve">
+    <value>البريد الالكترونى</value>
+  </data>
+  <data name="appletloginhaveanaccount" xml:space="preserve">
+    <value>لا تمتلك حساب حاليا ؟</value>
+  </data>
+  <data name="appletloginpasswordplaceholder" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="appletloginsigninbutton" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="appletloginsignintitle" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="appletlogoicon" xml:space="preserve">
+    <value>/Images/images/logo.png</value>
+  </data>
+  <data name="appletmediacss" xml:space="preserve">
+    <value>/Content/css/media-ar.css</value>
+  </data>
+  <data name="appletmybackgroundfeatures" xml:space="preserve">
+    <value>خدمات</value>
+  </data>
+  <data name="appletmybackgroundgetstart" xml:space="preserve">
+    <value>تصفح</value>
+  </data>
+  <data name="appletmybackgroundtyped1" xml:space="preserve">
+    <value>خدمات تصميم المواقع الالكترونية</value>
+  </data>
+  <data name="appletmybackgroundtyped2" xml:space="preserve">
+    <value>خدمات تطوير البرمجيات</value>
+  </data>
+  <data name="appletmybackgroundtyped3" xml:space="preserve">
+    <value>خدمات تطبيقات الجوال</value>
+  </data>
+  <data name="appletmybackgroundtyped4" xml:space="preserve">
+    <value>خدمات التسويق الالكترونى</value>
+  </data>
+  <data name="appletmybackgroundtyped5" xml:space="preserve">
+    <value>خدمات الرسوم المتحركة</value>
+  </data>
+  <data name="appletmybackgroundtyped6" xml:space="preserve">
+    <value>خدمات الاستضافة والخدمات</value>
+  </data>
+  <data name="appletnewsdetailsdaysago" xml:space="preserve">
+    <value>ايام مضت</value>
+  </data>
+  <data name="appletnewsdetailspostedby" xml:space="preserve">
+    <value>نشر بواسطة</value>
+  </data>
+  <data name="appletordernowfillform" xml:space="preserve">
+    <value>املاء الاستمارة التالية</value>
+  </data>
+  <data name="appletordernoworderemaillabel" xml:space="preserve">
+    <value>البريد الالكترونى مطلوب</value>
+  </data>
+  <data name="appletordernoworderfirstnamelabel" xml:space="preserve">
+    <value>الاسم الاول مطلوب</value>
+  </data>
+  <data name="appletordernoworderlastnamelabel" xml:space="preserve">
+    <value>الاسم الاخير مطلوب</value>
+  </data>
+  <data name="appletordernowordermessageelabel" xml:space="preserve">
+    <value>محتوى الرسالة مطلوب</value>
+  </data>
+  <data name="appletordernoworderphonenumberlabel" xml:space="preserve">
+    <value>رقم الهاتف مطلوب</value>
+  </data>
+  <data name="appletordernoworderplanlabel" xml:space="preserve">
+    <value>اسم البرنامج مطلوب</value>
+  </data>
+  <data name="appletordernowsubmitbutton" xml:space="preserve">
+    <value>ارسل</value>
+  </data>
+  <data name="appletpopupboxcss" xml:space="preserve">
+    <value>/Content/css/popuo-box.css</value>
+  </data>
+  <data name="appletpostscss" xml:space="preserve">
+    <value>/Content/css/post-ar.css</value>
+  </data>
+  <data name="appletslickcss" xml:space="preserve">
+    <value>/Content/css/slick/slick.css</value>
+  </data>
+  <data name="appletslickthemecss" xml:space="preserve">
+    <value>/Content/css/slick/slick-theme.css</value>
+  </data>
+  <data name="appletstyle2css" xml:space="preserve">
+    <value>/Content/css/style2-ar.css</value>
+  </data>
+  <data name="appletstylecss" xml:space="preserve">
+    <value>/Content/css/style-ar.css</value>
+  </data>
+  <data name="appletteamtitle" xml:space="preserve">
+    <value>يعمل الفريق من أجلك</value>
+  </data>
+  <data name="appletthemifycss" xml:space="preserve">
+    <value>/Content/css/themify-icons.css</value>
+  </data>
+  <data name="applettopmenuabout" xml:space="preserve">
+    <value>عن الشركة</value>
+  </data>
+  <data name="applettopmenublog" xml:space="preserve">
+    <value>الاخبار</value>
+  </data>
+  <data name="applettopmenucontact" xml:space="preserve">
+    <value>اتصل بنا</value>
+  </data>
+  <data name="applettopmenuhome" xml:space="preserve">
+    <value>الرئيسية</value>
+  </data>
+  <data name="applettopmenulogin" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="applettopmenulogoff" xml:space="preserve">
+    <value>تسخيل الخروج</value>
+  </data>
+  <data name="applettopmenuplans" xml:space="preserve">
+    <value>البرامج</value>
+  </data>
+  <data name="applettopmenuprojects" xml:space="preserve">
+    <value>المشروعات</value>
+  </data>
+  <data name="applettopmenuservices" xml:space="preserve">
+    <value>الخدمات</value>
+  </data>
+  <data name="applettopmenuteams" xml:space="preserve">
+    <value>فريق العمل</value>
+  </data>
+  <data name="appletyoutubepopupcss" xml:space="preserve">
+    <value>/Content/css/grt-youtube-popup.css</value>
+  </data>
+  <data name="appletyoutubepopupvimocss" xml:space="preserve">
+    <value>/Content/css/YouTubePopUp.css</value>
+  </data>
+</root>

@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewBag.currentcontact = "active";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- ------------------------ Start contact ---------------------------- -->
+
+<section class="footer-contact-area section_padding_100 clearfix" id="mycontact">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12 embed-responsive embed-responsive-16by9" style="margin-bottom:20px;">
+
+                <iframe frameborder="0" style="border:0" class="embed-responsive-item"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54695.26601846893!2d31.347820020844402!3d31.041454962405595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f79db7a9053547%3A0xf8dab3bbed766c97!2sMansoura%2C+Mansoura+Qism+2%2C+Mansoura%2C+Dakahlia+Governorate!5e0!3m2!1sen!2seg!4v1520143944011" allowfullscreen></iframe>
+
+            </div>
+
+
+
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-md-6 col-md-offset-0 col-xs-offset-1 col-xs-10">
+                <!-- Heading Text  -->
+                <div class="section-heading">
+                    <h2>@Appletindex.Index.appletindexcontactustitle</h2>
+                    <div class="line-shape"></div>
+                </div>
+                <div class="footer-text">
+                    <p>@Appletindex.Index.appletindexcontactussmallhint </p>
+                </div>
+                <div class="address-text">
+                    <p>
+                        <span>@Appletindex.Index.appletindexcontactusinfoaddress</span>@Appletindex.Index.appletindexcontactusinfoaddressvalue
+
+
+                </div>
+                <div class="phone-text">
+                    <p><span>@Appletindex.Index.appletindexcontactusinfophone</span><a href="">@Appletindex.Index.appletindexcontactusinfophonevalue</a></p>
+                </div>
+                <div class="email-text">
+                    <p><span>@Appletindex.Index.appletindexcontactusemail</span><a href=""> @Appletindex.Index.appletindexcontactusemailvalue</a> </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-md-offset-0 col-xs-offset-1 col-xs-10">
+                <!-- Form Start-->
+                <div class="contact_from">
+                    @using (Html.BeginForm("SendMessage", "Home", FormMethod.Post, new { id = "sendmessageform", role = "form" }))
+                {
+
+                    @Html.AntiForgeryToken()
+                    <!-- Message Input Area Start -->
+                    <div class="contact_input_area">
+                        <div class="row">
+                            <!-- Single Input Area Start -->
+                            <div class="col-md-12">
+
+
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="MessageSubject" id="MessageSubject" placeholder="@Appletindex.Index.appletindexcontactusplaceholdersubject" required="">
+                                </div>
+                            </div>
+                            <!-- Single Input Area Start -->
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" name="SenderEmail" id="SenderEmail" placeholder="@Appletindex.Index.appletindexcontactusplaceholderemail" required="">
+                                </div>
+                            </div>
+                            <!-- Single Input Area Start -->
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <textarea name="MessageContent" class="form-control" id="MessageContent" cols="30" rows="6" placeholder="@Appletindex.Index.appletindexcontactusplaceholdermessage" required=""></textarea>
+                                </div>
+                            </div>
+                            <!-- Single Input Area Start -->
+                            <div class="col-12">
+                                <button type="submit" class="btn submit-btn">@Appletindex.Index.appletindexcontactussendbutton</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Message Input Area End -->
+
+            }
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ------------------------ End contact ---------------------------- -->

@@ -1,0 +1,341 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+@using AppletSoftware.Models
+@model PagedList.IPagedList<AspNetClient>
+@{
+
+    Layout = "~/Views/Shared/_DashLayout.cshtml";
+}
+
+<!-- /inner_content_w3_agile_info-->
+<!-- breadcrumbs -->
+<div class="w3l_agileits_breadcrumbs">
+    <div class="w3l_agileits_breadcrumbs_inner">
+        <ul>
+            <li><a href="@Url.Action("Dashboard","Manage")">@Appletindex.Index.applettopmenuhome</a><span>«</span></li>
+
+            <li>@AppletDashIndex.DashIndex.appletdashindexsidebarclients</li>
+        </ul>
+    </div>
+</div>
+<!-- //breadcrumbs -->
+<!-- ------------------------------------------------------------------------------ -->
+
+
+<div class="inner_content_w3_agile_info codeHtml code_blog two_in">
+
+    <!-- tables -->
+    <div class="agile-tables">
+
+        <!-- start my-panel -->
+        <div class="my-panel w3l-table-info agile_info_shadow y">
+
+            <div class="col-md-12">
+
+                <a class="btn btn-primary" href="@Url.Action("NewClients","Manage")">
+                    <i class="fa fa-plus-square"></i> &nbsp; @AppletDashIndex.DashIndex.appletdashindexsidebarnewclient
+                </a>
+                <a class="btn btn-primary" href="@Url.Action("ClientsCategories","Manage")">
+                    <i class="fa fa-dashboard"></i> &nbsp; @AppletDashIndex.DashIndex.appletdashindexsidebarclientcategories
+                </a>
+                <a class="btn btn-primary" href="@Url.Action("NewClientsCategories","Manage")">
+                    <i class="fa fa-plus-square"></i> &nbsp; @AppletDashIndex.DashIndex.appletdashindexsidebardnewcategory
+                </a>
+
+            </div>
+            <br />
+            <br />
+            <div class="col-xs-12">
+
+                <div class="panel panel-default">
+
+                    <div class="panel-heading">@AppletDashIndex.DashIndex.appletdashindexsidebarclients</div>
+
+                    <div class="btn-block">
+                        <div class="row">
+
+                            <div class="col-md-3">
+
+                                <span class="input-group-addon has-error">
+                                    <i class="fa fa-search"></i>
+                                </span>
+                                <input id="txtsearchClientname" class="form-control1 icon" placeholder="@AppletDashIndex.DashIndex.appletdashclientsearchbycompany" type="text">
+
+                            </div>
+                            <div class="col-md-3">
+
+                                <span class="input-group-addon has-error">
+                                    <i class="fa fa-search"></i>
+                                </span>
+
+                                @Html.DropDownList("Categories", (IEnumerable<SelectListItem>)ViewData["Categories"], AppletDashIndex.DashIndex.appletdashnewprojectplaceholdercategory, new { @class = "form-control" })
+                            </div>
+                            <div class="col-md-3">
+
+                                <div class="input-group-addon has-error"> <i class="fa fa-search"></i></div>
+                                <input id="txtsearchClientdate" class="form-control1 icon" placeholder="Search by" type="date">
+
+                            </div>
+                            <div class="col-md-3 ">
+
+                                <div class="input-group-addon has-error"><i class="fa fa-search"></i></div>
+                                <input id="txtsearchClienturl" class="form-control1 icon" placeholder="@AppletDashIndex.DashIndex.appletdashclientsearchbyphonenumber" type="text">
+
+                            </div>
+
+
+
+                        </div>
+                        <div class="xpanel-body">
+
+                            <div class="table-responsive">
+
+                                <table class="table table-hover" id="tblClients">
+                                    <thead>
+                                        <tr style="cursor:pointer">
+
+                                            <th class="hidden-xs hidden-sm">@AppletDashIndex.DashIndex.appletdashprojectsimage</th>
+                                            <th>@AppletDashIndex.DashIndex.appletdashclientcompany</th>
+                                            <th>@AppletDashIndex.DashIndex.appletdashclientaddress</th>
+                                            <th>@AppletDashIndex.DashIndex.appletdashprojectscategory</th>
+
+
+                                            <th>@AppletDashIndex.DashIndex.appletdashprojectsdatetime</th>
+                                            <th>@AppletDashIndex.DashIndex.appletdashclientphonenumber</th>
+                                            <th>@AppletDashIndex.DashIndex.appletdashprojectsadd</th>
+                                            <th>@AppletDashIndex.DashIndex.appletdashprojectsedit</th>
+                                            <th>@AppletDashIndex.DashIndex.appletdashprojectsdelete</th>
+
+                                        </tr>
+                                    </thead>
+
+                                    <!-- -------------------------------------------------------------------------- -->
+
+
+
+
+
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr style="cursor:pointer">
+
+                                                <td class="hidden">@Html.HiddenFor(m => item.Client_Id)</td>
+                                                <td class="hidden-xs hidden-sm">
+                                                    <img src="@Url.Content("~/Images/resizedclients/"+item.Client_Photo)" class="img-responsive">
+                                                </td>
+                                                <td>@Html.DisplayFor(m => item.Client_CompanyName_En)</td>
+                                                <td>@Html.Raw(item.Client_Address_En)</td>
+                                                @{
+                                                    AppletSoftwareEntities Context = new AppletSoftwareEntities();
+
+                                                    string Category = Context.AspNetClientsCategories.Find(item.ClCat_Id).ClCat_Name_En;
+
+                                                }
+
+                                                <td>@Html.DisplayFor(m => Category)</td>
+                                                <td>@Html.DisplayFor(m => item.Client_DateTime)</td>
+                                                <td>@Html.DisplayFor(m => item.Client_PhoneNumber)</td>
+
+                                                <td>
+                                                    <a href="@Url.Action("NewClients","Manage")" data-placement="top" data-toggle="tooltip" title="" data-original-title="Add">
+                                                        <button class="btn btn-info btn-xs" data-title="Add">
+                                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                                        </button>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a href="@Url.Action("EditClients","Manage",new { Clients_Id=item.Client_Id })" data-placement="top" data-toggle="tooltip" title="" data-original-title="Edit">
+                                                        <button class="btn btn-success btn-xs" data-title="Edit">
+                                                            <i class="fa fa-pencil" aria-hidden="true"></i>
+                                                        </button>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    @using (Html.BeginForm("DeleteClients", "Manage", new { Client_Id = item.Client_Id }, FormMethod.Post))
+                                                    {
+                                                        @Html.AntiForgeryToken()
+                                                        <a href="" data-placement="top" data-toggle="tooltip" title="" data-original-title="Delete">
+                                                            <button class="btn btn-danger btn-xs btndelete" data-title="Delete">
+                                                                <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                                            </button>
+                                                        </a>
+                                                    }
+                                                </td>
+
+                                            </tr>
+
+                                            <!-- --------------------------------------------------------------------------- -->
+
+                                        }
+
+                                    </tbody>
+
+
+                                    <!-- --------------------------------------------------------------------------- -->
+
+                                </table>
+                                <!-- End Table -->
+
+                            </div>
+                            <!-- /.table-responsive -->
+
+                        </div>
+
+                        <div class="btn btn-product">
+                            <nav aria-label="Page navigation">
+
+
+                                @Html.PagedListPager(Model, page => Url.Action("Clients", new { page }))
+
+                            </nav>
+                        </div>
+
+                    </div>
+                    <!-- End btn-block -->
+
+                </div>
+                <!-- End panel -->
+
+            </div>
+            <!-- End col -->
+
+
+
+        </div>
+        <!-- End My panel -->
+        <!-- --------------------------------------------------------------------------- -->
+        <!-- --------------------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+
+
+    </div>
+    <!-- //tables agile-tables -->
+
+</div>
+<!-- codeHtml -->
+<!-- ------------------------------------------------------------------------------- -->
+
+<script type="text/javascript">
+    $("#txtsearchClientname").keyup(function () {
+        var val = $(this).val();
+
+        $('#tblClients tbody tr').hide();
+        var trs = $('table tbody tr').filter(function (d) {
+            return $(this).text().toLowerCase().indexOf(val) != -1;
+        });
+        trs.show();
+
+
+    });
+
+    $("#txtsearchClienturl").keyup(function () {
+        var val = $(this).val();
+
+        $('#tblClients tbody tr').hide();
+        var trs = $('table tbody tr').filter(function (d) {
+            return $(this).text().toLowerCase().indexOf(val) != -1;
+        });
+        trs.show();
+
+
+    });
+
+    $("#txtsearchClientdate").change(function () {
+        var val = $(this).val();
+
+        $('#tblClients tbody tr').hide();
+        var trs = $('table tbody tr').filter(function (d) {
+            return $(this).text().toLowerCase().indexOf(val) != -1;
+        });
+        trs.show();
+
+
+    });
+    $("#Categories").change(function () {
+        var val = $(this).val().toLowerCase();
+
+        $('#tblClients tbody tr').hide();
+        var trs = $('table tbody tr').filter(function (d) {
+            return $(this).text().toLowerCase().indexOf(val) != -1;
+        });
+        trs.show();
+
+
+    });
+
+
+    $(document).on("click", ".btndelete", function myfunction(e) {
+
+        if (confirm("Are you sure you want to  delete ?")) {
+
+            __doPostBack('btndelete');
+
+
+
+        } else {
+
+
+
+            return false;
+        }
+        ;
+
+
+
+    })
+
+
+
+</script>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var modelStatus =@string.IsNullOrEmpty(ViewBag.alertMessage).ToString().ToLower();
+
+        if (status == false) {
+
+            var modelMessage =@string.Compare(ViewBag.alertMessage, "Success");
+
+
+            if (modelMessage == 0) {
+
+
+
+                $.toast({
+                    text: " Client Deleted Successfuly Thank you :) !", // Text that is to be shown in the toast
+                    heading: 'APPLET Software', // Optional heading to be shown on the toast
+                    icon: 'success', // Type of toast icon
+                    showHideTransition: 'slide', // fade, slide or plain
+                    allowToastClose: true, // Boolean value true or false
+                    hideAfter: 10000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
+                    stack: 5, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
+                    position: { left: '0', right: '0', top: '0', bottom: 'auto' }, // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+
+
+
+                    textAlign: 'center',  // Text alignment i.e. left, right or center
+                    loader: true,  // Whether to show loader or not. True by default
+                    loaderBg: '#9EC600',  // Background color of the toast loader
+                    beforeShow: function () { }, // will be triggered before the toast is shown
+                    afterShown: function () { }, // will be triggered after the toat has been shown
+                    beforeHide: function () { }, // will be triggered before the toast gets hidden
+                    afterHidden: function () { }  // will be triggered after the toast has been hidden
+                });
+
+
+
+
+            }
+
+
+
+        }
+
+
+
+
+    });
+
+</script>

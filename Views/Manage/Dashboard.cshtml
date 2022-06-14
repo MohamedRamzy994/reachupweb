@@ -1,0 +1,317 @@
+﻿@model AppletSoftware.Models.IndexViewModel
+@using System.Threading
+@using System.Globalization
+@{
+    Layout = "~/Views/Shared/_DashLayout.cshtml";
+}
+
+<!-- /inner_content_w3_agile_info-->
+<div class="inner_content_w3_agile_info">
+    <!-- /agile_top_w3_grids-->
+    <div class="agile_top_w3_grids">
+        <ul class="ca-menu">
+            <li>
+                <a href="#">
+
+                    <i class="fa fa-desktop" aria-hidden="true"></i>
+                    <div class="ca-content">
+                        <h4 class="ca-main">@ViewData["Projects"].ToString()</h4>
+                        <h3 class="ca-sub">@AppletDashIndex.DashIndex.appletdashindexsidebardprojects</h3>
+                    </div>
+                </a>
+            </li>
+
+            <li>
+                <a href="#">
+                    <i class="fa fa-laptop" aria-hidden="true"></i>
+                    <div class="ca-content">
+                        <h4 class="ca-main two">@ViewData["Plans"].ToString()</h4>
+                        <h3 class="ca-sub two">@AppletDashIndex.DashIndex.appletdashindexsidebarplans</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                    <div class="ca-content">
+                        <h4 class="ca-main three">@ViewData["Teams"].ToString()</h4>
+                        <h3 class="ca-sub three">@AppletDashIndex.DashIndex.appletdashindexsidebarteams</h3>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa fa-user-secret" aria-hidden="true"></i>
+                    <div class="ca-content">
+                        <h4 class="ca-main four">@ViewData["Managers"].ToString()</h4>
+                        <h3 class="ca-sub four">@AppletDashIndex.DashIndex.appletdashindexsidebarmanagers</h3>
+                    </div>
+                </a>
+            </li>
+            <div class="clearfix"></div>
+        </ul>
+    </div>
+    <!-- //agile_top_w3_grids-->
+    <!-- /w3ls_agile_circle_progress-->
+    <div class="w3ls_agile_cylinder chart agile_info_shadow">
+        <h3 class="w3_inner_tittle two"> @AppletDashIndex.DashIndex.appletdashindexchartinsight</h3>
+
+        <div id="chartdiv"></div>
+
+
+    </div>
+    <!-- /w3ls_agile_circle_progress-->
+    <!-- /chart_agile-->
+    <!-- /w3ls_agile_circle_progress-->
+    <div class="w3ls_agile_circle_progress agile_info_shadow">
+
+        <div class="cir_agile_info ">
+            <h3 class="w3_inner_tittle">@AppletDashIndex.DashIndex.appletdashindexchartinsight</h3>
+            <div class="skill-grids">
+                <div class="skills-grid text-center">
+                    <div class="circle" id="circles-1"></div>
+                    <p>@AppletDashIndex.DashIndex.appletdashindexsidebarclients</p>
+                </div>
+                <div class="skills-grid text-center">
+                    <div class="circle" id="circles-2"></div>
+                    <p>@AppletDashIndex.DashIndex.appletdashindexsidebarplans</p>
+                </div>
+                <div class="skills-grid text-center">
+                    <div class="circle" id="circles-3"></div>
+
+                    <p>@AppletDashIndex.DashIndex.appletdashindexsidebardprojects</p>
+                </div>
+                <div class="skills-grid text-center">
+                    <div class="circle" id="circles-4"></div>
+                    <p>@AppletDashIndex.DashIndex.appletdashindexsidebarteams</p>
+                </div>
+
+
+
+                <div class="clearfix"></div>
+
+            </div>
+        </div>
+    </div>
+    <!-- /w3ls_agile_circle_progress-->
+    <!--/prograc-blocks_agileits-->
+    <div class="prograc-blocks_agileits">
+
+
+
+        <div class="col-md-12 fallowers_agile agile_info_shadow">
+            <h3 class="w3_inner_tittle two">@AppletDashIndex.DashIndex.appletdashindexrecentclientstitle</h3>
+            <div class="work-progres">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>@AppletDashIndex.DashIndex.appletdashindexrecentclientsfname</th>
+                                <th>@AppletDashIndex.DashIndex.appletdashindexrecentclientslname</th>
+                                <th>@AppletDashIndex.DashIndex.appletdashindexrecentclientsemail</th>
+
+                                <th>@AppletDashIndex.DashIndex.appletdashindexrecentclientscompany</th>
+                                <th>@AppletDashIndex.DashIndex.appletdashindexrecentclientsphonenumber</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        @foreach (var item in ViewData["RecentClients"] as IEnumerable<AppletSoftware.Models.AspNetClient>)
+                        {
+
+
+                            <tr>
+                                <td>@item.Client_Fname_En</td>
+                                <td>@item.Client_Lname_En</td>
+                                <td>@item.Client_Email</td>
+
+                                <td><span class="label label-danger">@item.Client_CompanyName_En</span></td>
+                                <td><span class="badge badge-info">@item.Client_PhoneNumber</span></td>
+                            </tr>
+
+
+                        }
+                            
+                        
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+    <!--//prograc-blocks_agileits-->
+
+    <!-- /weather_w3_agile_info-->
+    <div class="weather_w3_agile_info agile_info_shadow">
+        <div class="weather_w3_inner_info">
+            <a href="https://www.accuweather.com/en/eg/cairo/127164/driving-current-weather/127164" class="aw-widget-legal">
+                <!--
+        By accessing and/or using this code snippet, you agree to AccuWeather’s terms and conditions (in English) which can be found at https://www.accuweather.com/en/free-weather-widgets/terms and AccuWeather’s Privacy Statement (in English) which can be found at https://www.accuweather.com/en/privacy.
+        -->
+            </a>
+            @if (CultureInfo.CurrentCulture.Name == "ar-SA")
+            {
+        <div id="awtd1519731626374" class="aw-widget-36hour" style="padding-right:8%;" data-locationkey="127164" data-unit="f" data-language="ar-sa" data-useip="false" data-uid="awtd1519731626374" data-editlocation="true" data-lifestyle="driving"></div>
+            }
+            else if (CultureInfo.CurrentCulture.Name == "en-US")
+            {
+        <div id="awtd1519731626374" class="aw-widget-36hour" style="padding-left:8%;" data-locationkey="127164" data-unit="f" data-language="en-us" data-useip="false" data-uid="awtd1519731626374" data-editlocation="true" data-lifestyle="driving"></div>
+            }
+
+            <script type="text/javascript" src="https://oap.accuweather.com/launch.js"></script>
+        </div>
+    </div>
+    <!-- //weather_w3_agile_info-->
+
+</div>
+
+
+
+@section scripts
+    {
+    <!-- Chart code -->
+<script>
+        var chart = AmCharts.makeChart("chartdiv", {
+            "theme": "light",
+            "type": "serial",
+            "startDuration": 2,
+            "dataProvider": [{
+                "country": "@AppletDashIndex.DashIndex.appletdashindexsidebardprojects",
+                "visits": @ViewData["Projects"].ToString(),
+                "color": "#FF0F00"
+            }, {
+                "country": "@AppletDashIndex.DashIndex.appletdashindexsidebarplans",
+                "visits": @ViewData["Plans"].ToString(),
+                "color": "#FF6600"
+            }, {
+                "country": "@AppletDashIndex.DashIndex.appletdashindexsidebarclients",
+                "visits": @ViewData["Clients"].ToString(),
+                "color": "#FF9E01"
+            }, {
+                "country": "@AppletDashIndex.DashIndex.appletdashindexsidebarteams",
+                "visits": @ViewData["Teams"].ToString(),
+                "color": "#FCD202"
+            }, {
+                "country": "@AppletDashIndex.DashIndex.appletdashindexsidebardclientorders",
+                "visits": @ViewData["Orders"].ToString(),
+                "color": "#FF0F00"
+            }, {
+                "country": "@AppletDashIndex.DashIndex.appletdashindextopmenunewsletterstitle",
+                "visits": @ViewData["NewsLetters"].ToString(),
+                "color": "#F8FF01"
+            }, {
+                "country": "@AppletDashIndex.DashIndex.appletdashindextopmenumessagestitle",
+                "visits": @ViewData["Messages"].ToString(),
+                "color": "#FF6600"
+            },
+            {
+                "country": "@AppletDashIndex.DashIndex.appletdashindexsidebarmanagers",
+                "visits": @ViewData["Managers"].ToString(),
+                "color": "#F8FF01"
+            }, {
+                "country": "@AppletDashIndex.DashIndex.appletdashindexsidebardnews",
+                "visits": @ViewData["News"].ToString(),
+                "color": "#FF0F00"
+            }, {
+                "country": "@AppletDashIndex.DashIndex.appletdashindexsidebartestimonials",
+                "visits": @ViewData["Testmonials"].ToString(),
+                "color": "#F8FF01"
+            }],
+            "valueAxes": [{
+                "position": "left",
+                "axisAlpha": 0,
+                "gridAlpha": 0
+            }],
+            "graphs": [{
+                "balloonText": "[[category]]: <b>[[value]]</b>",
+                "colorField": "color",
+                "fillAlphas": 0.85,
+                "lineAlpha": 0.1,
+                "type": "column",
+                "topRadius": 1,
+                "valueField": "visits"
+            }],
+            "depth3D": 10,
+            "angle": 10,
+            "chartCursor": {
+                "categoryBalloonEnabled": false,
+                "cursorAlpha": 0,
+                "zoomable": false
+            },
+            "categoryField": "country",
+            "categoryAxis": {
+                "gridPosition": "start",
+                "axisAlpha": 0,
+                "gridAlpha": 0
+
+            },
+            "export": {
+                "enabled": true
+            }
+
+        }, 0);
+</script>
+
+    <script>
+        var colors = [
+            ['#ffffff', '#fd9426'], ['#ffffff', '#fc3158'], ['#ffffff', '#53d769'], ['#ffffff', '#147efb']
+        ];
+
+            var child1 = document.getElementById('circles-' + 1),
+                percentage = @ViewData["Clients"].ToString();
+
+            Circles.create({
+                id: child1.id,
+                percentage: percentage,
+                radius: 80,
+                width: 10,
+                number: percentage / 1,
+                text: '%',
+                colors: colors[0]
+            });
+
+         var child2 = document.getElementById('circles-' + 2),
+                percentage = @ViewData["Plans"].ToString();
+
+            Circles.create({
+                id: child2.id,
+                percentage: percentage,
+                radius: 80,
+                width: 10,
+                number: percentage / 1,
+                text: '%',
+                colors: colors[1]
+         });
+            var child3 = document.getElementById('circles-' + 3),
+                percentage = @ViewData["Projects"].ToString();
+
+            Circles.create({
+                id: child3.id,
+                percentage: percentage,
+                radius: 80,
+                width: 10,
+                number: percentage / 1,
+                text: '%',
+                colors: colors[2]
+            });
+           var child4 = document.getElementById('circles-' + 4),
+                percentage = @ViewData["Teams"].ToString();
+
+            Circles.create({
+                id: child4.id,
+                percentage: percentage,
+                radius: 80,
+                width: 10,
+                number: percentage / 1,
+                text: '%',
+                colors: colors[3]
+            });
+
+
+
+    </script>
+    <!-- //circle -->
+
+
+}

@@ -1,0 +1,1989 @@
+﻿@using System.Threading
+@using System.Globalization
+@{
+
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reach UP marketing agency</title>
+ 
+
+
+
+    <link rel="stylesheet" href="@Appletindex.Index.appletbootstrapcss">
+    <link rel="stylesheet" href="@Appletindex.Index.appletbootstraprtlcss">
+
+    <!-- Libarary of font Awesome -->
+    <link rel="stylesheet" href="@Appletindex.Index.appletfontawesomcss">
+
+    <link rel="stylesheet" href="@Appletindex.Index.appletlineariconcss">
+
+    <!-- Hover Css -->
+    <link rel="stylesheet" href="@Appletindex.Index.applethovercss">
+
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="@Appletindex.Index.appletanimatecss">
+
+    <!-- icon Css -->
+    <link rel="icon" href="@Appletindex.Index.appletlogoicon">
+
+    <!-- Get Youtube vido Css -->
+    <link rel="stylesheet" href="@Appletindex.Index.appletyoutubepopupcss">
+
+    <!-- Get vimo vido Css -->
+    <link rel="stylesheet" href="@Appletindex.Index.appletyoutubepopupvimocss">
+
+    <link href="@Appletindex.Index.appleticoncloseicon">
+
+    <!-- popuo Css -->
+    <link href="@Appletindex.Index.appletpopupboxcss" rel="stylesheet">
+
+    <!-- slick Css -->
+    <link rel="stylesheet" href="@Appletindex.Index.appletslickthemecss">
+
+    <!-- slick Css -->
+    <link rel="stylesheet" href="@Appletindex.Index.appletslickcss">
+
+    <!-- gif Css -->
+    <link href="@Appletindex.Index.appletajaxloadericon">
+
+    <!-- Libarary of themify-icons -->
+    <link rel="stylesheet" href="@Appletindex.Index.appletthemifycss">
+
+    <!-- Libarary of ionicons-icons -->
+    <link rel="stylesheet" href="@Appletindex.Index.appletioniconscss">
+
+    <link rel="stylesheet" href="@Appletindex.Index.appletfancyboxcss">
+
+
+    <!-- My Style CSS -->
+    <link rel="stylesheet" href="@Appletindex.Index.appletstylecss">
+
+    <!-- My feature CSS -->
+    <link rel="stylesheet" href="@Appletindex.Index.appletstyle2css">
+
+    <!-- My Media CSS -->
+    <link rel="stylesheet" href="@Appletindex.Index.appletmediacss">
+
+    <link href='@Appletindex.Index.appletgooglefonts' rel='stylesheet' type='text/css'>
+
+    <link href='@Appletindex.Index.appletgooglefonts2' rel='stylesheet' type='text/css'>
+
+
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <!-- Libarary of themify-icons -->
+    <!--[endif]-->
+    <!-- ---------------------------------------------------------------------------------------------------- -->
+    @*@Styles.Render("~/Content/css")*@
+    @*@Scripts.Render("~/bundles/modernizr")*@
+
+</head>
+<body>
+
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5fe83948df060f156a90839a/1eqhhvhf3';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+    <!-- -----------------------------------Start Navbar------------------------------ -->
+
+    <div id="myhome">
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapsible" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand logo" href="@Url.Action("Index","Home")">
+                        <img src="~/Images/images/logo.png" class="img-responsive">
+
+                    </a>
+
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar-collapsible">
+                    @Html.Partial("_LoginPartial")
+
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li class="active"> <a href="#myhome" data-value="myhome">@Appletindex.Index.applettopmenuhome<span class="sr-only">(current)</span></a> </li>
+
+
+
+                        <li> <a href="#Services" data-value="Services"> @Appletindex.Index.applettopmenuservices </a> </li>
+
+                        <li> <a href="#Pricing" data-value="Pricing"> @Appletindex.Index.applettopmenuplans</a> </li>
+
+                        <li> <a href="#TEAM" data-value="TEAM"> @Appletindex.Index.applettopmenuteams</a> </li>
+
+                        <li> <a href="#myprojects" data-value="myprojects"> @Appletindex.Index.applettopmenuprojects</a> </li>
+
+
+                        <li> <a href="#myblog" data-value="myblog"> @Appletindex.Index.applettopmenublog</a> </li>
+
+                        <li> <a href="#mycontact" data-value="mycontact">@Appletindex.Index.applettopmenucontact</a> </li>
+                        <li>
+
+
+
+                            @{ string lang = Thread.CurrentThread.CurrentCulture.Name;
+
+                                if (lang == "ar-SA")
+                                {
+
+                                    lang = "en-US";
+                                }
+                                else if (lang == "en-US")
+                                {
+                                    lang = "ar-SA";
+                                }
+
+                            }
+
+
+
+
+                            <a href="@Url.Action(ViewContext.RouteData.Values["action"].ToString(),ViewContext.RouteData.Values["controller"].ToString(),new {language=lang})">
+                                @Appletindex.Index.appletchangelanguagebutton
+                                <i class="fa fa-language"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container -->
+        </nav>
+
+    </div>
+
+    <!-- ------------------------------------End Navbar------------------------------------------ -->
+    <!-- ----------------------------- Start MyBackground ----------------------- -->
+
+    <section class="MyBackground">
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <div class="col-xs-12">
+
+                    <!-- start MyBackground-text -->
+                    <div class="MyBackground-text text-center">
+
+                        <h1 class="wow fadeInUp bannertypedh1"></h1>
+
+
+
+
+
+                        <div class="links wow fadeInUp">
+                            <a class="get" href="#Pricing" data-value="Pricing">@Appletindex.Index.appletmybackgroundgetstart</a>
+                            <a class="fut" href="#Services" data-value="Services">@Appletindex.Index.appletmybackgroundfeatures</a>
+                        </div>
+                    </div>
+                    <!-- End MyBackground-text -->
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ----------------------------- Start MyBackground ----------------------- -->
+    <!-- ----------------------------- Start Services --------------------------- -->
+
+    <div id="Services" class="services">
+
+        <div class="container">
+
+            <div class="row">
+
+                <!-- Start Text -->
+                <div class="about_us_text text-center col-xs-12">
+                    <h1 class="text-center wow fadeInDown emphase" data-wow-offset="400" style="visibility: visible; animation-name: fadeInDown;">
+                        @Appletindex.Index.appletindexservicestitle
+                    </h1>
+                    <br />
+                    <p class="title-one wow fadeInUp" data-wow-offset="300" data-wow-duration="1s">
+                        @Html.Raw(Appletindex.Index.appletindexservicesparagraph)
+                    </p>
+
+
+
+                    <!-- ----------------------- -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="about_content wow bounceInDown" data-wow-offset="300" data-wow-duration="2s">
+                            <div class="icon">
+                                <span class="fa fa-3x fa-laptop"></span>
+                            </div>
+                            <h4><span class="emphase">@Appletindex.Index.appletindexservicesboxeswebdesigntitle</span></h4>
+                            <p>
+                                @Appletindex.Index.appletindexservicesboxeswebdesignparagrapg
+                            </p>
+                        </div>
+                    </div>
+                    <!-- ----------------------- -->
+                    <!-- ----------------------- -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="about_content wow bounceInDown" data-wow-offset="300" =data-wow-duration ="2s">
+                            <div class="icon">
+                                <span class="fa fa-3x fa-code"></span>
+                            </div>
+                            <h4><span class="emphase">@Appletindex.Index.appletindexservicesboxesdevelopmenttitle</span></h4>
+                            <p>
+                                @Appletindex.Index.appletindexservicesboxesdevelopmentparagrapg
+                            </p>
+                        </div>
+                    </div>
+                    <!-- ----------------------- -->
+                    <!-- ----------------------- -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="about_content wow bounceInDown" data-wow-offset="300" data-wow-duration="2s">
+                            <div class="icon">
+                                <span class="fa fa-3x fa-mobile-phone"></span>
+                            </div>
+                            <h4><span class="emphase">@Appletindex.Index.appletindexservicesboxesmobileapptitle</span></h4>
+                            <p>
+                                @Appletindex.Index.appletindexservicesboxesmobileappparagrapg
+                            </p>
+                        </div>
+                    </div>
+                    <!-- ----------------------- -->
+
+                </div>
+                <!-- End Text -->
+                <!-- Start Text -->
+                <div class="about_us_text text-center col-xs-12">
+
+
+                    <!-- ----------------------- -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="about_content wow bounceInDown" data-wow-offset="300" data-wow-duration="2s">
+                            <div class="icon">
+                                <span class="fa fa-2x fa-line-chart"></span>
+                            </div>
+                            <h4><span class="emphase">@Appletindex.Index.appletindexservicesboxesdigitalmarketingtitle</span></h4>
+                            <p>
+                                @Appletindex.Index.appletindexservicesboxesdigitalmarketingparagraph
+                            </p>
+                        </div>
+                    </div>
+                    <!-- ----------------------- -->
+                    <!-- ----------------------- -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="about_content wow bounceInDown" data-wow-offset="300" =data-wow-duration ="2s">
+                            <div class="icon">
+                                <span class="fa fa-3x fa-object-ungroup"></span>
+                            </div>
+                            <h4><span class="emphase">@Appletindex.Index.appletindexservicesboxesgraphicstitle</span></h4>
+                            <p>
+                                @Appletindex.Index.appletindexservicesboxesgraphicsparagraph
+                            </p>
+                        </div>
+                    </div>
+                    <!-- ----------------------- -->
+                    <!-- ----------------------- -->
+                    <div class="col-md-4 col-sm-6">
+                        <div class="about_content wow bounceInDown" data-wow-offset="300" data-wow-duration="2s">
+                            <div class="icon">
+                                <span class="fa fa-2x fa-server"></span>
+                            </div>
+                            <h4><span class="emphase">@Appletindex.Index.appletindexservicesboxeshostingdomainstitle</span></h4>
+                            <p>
+                                @Appletindex.Index.appletindexservicesboxeshostingdomainsparagraph
+                            </p>
+                        </div>
+                    </div>
+                    <!-- ----------------------- -->
+
+                </div>
+                <!-- End Text -->
+
+
+            </div>
+            <!-- End Row -->
+
+        </div>
+    </div>
+
+    <!-- ----------------------------- End Services --------------------------- -->
+    <!-- ----------------------------- Start Work ----------------------------- -->
+
+    <div class="work">
+
+        <div class="container">
+
+            <div class="work-top wow fadeInUp" data-wow-offset="350">
+                <h3>@Appletindex.Index.appletindexhowitworkstitle</h3>
+                <span> </span>
+            </div>
+
+            <div class="work-bottom">
+
+                <div class="col-md-8 work-left wow slideInLeft" data-wow-offset="350">
+                    <ul>
+                        <li>
+                            <div class="myinline">
+                                <img src="~/Images/images/crt.png" alt="">
+                            </div>
+                            <div class="myinline">
+                                <p><a href="#">@Appletindex.Index.appletindexhowitworksmenuli1</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="myinline">
+                                <img src="~/Images/images/crt.png" alt="">
+                            </div>
+                            <div class="myinline">
+                                <p><a href="#">@Appletindex.Index.appletindexhowitworksmenuli2</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="myinline">
+                                <img src="~/Images/images/crt.png" alt="">
+                            </div>
+                            <div class="myinline">
+                                <p>
+                                    <a href="#">@Appletindex.Index.appletindexhowitworksmenuli3</a>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="myinline">
+                                <img src="~/Images/images/crt.png" alt="">
+                            </div>
+                            <div class="myinline">
+                                <p><a href="#">@Appletindex.Index.appletindexhowitworksmenuli4</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="myinline">
+                                <img src="~/Images/images/crt.png" alt="">
+                            </div>
+                            <div class="myinline">
+                                <p>
+                                    <a href="#">@Appletindex.Index.appletindexhowitworksmenuli5</a>
+                                </p>
+                            </div>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+
+                <div class="col-md-4 work-right wow slideInRight" data-wow-offset="350">
+                    <img src="~/Images/images/work-1.png" class="img-responsive" alt="">
+                    <div class="video">
+
+                        <a class="demo play-icon popup-with-zoom-anim" href="">
+                            <span> </span>
+                        </a>
+
+
+                        @*<a class="play-icon popup-with-zoom-anim"
+                               href="#small-dialog5">
+                                <span> </span>
+                            </a>*@
+
+
+                        <br>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- -------------------------------End Work ---------------------------------- -->
+    <!-- ------------------------------ Start Search ------------------------------ -->
+
+    <section class="Subscribe text-center">
+        <div class="container">
+            <div class="row wow bounceIn" data-wow-offset="370">
+                <h1 style="color:#c9302c;">@Appletindex.Index.appletindexnewsletterstitle</h1>
+
+                @using (Html.BeginForm("NewsLetters", "Home", FormMethod.Post, new { role = "form" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-group">
+                        <input type="email" class="form-control input-lg" name="Letter_Email" id="Letter_Email" placeholder="@Appletindex.Index.appletindexnewsletterstemailplaceholder" required="required">
+                    </div>
+                    <button type="submit" class="form-control input-lg btn-danger">
+                        <i class="fa fa-paper-plane"></i>
+                    </button>
+                }
+                <!-- End Contact Form -->
+
+                <p>@Appletindex.Index.appletindexnewsletterstsmallhint</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ------------------------------ End Search -------------------------------- -->
+    <!-- ------------------------------ Start Pricing ------------------------------ -->
+
+    <section class="Pricing" id="Pricing">
+
+        <div class="container">
+
+
+            @if (CultureInfo.CurrentCulture.Name == "en-US")
+            {
+                <div class="row">
+
+                    <h1 class="text-center wow fadeInDown" data-wow-offset="400">
+                        @Appletindex.Index.appletindexplanstitle
+                    </h1>
+
+                    @if (ViewData["LatestPlans"] != null)
+                    {
+
+                        foreach (var item in ViewData["LatestPlans"] as IEnumerable<AppletSoftware.Models.AspNetPlan>)
+                        {
+
+
+                            <!-- Start First col-sm-3 -->
+                            <div class="col-sm-4 col-sm-offset-0 col-xs-offset-2 col-xs-8">
+
+                                <!-- Start Pricing-content -->
+                                <div class="Pricing-content text-center wow flipInY" data-wow-offset="400" data-wow-duration="1s">
+
+                                    <h3 class="emphase">@Html.DisplayFor(m => item.Plan_Name_En)</h3>
+                                    <br />
+                                    <h2>@Html.DisplayFor(m => item.AspNetPlansCategory.PlanCat_Name_En)</h2>
+                                    <br />
+
+                                    <h1>&#36;@Html.DisplayFor(m => item.Plan_Price)</h1>
+
+
+                                    @Html.Raw(item.Plan_Description_En)
+
+
+                                    <a href="@Url.Action("OrderNow","Home",new {Plan_Id=item.Plan_Id})" class="btn btn-primary btn-lg btn-block">
+                                        @Appletindex.Index.appletindexplansorderplan
+                                    </a>
+
+                                </div>
+                                <!-- End Pricing-content -->
+
+                            </div>
+                            <!-- End First col-sm-3 -->
+
+
+
+                        }
+
+                    }
+
+
+
+
+                    <div class="col-sm-12 col-xs-12 text-center">
+                        <a href="@Url.Action("Plans","Home")" class="btn btn-default move hvr-bounce-to-right pricingmore">
+                            @Appletindex.Index.appletindexplansshowmore
+                        </a>
+                    </div>
+
+                </div>
+            }
+            else if (CultureInfo.CurrentCulture.Name == "ar-SA")
+            {
+                <div class="row">
+
+                    <h1 class="text-center wow fadeInDown" data-wow-offset="400">
+                        @Appletindex.Index.appletindexplanstitle
+                    </h1>
+
+                    @if (ViewData["LatestPlans"] != null)
+                    {
+
+                        foreach (var item in ViewData["LatestPlans"] as IEnumerable<AppletSoftware.Models.AspNetPlan>)
+                        {
+
+
+
+                            <!-- Start First col-sm-3 -->
+                            <div class="col-sm-4 col-sm-offset-0 col-xs-offset-2 col-xs-8">
+
+                                <!-- Start Pricing-content -->
+                                <div class="Pricing-content text-center wow flipInY" data-wow-offset="400" data-wow-duration="1s">
+
+                                    <h3 class="emphase">@Html.DisplayFor(m => item.Plan_Name_Ar)</h3>
+                                    <br />
+                                    <h2>@Html.DisplayFor(m => item.AspNetPlansCategory.PlanCat_Name_Ar)</h2>
+                                    <br />
+
+                                    <h1>&#36;@Html.DisplayFor(m => item.Plan_Price)</h1>
+
+
+                                    @Html.Raw(item.Plan_Description_Ar)
+
+
+                                    <a href="@Url.Action("OrderNow","Home",new {Plan_Id=item.Plan_Id})" class="btn btn-primary btn-lg btn-block">
+                                        @Appletindex.Index.appletindexplansorderplan
+                                    </a>
+
+                                </div>
+                                <!-- End Pricing-content -->
+
+                            </div>
+                            <!-- End First col-sm-3 -->
+
+
+
+
+                        }
+
+                    }
+
+                    <div class="col-sm-12 col-xs-12 text-center">
+                        <a href="@Url.Action("Plans","Home")" class="btn btn-default move hvr-bounce-to-right pricingmore">
+                            @Appletindex.Index.appletindexplansshowmore
+                        </a>
+                    </div>
+
+                </div>
+            }
+            else
+            {
+                <div class="row">
+
+                    <h1 class="text-center wow fadeInDown" data-wow-offset="400">
+                        @Appletindex.Index.appletindexplanstitle
+                    </h1>
+                    @if (ViewData["LatestPlans"] != null)
+                    {
+
+                        foreach (var item in ViewData["LatestPlans"] as IEnumerable<AppletSoftware.Models.AspNetPlan>)
+                        {
+
+
+
+                            <!-- Start First col-sm-3 -->
+                            <div class="col-sm-4 col-sm-offset-0 col-xs-offset-2 col-xs-8">
+
+                                <!-- Start Pricing-content -->
+                                <div class="Pricing-content text-center wow flipInY" data-wow-offset="400" data-wow-duration="1s">
+
+                                    <h3 class="emphase">@Html.DisplayFor(m => item.Plan_Name_En)</h3>
+                                    <br />
+                                    <h2>@Html.DisplayFor(m => item.AspNetPlansCategory.PlanCat_Name_En)</h2>
+                                    <br />
+
+                                    <h1>&#36;@Html.DisplayFor(m => item.Plan_Price)</h1>
+
+
+                                    @Html.Raw(item.Plan_Description_En)
+
+
+                                    <a href="@Url.Action("OrderNow","Home",new {Plan_Id=item.Plan_Id})" class="btn btn-primary btn-lg btn-block">
+                                        @Appletindex.Index.appletindexplansorderplan
+                                    </a>
+
+                                </div>
+                                <!-- End Pricing-content -->
+
+                            </div>
+                            <!-- End First col-sm-3 -->
+
+
+
+
+                        }
+
+                    }
+
+                    <div class="col-sm-12 col-xs-12 text-center">
+                        <a href="@Url.Action("Plans","Home")" class="btn btn-default move hvr-bounce-to-right pricingmore">
+                            @Appletindex.Index.appletindexplansshowmore
+                        </a>
+                    </div>
+
+                </div>
+            }
+
+
+
+
+
+        </div>
+
+    </section>
+
+    <!-- ------------------------------ End Pricing ------------------------------ -->
+
+    <section class="text-center projects" id="myprojects">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12@sm">
+                    <h3>@Appletindex.Index.appletindexprojectstitle</h3>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <style type="text/css">
+                .container__image {
+                    position: relative;
+                    margin: 15px 0px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    width: 250px;
+                    height: 250px;
+                    border-radius: 50%;
+                    background-size: cover;
+                    transition: ease-in-out .3s;
+                    z-index: 2;
+                }
+            </style>
+            <div class="row">
+
+                @if (CultureInfo.CurrentCulture.Name == "en-US")
+                {
+
+
+
+                    if (ViewData["LatestProjects"] != null)
+                    {
+
+                        foreach (var item in ViewData["LatestProjects"] as IEnumerable<AppletSoftware.Models.AspNetProject>)
+                        {
+
+
+
+
+                            <div class="col-md-4">
+
+                                <img src="@Url.Content("~/Images/projects/"+item.Project_Photo)" class="container__image" />
+
+                                <div class="container__info container__author"> <a class="link" href="@item.Project_Url" target="_blank">@item.Project_Name_En</a></div>
+                                <div class="container__info container__location">@item.AspNetProjectsCategory.PCat_Name_En </div>
+
+
+
+                            </div>
+
+
+
+
+                        }
+
+                    }
+
+
+
+
+                    <!-- ---------------------------------------------------- -->
+                }
+                else if (CultureInfo.CurrentCulture.Name == "ar-SA")
+                {
+
+
+                    if (ViewData["LatestProjects"] != null)
+                    {
+
+                        foreach (var item in ViewData["LatestProjects"] as IEnumerable<AppletSoftware.Models.AspNetProject>
+                            )
+                        {
+
+
+
+                            <div class="col-md-4">
+
+                                <img src="@Url.Content("~/Images/projects/"+item.Project_Photo)" class="container__image" />
+
+                                <div class="container__info container__author"> <a class="link" href="@item.Project_Url" target="_blank">@item.Project_Name_Ar</a></div>
+                                <div class="container__info container__location">@item.AspNetProjectsCategory.PCat_Name_Ar </div>
+
+
+
+                            </div>
+
+                        }
+
+                    }
+
+
+                    <!-- ---------------------------------------------------- -->
+                }
+                else
+                {
+
+
+
+                    if (ViewData["LatestProjects"] != null)
+                    {
+
+                        foreach (var item in ViewData["LatestProjects"] as IEnumerable<AppletSoftware.Models.AspNetProject>
+                            )
+                        {
+
+
+
+
+                            <div class="col-md-4">
+
+                                <img src="@Url.Content("~/Images/projects/"+item.Project_Photo)" class="container__image" />
+
+                                <div class="container__info container__author"> <a class="link" href="@item.Project_Url" target="_blank">@item.Project_Name_En</a></div>
+                                <div class="container__info container__location">@item.AspNetProjectsCategory.PCat_Name_En </div>
+
+
+
+                            </div>
+
+
+
+                        }
+
+                    }
+
+
+
+
+                }
+
+
+            </div>
+            <div class="col-1@sm col-1@xs my-sizer-element"></div>
+        </div>
+
+        <div class="col-sm-12 col-xs-12 text-center wow fadeInUp" data-wow-offset="300">
+            <a href="@Url.Action("Projects","Home")" class="btn btn-default move hvr-bounce-to-right">
+                @Appletindex.Index.appletindexprojectsshowmore
+            </a>
+        </div>
+    </section>
+
+
+
+
+    <!-- --------------------------- End Projects -------------------------------- -->
+    <!-- ------------------------- Start Vido ----------------------------- -->
+
+    <div class="video-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 col-sm-offset-0 col-xs-offset-1 col-xs-10">
+                    <!-- Video Area Start -->
+                    <div class="video-area">
+                        <div class="video-play-btn">
+                            <a href="https://www.youtube.com/watch?v=NhZbdpYijPU" class="video_btn">
+                                <a class="youtube-link" youtubeid="NhZbdpYijPU">
+                                    <i class="fa fa-play" aria-hidden="true"></i>
+                                </a>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ------------------------- End Vido ----------------------------- -->
+    <!-- ----------------------- Start Counter -------------------------- -->
+
+    <section class="counter">
+
+        <div class="container">
+
+            <div class="row">
+
+                <!-- --------------------------------- -->
+                <div class="col-sm-3 col-sm-offset-0 col-xs-offset-4 col-xs-4">
+                    <div class="counter_content">
+                        <p class="icon"><i class="ion-arrow-down-a"></i></p>
+                        <div>
+                            <div class="inline_element">
+                                <span class="count" data-from="0" data-to="@ViewData["ProjectsCount"].ToString()" data-speed="6000" data-refresh-interval="70"> @ViewData["ProjectsCount"].ToString()</span>
+                            </div>
+                            <div class="inline_element">
+
+                                <p>@Appletindex.Index.appletindexcounterapps</p>
+                                <p>&nbsp;&nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- --------------------------------- -->
+                <!-- --------------------------------- -->
+                <div class="col-sm-3 col-sm-offset-0 col-xs-offset-4 col-xs-4">
+                    <div class="counter_content">
+                        <p class="icon x"><i class="ion-arrow-down-a"></i></p>
+                        <div>
+                            <div class="inline_element">
+                                <span class="count" data-from="0" data-to="@ViewData["PlansCount"].ToString()" data-speed="6000" data-refresh-interval="70"> @ViewData["PlansCount"].ToString()</span>
+                            </div>
+                            <div class="inline_element">
+                                <p>@Appletindex.Index.appletindexcounterplans</p>
+                                <p>&nbsp;&nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- --------------------------------- -->
+                <!-- --------------------------------- -->
+                <div class="col-sm-3 col-sm-offset-0 col-xs-offset-4 col-xs-4">
+                    <div class="counter_content">
+                        <p class="icon"><i class="ion-person"></i></p>
+                        <div>
+                            <div class="inline_element">
+                                <span class="count" data-from="0" data-to="@ViewData["ClientsCount"].ToString()" data-speed="6000" data-refresh-interval="70"> @ViewData["ClientsCount"].ToString()</span>
+                            </div>
+                            <div class="inline_element">
+                                <p>@Appletindex.Index.appletindexcounterclients</p>
+                                <p>&nbsp;&nbsp;</p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- --------------------------------- -->
+                <!-- --------------------------------- -->
+                <div class="col-sm-3 col-sm-offset-0 col-xs-offset-4 col-xs-4">
+                    <div class="counter_content">
+                        <p class="icon"><i class="ion-ios-star-outline"></i></p>
+                        <div>
+                            <div class="inline_element">
+                                <span class="count" data-from="0" data-to="@ViewData["TestmonialsCount"].ToString()" data-speed="6000" data-refresh-interval="70"> @ViewData["TestmonialsCount"].ToString()</span>
+                            </div>
+                            <div class="inline_element">
+                                <p>@Appletindex.Index.appletindexcountertestmonials</p>
+                                <p>&nbsp;&nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- --------------------------------- -->
+
+            </div>
+            <!-- End Row -->
+
+        </div>
+
+    </section>
+
+    <!-- ----------------------- Start Counter -------------------------- -->
+    <!-- ------------------------- Start Our Feature ---------------------- -->
+    <!--features-starts-->
+    <div class="features" id="features">
+        <div class="container">
+            <div class="features-top">
+                <h3>@Appletindex.Index.appletindexourfeaturestitle</h3>
+                <span></span>
+            </div>
+            <div class="features-bottom">
+                <div class="col-md-4 feature-left">
+                    <ul>
+
+                        <li><p>@Appletindex.Index.appletindexourfeaturesli1</p><img src="~/Images/images/feature-2.png" alt="" /><span class="two"> </span></li>
+                        <li><p>@Appletindex.Index.appletindexourfeaturesli2</p><img src="~/Images/images/feature-3.png" alt="" /><span class="three"> </span></li>
+                        <li><p>@Appletindex.Index.appletindexourfeaturesli3</p><img src="~/Images/images/feature-4.png" alt="" /><span class="four"> </span></li>
+                        <li><p>@Appletindex.Index.appletindexourfeaturesli4 </p><img src="~/Images/images/feature-5.png" alt="" /><span class="five"> </span></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 feature-middle">
+                    <img src="~/Images/images/placeit.png" style="width:100%;height:100%;" />
+                </div>
+                <div class="col-md-4 feature-right">
+                    <ul>
+                        <li><span class="six"> </span><img src="~/Images/images/feature-6.png" alt="" /><p>@Appletindex.Index.appletindexourfeaturesli5</p></li>
+
+                        <li><span class="eght"> </span><img src="~/Images/images/feature-8.png" alt="" /><p>@Appletindex.Index.appletindexourfeaturesli6</p></li>
+                        <li><span class="nine"> </span><img src="~/Images/images/feature-9.png" alt="" /><p>@Appletindex.Index.appletindexourfeaturesli7</p></li>
+                        <li><span class="ten"> </span><img src="~/Images/images/feature-10.png" alt="" /><p>@Appletindex.Index.appletindexourfeaturesli8</p></li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <!--features-end-->
+    <!-- -------------------------- End Our Feature ----------------------- -->
+    <!-- ---------------------------- Start Team ---------------------------- -->
+
+
+
+    <section class="team text-center" id="TEAM">
+
+        <!-- Start Container -->
+        <div class="container">
+
+
+            @if (CultureInfo.CurrentCulture.Name == "en-US")
+            {
+                <!-- start row -->
+                <div class="row">
+
+                    <h1 class="my_head">@Appletindex.Index.appletindexteamtitle</h1>
+
+                    <div class="clearfix"></div>
+
+                    <!-- start autoplay -->
+                    <div class="autoplay text-center">
+                        @if (ViewData["LatestTeams"] != null)
+                        {
+                            foreach (var item in ViewData["LatestTeams"] as IEnumerable<AppletSoftware.Models.AspNetTeam>)
+                            {
+                                <!-- --------------------------------------------------- -->
+
+                                <div class="col-md-3 col-sm-4">
+
+                                    <!-- Start content 1 -->
+                                    <div class="content">
+                                        <img src="@Url.Content("~/Images/resizedteams/" + item.Team_Photo)" class="img-responsive" style="width:100%;height:250px;">
+                                        <h3>@item.Team_Fname_En @item.Team_Lname_En</h3>
+                                        <h5>@item.Team_JobTitle_En</h5>
+                                        @Html.Raw(item.AspNetTeamsCategory.TCat_Description_En)
+                                        <div class="socials">
+                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- End content 1 -->
+
+                                </div>
+
+                                <!-- --------------------------------------------------- -->
+
+
+                            }
+
+                        }
+
+                    </div>
+                    <!-- End autoplay -->
+
+                    <div class="clearfix"></div>
+
+                    <div class="col-sm-12 col-xs-12 text-center">
+                        <a href="@Url.Action("Teams","Home")" class="btn btn-default move hvr-bounce-to-right">
+                            @Appletindex.Index.appletindexteamshowmore
+                        </a>
+                    </div>
+
+
+                </div>
+                <!-- End Row -->
+            }
+            else if (CultureInfo.CurrentCulture.Name == "ar-SA")
+            {
+                <!-- start row -->
+                <div class="row">
+
+                    <h1 class="my_head">@Appletindex.Index.appletindexteamtitle</h1>
+
+                    <div class="clearfix"></div>
+
+                    <!-- start autoplay -->
+                    <div class="autoplay text-center">
+                        @if (ViewData["LatestTeams"] != null)
+                        {
+                            foreach (var item in ViewData["LatestTeams"] as IEnumerable<AppletSoftware.Models.AspNetTeam>)
+                            {
+                                <!-- --------------------------------------------------- -->
+
+                                <div class="col-md-3 col-sm-4">
+
+                                    <!-- Start content 1 -->
+                                    <div class="content">
+                                        <img src="@Url.Content("~/Images/resizedteams/" + item.Team_Photo)" class="img-responsive" style="width:100%;height:250px;">
+                                        <h3>@item.Team_Fname_Ar @item.Team_Lname_Ar</h3>
+                                        <h5>@item.Team_JobTitle_Ar</h5>
+                                        @Html.Raw(item.AspNetTeamsCategory.TCat_Description_Ar)
+                                        <div class="socials">
+                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- End content 1 -->
+
+                                </div>
+
+                                <!-- --------------------------------------------------- -->
+
+
+                            }
+
+                        }
+
+                    </div>
+                    <!-- End autoplay -->
+
+                    <div class="clearfix"></div>
+
+                    <div class="col-sm-12 col-xs-12 text-center">
+                        <a href="@Url.Action("Teams","Home")" class="btn btn-default move hvr-bounce-to-right">
+                            @Appletindex.Index.appletindexteamshowmore
+                        </a>
+                    </div>
+
+
+                </div>
+                <!-- End Row -->
+            }
+            else
+            {
+                <!-- start row -->
+                <div class="row">
+
+                    <h1 class="my_head">@Appletindex.Index.appletindexteamtitle</h1>
+
+                    <div class="clearfix"></div>
+
+                    <!-- start autoplay -->
+                    <div class="autoplay text-center">
+                        @if (ViewData["LatestTeams"] != null)
+                        {
+                            foreach (var item in ViewData["LatestTeams"] as IEnumerable<AppletSoftware.Models.AspNetTeam>)
+                            {
+                                <!-- --------------------------------------------------- -->
+
+                                <div class="col-md-3 col-sm-4">
+
+                                    <!-- Start content 1 -->
+                                    <div class="content">
+                                        <img src="@Url.Content("~/Images/resizedteams/" + item.Team_Photo)" class="img-responsive">
+                                        <h3>@item.Team_Fname_En @item.Team_Lname_En</h3>
+                                        <h5>@item.Team_JobTitle_En</h5>
+                                        @Html.Raw(item.AspNetTeamsCategory.TCat_Description_En)
+                                        <div class="socials">
+                                            <a href="#"><i class="fa fa-facebook"></i></a>
+                                            <a href="#"><i class="fa fa-twitter"></i></a>
+                                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                                        </div>
+                                    </div>
+                                    <!-- End content 1 -->
+
+                                </div>
+
+                                <!-- --------------------------------------------------- -->
+
+
+                            }
+
+                        }
+
+                    </div>
+                    <!-- End autoplay -->
+
+                    <div class="clearfix"></div>
+
+                    <div class="col-sm-12 col-xs-12 text-center">
+                        <a href="@Url.Action("Teams","Home")" class="btn btn-default move hvr-bounce-to-right">
+                            @Appletindex.Index.appletindexteamshowmore
+                        </a>
+                    </div>
+
+
+                </div>
+                <!-- End Row -->
+            }
+
+        </div>
+        <!-- End Container -->
+
+    </section>
+
+    <!-- ---------------------------- End Team ---------------------------- -->
+    <!-- ---------------------- Start Section testimonials ------------------------ -->
+
+    <section class="testimonials text-center" id="mytestimonials">
+
+        <div class="container">
+
+            @if (CultureInfo.CurrentCulture.Name == "en-US")
+            {
+                <div class="row">
+
+                    <div class="testimonials-myspan">
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    </div>
+
+
+                    <div class="col-md-12">
+
+                        <div id="my-carousel" class="carousel slide" data-ride="carousel">
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+
+                                @if (ViewData["LatestTestmonials"] != null)
+                                {
+
+                                    foreach (var item in ViewData["LatestTestmonials"] as IEnumerable<AppletSoftware.Models.AspNetTestmonial>)
+                                    {
+
+                                        IEnumerable<AppletSoftware.Models.AspNetTestmonial> Collection = ViewData["LatestTestmonials"] as IEnumerable<AppletSoftware.Models.AspNetTestmonial>;
+
+                                        bool renderRow = Collection.ToList().IndexOf(item) == 0 ? true : false;
+                                        if (renderRow == true)
+                                        {
+
+
+
+
+                                            <div class="item active">
+
+                                                <div class="col-md-12">
+                                                    <h3>@Html.Raw(item.Testmonial_Question_En)</h3>
+                                                    <p>
+                                                        @Html.Raw(item.Testmonial_Answer_En)
+
+                                                        @*The Muhammad team is absolutely fantastic to work with and I would highly recommend them no matter what type of project you have.*@
+                                                    </p>
+                                                    <img src="@Url.Content("~/Images/resizedtestmonials/" + item.Testmonial_ClientPhoto)" class="img-responsive img-thumbnail" width="50" height="50">
+                                                    <h5>@Html.DisplayFor(m => item.Testmonial_ClientName_En)<span> &#45; @Html.DisplayFor(m => item.Testmonial_ClientJobTitle_En)</span></h5>
+                                                </div>
+
+                                            </div>
+
+
+                                        }
+                                        else
+                                        {
+
+
+                                            <div class="item">
+
+                                                <div class="col-md-12">
+                                                    <h3>@Html.Raw(item.Testmonial_Question_En)</h3>
+                                                    <p>
+                                                        @Html.Raw(item.Testmonial_Answer_En)
+
+                                                        @*The Muhammad team is absolutely fantastic to work with and I would highly recommend them no matter what type of project you have.*@
+                                                    </p>
+                                                    <img src="@Url.Content("~/Images/resizedtestmonials/" + item.Testmonial_ClientPhoto)" class="img-responsive img-thumbnail" width="50" height="50">
+                                                    <h5>@Html.DisplayFor(m => item.Testmonial_ClientName_En)<span> &#45; @Html.DisplayFor(m => item.Testmonial_ClientJobTitle_En)</span></h5>
+                                                </div>
+
+                                            </div>
+                                        }
+
+
+
+
+                                    }
+
+                                }
+
+
+                            </div>
+                            <!-- End Wrapper for slides -->
+
+
+                            <div class="col-md-12 my-indicators">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#my-carousel" data-slide-to="1"></li>
+                                    <li data-target="#my-carousel" data-slide-to="2"></li>
+
+
+                                </ol>
+                            </div>
+
+
+                        </div>
+                        <!-- End my-carousel -->
+
+                    </div>
+                    <!-- End Col-md -->
+
+                </div>
+            }
+            else if (CultureInfo.CurrentCulture.Name == "ar-SA")
+            {
+                <div class="row">
+
+                    <div class="testimonials-myspan">
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    </div>
+
+
+                    <div class="col-md-12">
+
+                        <div id="my-carousel" class="carousel slide" data-ride="carousel">
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+
+                                @if (ViewData["LatestTestmonials"] != null)
+                                {
+
+
+                                    foreach (var item in ViewData["LatestTestmonials"] as IEnumerable<AppletSoftware.Models.AspNetTestmonial>)
+                                    {
+
+                                        IEnumerable<AppletSoftware.Models.AspNetTestmonial> Collection = ViewData["LatestTestmonials"] as IEnumerable<AppletSoftware.Models.AspNetTestmonial>;
+
+                                        bool renderRow = Collection.ToList().IndexOf(item) == 0 ? true : false;
+                                        if (renderRow == true)
+                                        {
+
+
+
+
+                                            <div class="item active">
+
+                                                <div class="col-md-12">
+                                                    <h3>@Html.Raw(item.Testmonial_Question_Ar)</h3>
+                                                    <p>
+                                                        @Html.Raw(item.Testmonial_Answer_Ar)
+
+                                                        @*The Muhammad team is absolutely fantastic to work with and I would highly recommend them no matter what type of project you have.*@
+                                                    </p>
+                                                    <img src="@Url.Content("~/Images/resizedtestmonials/" + item.Testmonial_ClientPhoto)" class="img-responsive img-thumbnail" width="50" height="50">
+                                                    <h5>@Html.DisplayFor(m => item.Testmonial_ClientName_Ar)<span> &#45; @Html.DisplayFor(m => item.Testmonial_ClientJobTitle_Ar)</span></h5>
+                                                </div>
+
+                                            </div>
+
+
+                                        }
+                                        else
+                                        {
+
+
+                                            <div class="item">
+
+                                                <div class="col-md-12">
+                                                    <h3>@Html.Raw(item.Testmonial_Question_Ar)</h3>
+                                                    <p>
+                                                        @Html.Raw(item.Testmonial_Answer_Ar)
+
+                                                        @*The Muhammad team is absolutely fantastic to work with and I would highly recommend them no matter what type of project you have.*@
+                                                    </p>
+                                                    <img src="@Url.Content("~/Images/resizedtestmonials/" + item.Testmonial_ClientPhoto)" class="img-responsive img-thumbnail" width="50" height="50">
+                                                    <h5>@Html.DisplayFor(m => item.Testmonial_ClientName_Ar)<span> &#45; @Html.DisplayFor(m => item.Testmonial_ClientJobTitle_Ar)</span></h5>
+                                                </div>
+
+                                            </div>
+                                        }
+
+
+
+
+                                    }
+
+
+                                }
+
+                            </div>
+                            <!-- End Wrapper for slides -->
+
+
+                            <div class="col-md-12 my-indicators">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#my-carousel" data-slide-to="1"></li>
+                                    <li data-target="#my-carousel" data-slide-to="2"></li>
+
+
+                                </ol>
+                            </div>
+
+
+                        </div>
+                        <!-- End my-carousel -->
+
+                    </div>
+                    <!-- End Col-md -->
+
+                </div>
+            }
+            else
+            {
+                <div class="row">
+
+                    <div class="testimonials-myspan">
+                        <i class="fa fa-quote-left" aria-hidden="true"></i>
+                    </div>
+
+
+                    <div class="col-md-12">
+
+                        <div id="my-carousel" class="carousel slide" data-ride="carousel">
+
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                @if (ViewData["LatestTestmonials"] != null)
+                                {
+
+
+
+                                    foreach (var item in ViewData["LatestTestmonials"] as IEnumerable<AppletSoftware.Models.AspNetTestmonial>)
+                                    {
+
+                                        IEnumerable<AppletSoftware.Models.AspNetTestmonial> Collection = ViewData["LatestTestmonials"] as IEnumerable<AppletSoftware.Models.AspNetTestmonial>;
+
+                                        bool renderRow = Collection.ToList().IndexOf(item) == 0 ? true : false;
+                                        if (renderRow == true)
+                                        {
+
+
+
+
+                                            <div class="item active">
+
+                                                <div class="col-md-12">
+                                                    <h3>@Html.Raw(item.Testmonial_Question_En)</h3>
+                                                    <p>
+                                                        @Html.Raw(item.Testmonial_Answer_En)
+
+                                                        @*The Muhammad team is absolutely fantastic to work with and I would highly recommend them no matter what type of project you have.*@
+                                                    </p>
+                                                    <img src="@Url.Content("~/Images/resizedtestmonials/" + item.Testmonial_ClientPhoto)" class="img-responsive img-thumbnail" width="50" height="50">
+                                                    <h5>@Html.DisplayFor(m => item.Testmonial_ClientName_En)<span> &#45; @Html.DisplayFor(m => item.Testmonial_ClientJobTitle_En)</span></h5>
+                                                </div>
+
+                                            </div>
+
+
+                                        }
+                                        else
+                                        {
+
+
+                                            <div class="item">
+
+                                                <div class="col-md-12">
+                                                    <h3>@Html.Raw(item.Testmonial_Question_En)</h3>
+                                                    <p>
+                                                        @Html.Raw(item.Testmonial_Answer_En)
+
+                                                        @*The Muhammad team is absolutely fantastic to work with and I would highly recommend them no matter what type of project you have.*@
+                                                    </p>
+                                                    <img src="@Url.Content("~/Images/resizedtestmonials/" + item.Testmonial_ClientPhoto)" class="img-responsive img-thumbnail" width="50" height="50">
+                                                    <h5>@Html.DisplayFor(m => item.Testmonial_ClientName_En)<span> &#45; @Html.DisplayFor(m => item.Testmonial_ClientJobTitle_En)</span></h5>
+                                                </div>
+
+                                            </div>
+                                        }
+
+
+
+
+                                    }
+
+
+                                }
+
+                            </div>
+                            <!-- End Wrapper for slides -->
+
+
+                            <div class="col-md-12 my-indicators">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#my-carousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#my-carousel" data-slide-to="1"></li>
+                                    <li data-target="#my-carousel" data-slide-to="2"></li>
+
+
+                                </ol>
+                            </div>
+
+
+                        </div>
+                        <!-- End my-carousel -->
+
+                    </div>
+                    <!-- End Col-md -->
+
+                </div>
+            }
+
+
+        </div>
+
+    </section>
+    <!-- --------------------------- End testimonials-------------------------------- -->
+    <!-- ---------------------- Start Section Blog ------------------------------- -->
+
+    <section class="blog" id="myblog">
+
+        <div class="container">
+
+            @if (CultureInfo.CurrentCulture.Name == "en-US")
+            {
+                <div class="row">
+
+                    <div class="blog-heading text-center wow fadeInUp" data-wow-offset="400">
+                        <h2 class="text-center">@Appletindex.Index.appletindexnewstitle </h2>
+                    </div>
+
+
+
+                    <!-- End blog-heading -->
+                    @if (ViewData["LatestNews"] != null)
+                    {
+
+                        foreach (var item in ViewData["LatestNews"] as IEnumerable<AppletSoftware.Models.AspNetNew>)
+                        {
+
+                            <div class="col-sm-6 col-sm-offset-0 col-xs-offset-1 col-xs-10">
+                                <div class="blog-content wow fadeInUp" data-wow-offset="400">
+
+                                    <div class="blog-img">
+                                        <img src="@Url.Content("~/Images/resizednews/" + item.News_Photo)" class="img-responsive" style="height:300px;">
+                                        <div class="blog-overlay">
+                                            <a href="@Url.Action("NewsDetails", "Home", new { News_Id = item.News_Id })"> <i class="fa fa-search-plus" aria-hidden="true"></i> </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="blog-posts">
+
+                                        <div class="myspan">
+                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </div>
+
+                                        <p> <a href="#">@Html.DisplayFor(m => item.News_Title_En)</a> </p>
+                                        <p>
+
+                                            @Html.Raw(item.News_Short_En)
+
+
+                                        </p>
+
+                                        <a href="@Url.Action("NewsDetails", "Home", new { News_Id = item.News_Id })" class="btn btn-default hvr-bounce-to-right">@Appletindex.Index.appletindexnewsreadmore</a>
+
+                                        @*<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a9d222e2326af0013ae40ec&product=inline-share-buttons' async='async'></script>*@
+                                        <div class="sharethis-inline-share-buttons"></div>
+
+
+                                    </div>
+                                    <!-- End blog-posts -->
+
+                                </div>
+                            </div>
+                            <!-- End Col-md 1 -->
+
+
+
+
+
+                        }
+
+                    }
+                    <div class="col-sm-12 col-xs-12 text-center">
+                        <a href="@Url.Action("News","Home")" class="btn btn-default move hvr-bounce-to-right">@Appletindex.Index.appletindexnewsshowmore</a>
+                    </div>
+
+
+                </div>
+            }
+            else if (CultureInfo.CurrentCulture.Name == "ar-SA")
+            {
+                <div class="row">
+
+                    <div class="blog-heading text-center wow fadeInUp" data-wow-offset="400">
+                        <h2 class="text-center">@Appletindex.Index.appletindexnewstitle </h2>
+                    </div>
+
+
+
+                    <!-- End blog-heading -->
+                    @if (ViewData["LatestNews"] != null)
+                    {
+
+                        foreach (var item in ViewData["LatestNews"] as IEnumerable<AppletSoftware.Models.AspNetNew>)
+                        {
+
+                            <div class="col-sm-6 col-sm-offset-0 col-xs-offset-1 col-xs-10">
+                                <div class="blog-content wow fadeInUp" data-wow-offset="400">
+
+                                    <div class="blog-img">
+                                        <img src="@Url.Content("~/Images/resizednews/" + item.News_Photo)" class="img-responsive" style="height:300px;">
+                                        <div class="blog-overlay">
+                                            <a href="@Url.Action("NewsDetails", "Home", new { News_Id = item.News_Id })"> <i class="fa fa-search-plus" aria-hidden="true"></i> </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="blog-posts">
+
+                                        <div class="myspan">
+                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </div>
+
+                                        <p> <a href="#">@Html.DisplayFor(m => item.News_Title_Ar)</a> </p>
+                                        <p>
+
+                                            @Html.Raw(item.News_Short_Ar)
+
+
+                                        </p>
+
+                                        <a href="@Url.Action("NewsDetails", "Home", new { News_Id = item.News_Id })" class="btn btn-default hvr-bounce-to-right">@Appletindex.Index.appletindexnewsreadmore</a>
+
+                                        @*<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a9d222e2326af0013ae40ec&product=inline-share-buttons' async='async'></script>*@
+                                        <div class="sharethis-inline-share-buttons"></div>
+
+
+                                    </div>
+                                    <!-- End blog-posts -->
+
+                                </div>
+                            </div>
+                            <!-- End Col-md 1 -->
+
+
+
+
+
+                        }
+                    }
+
+                    <div class="col-sm-12 col-xs-12 text-center">
+                        <a href="@Url.Action("News","Home")" class="btn btn-default move hvr-bounce-to-right">@Appletindex.Index.appletindexnewsshowmore</a>
+                    </div>
+
+
+                </div>
+            }
+            else
+            {
+                <div class="row">
+
+                    <div class="blog-heading text-center wow fadeInUp" data-wow-offset="400">
+                        <h2 class="text-center">@Appletindex.Index.appletindexnewstitle </h2>
+                    </div>
+
+
+
+                    <!-- End blog-heading -->
+                    @if (ViewData["LatestNews"] != null)
+                    {
+
+                        foreach (var item in ViewData["LatestNews"] as IEnumerable<AppletSoftware.Models.AspNetNew>)
+                        {
+
+                            <div class="col-sm-6 col-sm-offset-0 col-xs-offset-1 col-xs-10">
+                                <div class="blog-content wow fadeInUp" data-wow-offset="400">
+
+                                    <div class="blog-img">
+                                        <img src="@Url.Content("~/Images/resizednews/" + item.News_Photo)" class="img-responsive" style="height:300px;">
+                                        <div class="blog-overlay">
+                                            <a href="@Url.Action("NewsDetails", "Home", new { News_Id = item.News_Id })"> <i class="fa fa-search-plus" aria-hidden="true"></i> </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="blog-posts">
+
+                                        <div class="myspan">
+                                            <i class="fa fa-plus" aria-hidden="true"></i>
+                                        </div>
+
+                                        <p> <a href="#">@Html.DisplayFor(m => item.News_Title_En)</a> </p>
+                                        <p>
+
+                                            @Html.Raw(item.News_Short_En)
+
+
+                                        </p>
+
+                                        <a href="@Url.Action("NewsDetails", "Home", new { News_Id = item.News_Id })" class="btn btn-default hvr-bounce-to-right">@Appletindex.Index.appletindexnewsreadmore</a>
+
+                                       @* <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a9d222e2326af0013ae40ec&product=inline-share-buttons' async='async'></script>*@
+                                        <div class="sharethis-inline-share-buttons"></div>
+
+
+                                    </div>
+                                    <!-- End blog-posts -->
+
+                                </div>
+                            </div>
+                            <!-- End Col-md 1 -->
+
+
+
+
+
+                        }
+
+                    }
+                    <div class="col-sm-12 col-xs-12 text-center">
+                        <a href="@Url.Action("News","Home")" class="btn btn-default move hvr-bounce-to-right">@Appletindex.Index.appletindexnewsshowmore</a>
+                    </div>
+
+
+                </div>
+            }
+
+
+
+        </div>
+
+    </section>
+
+    <!-- --------------------------- End Blog ---------------------------- -->
+   
+    <!-- ------------------------ Start contact ---------------------------- -->
+
+    <section class="footer-contact-area section_padding_100 clearfix" id="mycontact">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-md-offset-0 col-xs-offset-1 col-xs-10">
+                    <!-- Heading Text  -->
+                    <div class="section-heading">
+                        <h2>@Appletindex.Index.appletindexcontactustitle</h2>
+                        <div class="line-shape"></div>
+                    </div>
+                    <div class="footer-text">
+                        <p>@Appletindex.Index.appletindexcontactussmallhint </p>
+                    </div>
+                    <div class="address-text">
+                        <p>
+                            <span>@Appletindex.Index.appletindexcontactusinfoaddress</span>@Appletindex.Index.appletindexcontactusinfoaddressvalue
+
+
+                    </div>
+                    <div class="phone-text">
+                        <p><span>@Appletindex.Index.appletindexcontactusinfophone</span><a href="">@Appletindex.Index.appletindexcontactusinfophonevalue</a></p>
+                    </div>
+                    <div class="email-text">
+                        <p><span>@Appletindex.Index.appletindexcontactusemail</span><a href=""> @Appletindex.Index.appletindexcontactusemailvalue</a> </p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-md-offset-0 col-xs-offset-1 col-xs-10">
+                    <!-- Form Start-->
+                    <div class="contact_from">
+                        @using (Html.BeginForm("SendMessage", "Home", FormMethod.Post, new { id = "sendmessageform", role = "form" }))
+                        {
+
+                            @Html.AntiForgeryToken()
+                            <!-- Message Input Area Start -->
+                            <div class="contact_input_area">
+                                <div class="row">
+                                    <!-- Single Input Area Start -->
+                                    <div class="col-md-12">
+
+
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="MessageSubject" id="MessageSubject" placeholder="@Appletindex.Index.appletindexcontactusplaceholdersubject" required="">
+                                        </div>
+                                    </div>
+                                    <!-- Single Input Area Start -->
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" name="SenderEmail" id="SenderEmail" placeholder="@Appletindex.Index.appletindexcontactusplaceholderemail" required="">
+                                        </div>
+                                    </div>
+                                    <!-- Single Input Area Start -->
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <textarea name="MessageContent" class="form-control" id="MessageContent" cols="30" rows="6" placeholder="@Appletindex.Index.appletindexcontactusplaceholdermessage" required=""></textarea>
+                                        </div>
+                                    </div>
+                                    <!-- Single Input Area Start -->
+                                    <div class="col-12">
+                                        <button type="submit" class="btn submit-btn">@Appletindex.Index.appletindexcontactussendbutton</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Message Input Area End -->
+
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ------------------------ End contact ---------------------------- -->
+    <!-- -----------------------------Start Section Footer------------------------------------- -->
+
+    <section class="Footer">
+
+        <div class="container">
+
+
+            <div class="row">
+
+                <div class="col-sm-4 col-sm-offset-0 col-xs-offset-1 col-xs-10">
+                    <div class="footer-first">
+                        <h4>@Appletindex.Index.appletindexfooterabouttitle </h4>
+                        <p>
+
+
+                            @Appletindex.Index.appletindexfooteraboutparagraph
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-sm-offset-0 col-xs-offset-1 col-xs-10">
+                    <div class="footer-second">
+                        <div class="row">
+
+
+
+                            <div class="col-sm-8 col-md-offset-4 col-xs-12">
+                                <h4>@Appletindex.Index.appletindexfooterquicklinkstitle</h4>
+                                <ul>
+                                    <li> <a href="@Url.Action("Projects","Home")">@Appletindex.Index.appletindexfooterquicklinksli1</a> </li>
+                                    <li> <a href="@Url.Action("Plans","Home")">@Appletindex.Index.appletindexfooterquicklinksli2</a> </li>
+                                    <li> <a href="@Url.Action("News","Home")">@Appletindex.Index.appletindexfooterquicklinksli3</a> </li>
+                                    <li> <a href="#">@Appletindex.Index.appletindexfooterquicklinksli4</a> </li>
+                                    <li> <a href="@Url.Action("Teams","Home")">@Appletindex.Index.appletindexfooterquicklinksli5</a> </li>
+                                    <li> <a href="@Url.Action("Contact","Home")">@Appletindex.Index.appletindexfooterquicklinksli6</a> </li>
+                                    <li> <a href="@Url.Action("About","Home")">@Appletindex.Index.appletindexfooterquicklinksli7</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Row -->
+                    </div>
+                    <!-- End Footer Second -->
+                </div>
+
+
+
+                <div class="col-sm-4 col-sm-offset-0 col-xs-offset-1 col-xs-10">
+                    <div class="footer-third">
+
+
+                        <div class="row">
+
+                            <div class="footer-~/Images/images col-sm-12">
+
+                                <img src="~/Images/images/logo.png" height="200" />
+
+                            </div>
+
+
+                        </div>
+                        <!-- End Row -->
+
+                    </div>
+                    <!-- End footer-third -->
+                </div>
+                <!-- End third col-md-4 -->
+
+            </div>
+            <!-- End first Row -->
+
+            <hr>
+
+
+            <div class="row">
+                <div class="footer-bottom">
+                    <div class="copyright pull-left">
+                        @Appletindex.Index.appletindexfootercopyright <a href="#" style="background-color:#fff;"> <img src="~/Images/images/logofooter.png" height="60" /> </a>
+                    </div>
+
+                    <!-- Start Social Media in Footer -->
+                    <div class="social-media  pull-right">
+                        <a href="#" title="Follow Me On Facebook">
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="#" title="Follow Me On Twitter">
+                            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="#" title="Follow Me On Youtube">
+                            <i class="fa fa-youtube-square" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="#" title="Follow Me On Linkedin">
+                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="#" title="Follow Me On Behance">
+                            <i class="fa fa-behance-square" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="#" title="Follow Me On Github">
+                            <i class="fa fa-github-square" aria-hidden="true"></i>
+                        </a>
+
+                    </div>
+                    <!-- End Social Media in Footer -->
+
+                </div>
+                <!-- End footer-bottom -->
+            </div>
+            <!-- End Second Row -->
+
+
+        </div>
+    </section>
+
+    <!-- ------------------------------End Section Footer------------------------------------- -->
+
+    <div id="Scroll-top" class="Scroll-top">
+        <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </div>
+
+
+
+    <!-- ----------------------------Start Section Loading------------------------- -->
+
+    <section class="loading-overlay">
+        <div class="myloading">
+            <div class="loading-overlay-content">
+                <h1 class="text-center heading"></h1>
+            </div>
+            <div class="sk-cube-grid">
+                <div class="sk-cube sk-cube1"></div>
+                <div class="sk-cube sk-cube2"></div>
+                <div class="sk-cube sk-cube3"></div>
+                <div class="sk-cube sk-cube4"></div>
+                <div class="sk-cube sk-cube5"></div>
+                <div class="sk-cube sk-cube6"></div>
+                <div class="sk-cube sk-cube7"></div>
+                <div class="sk-cube sk-cube8"></div>
+                <div class="sk-cube sk-cube9"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ----------------------------End Section Loading------------------------- -->
+    <!-- ----------------------------------------------------------------------------------------------------- -->
+
+
+
+    <script src="~/Scripts/js/jquery-3.2.1.min.js"></script>
+
+    <!-- bootstrap js -->
+    <script src="~/Scripts/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js" integrity="sha512-VHIYn9ssmuPBliadBEgGCTRtCO4agkhQCxiPaTBKaAq0cm2KKpX+PE2klG1VfOHKKcN5eZcev0M3s5V2xXxVew==" crossorigin="anonymous"></script>
+
+    <script src="~/Scripts/filtergallery.js"></script>
+
+    <!-- foor animated words -->
+    <script src="~/Scripts/js/typed.js"></script>
+
+    <script src="~/Scripts/js/jquery.nicescroll.min.js"></script>
+
+    <!-- GRT Youtube Popup -->
+    <script src="~/Scripts/js/grt-youtube-popup.js"></script>
+
+    <!-- for animated background -->
+    <script src="~/Scripts/js/jquery.particleground.min.js"></script>
+
+    <script src="~/Scripts/js/wow.min.js"></script>
+
+    <!-- for counter -->
+    <script src="~/Scripts/js/jquery.countTo.js"></script>
+
+    <!-- for slick -->
+    <script src="~/Scripts/js/slick/slick.min.js"></script>
+
+    <!-- Circle progress -->
+    <script src="~/Scripts/js/pie-chart.js"></script>
+
+    <!-- directional overlay -->
+    <script src="~/Scripts/js/jquery.directional-hover.min.js"></script>
+
+    <script src="~/Scripts/js/modernizr.custom.53451.js"></script>
+
+    <script src="~/Scripts/js/jquery.magnific-popup.js"></script>
+
+    <script src="~/Scripts/js/jquery.fancybox.min.js"></script>
+
+    <!-- <script src="js/numscroller-1.0.js"></script> -->
+    <!-- Java Script Code -->
+    <script src="~/Scripts/js/mycode.js"></script>
+
+    <script>
+                new WOW().init();
+
+
+                 var typed = new Typed('.bannertypedh1', {
+        strings: ["<span class='odd'>reach</span><span class='even'>UP</span> <span class='even'>marketing agency</span>",
+            "@Appletindex.Index.appletmybackgroundtyped1",
+             "@Appletindex.Index.appletmybackgroundtyped2",
+             "@Appletindex.Index.appletmybackgroundtyped3",
+             "@Appletindex.Index.appletmybackgroundtyped4",
+             "@Appletindex.Index.appletmybackgroundtyped5",
+             "@Appletindex.Index.appletmybackgroundtyped6",
+                         "<span class= 'odd' > reach</span > <span class='even'>UP</span> <span class='even'>marketing agency</span>"
+
+        ],
+
+        stringsElement: null,
+        // typing speed
+        typeSpeed: 20,
+        // time before typing starts
+        startDelay: 10,
+        // backspacing speed
+        backSpeed: 50,
+        // time before backspacing
+        backDelay: 500,
+        // loop
+        loop: true,
+        // false = infinite
+        loopCount: 10,
+        // show cursor
+        showCursor: true,
+        // character for cursor
+        cursorChar: "|",
+        // attribute to type (null == text)
+        attr: null,
+        // either html or text
+        contentType: 'html',
+        // call when done callback function
+        callback: function () { },
+        // starting callback function before each string
+        preStringTyped: function () { },
+        //callback for every typed string
+        onStringTyped: function () { },
+        // callback for reset
+        resetCallback: function () { }
+    });
+
+
+
+    </script>
+    @*<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a9d222e2326af0013ae40ec&product=inline-share-buttons' async='async'></script>*@
+</body>
+
+
+
+</html>

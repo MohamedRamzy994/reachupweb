@@ -1,0 +1,1798 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="AppletSoftwareModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AspNetClients">
+          <Key>
+            <PropertyRef Name="Client_Id" />
+          </Key>
+          <Property Name="Client_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Client_Fname_Ar" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Client_Fname_En" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Client_Lname_Ar" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Client_Lname_En" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Client_Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Client_PhoneNumber" Type="nvarchar" MaxLength="15" Nullable="false" />
+          <Property Name="Client_CompanyName_Ar" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Client_CompanyName_En" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Client_Address_Ar" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Client_Address_En" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Client_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="ClCat_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Client_Photo" Type="nvarchar" MaxLength="150" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetClientsCategories">
+          <Key>
+            <PropertyRef Name="ClCat_Id" />
+          </Key>
+          <Property Name="ClCat_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ClCat_Name_Ar" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ClCat_Name_En" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ClCat_Description_Ar" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="ClCat_Description_En" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="ClCat_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetMessages">
+          <Key>
+            <PropertyRef Name="Message_Id" />
+          </Key>
+          <Property Name="Message_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Message_Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Message_Subject" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Message_Content" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Message_Active" Type="bit" Nullable="false" />
+          <Property Name="Message_Response" Type="bit" Nullable="false" />
+          <Property Name="Message_DateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetNews">
+          <Key>
+            <PropertyRef Name="News_Id" />
+          </Key>
+          <Property Name="News_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="News_Title_Ar" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="News_Title_En" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="News_Short_Ar" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="News_Short_En" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="News_Long_Ar" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="News_Long_En" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="News_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="News_Photo" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="NCat_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetNewsCategories">
+          <Key>
+            <PropertyRef Name="NCat_Id" />
+          </Key>
+          <Property Name="NCat_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="NCat_Name_Ar" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NCat_Name_En" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="NCat_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="NCat_Description_Ar" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="NCat_Description_En" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetNewsLetters">
+          <Key>
+            <PropertyRef Name="Letter_Id" />
+          </Key>
+          <Property Name="Letter_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Letter_Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Letter_Active" Type="bit" Nullable="false" />
+          <Property Name="Letter_Response" Type="bit" Nullable="false" />
+          <Property Name="Letter_DateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetNotifications">
+          <Key>
+            <PropertyRef Name="Notify_Id" />
+          </Key>
+          <Property Name="Notify_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Notify_Manager_Name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Notify_Manager_Photo" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Notify_Title" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Notify_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="Notify_Active" Type="bit" Nullable="false" />
+          <Property Name="Notify_Action" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Notify_Manager_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetPlanOrders">
+          <Key>
+            <PropertyRef Name="Order_Id" />
+          </Key>
+          <Property Name="Order_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Order_Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Order_Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Order_Plan" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Order_Message" Type="nvarchar(max)" />
+          <Property Name="Order_Fname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Order_Lname" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Order_Response" Type="bit" Nullable="false" />
+          <Property Name="Order_DateTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetPlans">
+          <Key>
+            <PropertyRef Name="Plan_Id" />
+          </Key>
+          <Property Name="Plan_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Plan_Name_Ar" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Plan_Name_En" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Plan_Price" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Plan_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="Plan_Description_Ar" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Plan_Description_En" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="PlanCat_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetPlansCategories">
+          <Key>
+            <PropertyRef Name="PlanCat_Id" />
+          </Key>
+          <Property Name="PlanCat_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="PlanCat_Name_Ar" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PlanCat_Name_En" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PlanCat_Description_Ar" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="PlanCat_Description_En" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="PlanCat_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetProjects">
+          <Key>
+            <PropertyRef Name="Project_Id" />
+          </Key>
+          <Property Name="Project_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Project_Name_Ar" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Project_Name_En" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Project_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="Project_Photo" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Project_Url" Type="nvarchar" MaxLength="250" />
+          <Property Name="Project_Descrption_Ar" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="Project_Descrption_En" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="PCat_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetProjectsCategories">
+          <Key>
+            <PropertyRef Name="PCat_Id" />
+          </Key>
+          <Property Name="PCat_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="PCat_Name_Ar" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="PCat_Name_En" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="PCat_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="PCat_Description_Ar" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="PCat_Description_En" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetRoles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetTeams">
+          <Key>
+            <PropertyRef Name="Team_Id" />
+          </Key>
+          <Property Name="Team_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Team_Fname_Ar" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Team_Fname_En" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Team_Lname_Ar" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Team_Lname_En" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Team_Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Team_Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Team_Photo" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Team_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="TCat_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Team_Salary" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="Team_JobTitle_Ar" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Team_JobTitle_En" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetTeamsCategories">
+          <Key>
+            <PropertyRef Name="TCat_Id" />
+          </Key>
+          <Property Name="TCat_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="TCat_Name_Ar" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TCat_Name_En" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TCat_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="TCat_Description_Ar" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="TCat_Description_En" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetTestmonials">
+          <Key>
+            <PropertyRef Name="Testmonial_Id" />
+          </Key>
+          <Property Name="Testmonial_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Testmonial_Question_Ar" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Testmonial_Question_En" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Testmonial_Answer_Ar" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Testmonial_Answer_En" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Testmonial_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="Testmonial_ClientName_Ar" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Testmonial_ClientName_En" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Testmonial_ClientJobTitle_Ar" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Testmonial_ClientJobTitle_En" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Testmonial_ClientPhoto" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="TsCat_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetTestmonialsCategories">
+          <Key>
+            <PropertyRef Name="TsCat_Id" />
+          </Key>
+          <Property Name="TsCat_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="TsCat_Name_Ar" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TsCat_Name_En" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TsCat_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="TsCat_Description_En" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="TsCat_Description_Ar" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaims">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ClaimType" Type="nvarchar(max)" />
+          <Property Name="ClaimValue" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogins">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="ProviderKey" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUserRoles">
+          <Key>
+            <PropertyRef Name="RoleId" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="RoleId" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUsers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="Email" Type="nvarchar" MaxLength="256" />
+          <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
+          <Property Name="PasswordHash" Type="nvarchar(max)" />
+          <Property Name="SecurityStamp" Type="nvarchar(max)" />
+          <Property Name="PhoneNumber" Type="nvarchar(max)" />
+          <Property Name="PhoneNumberConfirmed" Type="bit" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="bit" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="datetime" />
+          <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+        </EntityType>
+        <EntityType Name="AspNetUsersInfoPlus">
+          <Key>
+            <PropertyRef Name="UInfoPlus_Id" />
+          </Key>
+          <Property Name="UInfoPlus_Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UInfoPlus_Fname_En" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UInfoPlus_Fname_Ar" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UInfo_Lname_En" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UInfo_Lname_Ar" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="UInfo_Photo" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="UInfo_DateTime" Type="datetime" Nullable="false" />
+          <Property Name="UInfo_Publisher" Type="nvarchar" MaxLength="128" Nullable="false" />
+        </EntityType>
+        <EntityType Name="C__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="ContextKey" Type="nvarchar" MaxLength="300" Nullable="false" />
+          <Property Name="Model" Type="varbinary(max)" Nullable="false" />
+          <Property Name="ProductVersion" Type="nvarchar" MaxLength="32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_AspNetClients_AspNetClientsCategories">
+          <End Role="AspNetClientsCategories" Type="Self.AspNetClientsCategories" Multiplicity="1" />
+          <End Role="AspNetClients" Type="Self.AspNetClients" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetClientsCategories">
+              <PropertyRef Name="ClCat_Id" />
+            </Principal>
+            <Dependent Role="AspNetClients">
+              <PropertyRef Name="ClCat_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetClients_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="AspNetClients" Type="Self.AspNetClients" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetClients">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetClientsCategories_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="AspNetClientsCategories" Type="Self.AspNetClientsCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetClientsCategories">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetNews_AspNetNewsCategories">
+          <End Role="AspNetNewsCategories" Type="Self.AspNetNewsCategories" Multiplicity="1" />
+          <End Role="AspNetNews" Type="Self.AspNetNews" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetNewsCategories">
+              <PropertyRef Name="NCat_Id" />
+            </Principal>
+            <Dependent Role="AspNetNews">
+              <PropertyRef Name="NCat_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetNews_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="AspNetNews" Type="Self.AspNetNews" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetNews">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetNewsCategories_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="AspNetNewsCategories" Type="Self.AspNetNewsCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetNewsCategories">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetPlans_AspNetPlansCategories">
+          <End Role="AspNetPlansCategories" Type="Self.AspNetPlansCategories" Multiplicity="1" />
+          <End Role="AspNetPlans" Type="Self.AspNetPlans" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetPlansCategories">
+              <PropertyRef Name="PlanCat_Id" />
+            </Principal>
+            <Dependent Role="AspNetPlans">
+              <PropertyRef Name="PlanCat_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetPlans_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="AspNetPlans" Type="Self.AspNetPlans" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetPlans">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetProjects_AspNetProjectsCategories">
+          <End Role="AspNetProjectsCategories" Type="Self.AspNetProjectsCategories" Multiplicity="1" />
+          <End Role="AspNetProjects" Type="Self.AspNetProjects" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetProjectsCategories">
+              <PropertyRef Name="PCat_Id" />
+            </Principal>
+            <Dependent Role="AspNetProjects">
+              <PropertyRef Name="PCat_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetProjects_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="AspNetProjects" Type="Self.AspNetProjects" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetProjects">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetProjectsCategories_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="AspNetProjectsCategories" Type="Self.AspNetProjectsCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetProjectsCategories">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetTeams_AspNetTeamsCategories">
+          <End Role="AspNetTeamsCategories" Type="Self.AspNetTeamsCategories" Multiplicity="1" />
+          <End Role="AspNetTeams" Type="Self.AspNetTeams" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetTeamsCategories">
+              <PropertyRef Name="TCat_Id" />
+            </Principal>
+            <Dependent Role="AspNetTeams">
+              <PropertyRef Name="TCat_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetTeams_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="AspNetTeams" Type="Self.AspNetTeams" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetTeams">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetTeamsCategories_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="AspNetTeamsCategories" Type="Self.AspNetTeamsCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetTeamsCategories">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetTestmonials_AspNetTestmonialsCategories">
+          <End Role="AspNetTestmonialsCategories" Type="Self.AspNetTestmonialsCategories" Multiplicity="1" />
+          <End Role="AspNetTestmonials" Type="Self.AspNetTestmonials" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetTestmonialsCategories">
+              <PropertyRef Name="TsCat_Id" />
+            </Principal>
+            <Dependent Role="AspNetTestmonials">
+              <PropertyRef Name="TsCat_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetTestmonials_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="AspNetTestmonials" Type="Self.AspNetTestmonials" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetTestmonials">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetTestmonialsCategories_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="AspNetTestmonialsCategories" Type="Self.AspNetTestmonialsCategories" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetTestmonialsCategories">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetUserRoles_AspNetRoles">
+          <End Role="AspNetRoles" Type="Self.AspNetRoles" Multiplicity="1" />
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetRoles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetUserRoles_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="AspNetUserRoles" Type="Self.AspNetUserRoles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserRoles">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetUsersInfoPlus_AspNetUsers">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1" />
+          <End Role="AspNetUsersInfoPlus" Type="Self.AspNetUsersInfoPlus" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUsersInfoPlus">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserClaims" Type="Self.AspNetUserClaims" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaims">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Role="AspNetUsers" Type="Self.AspNetUsers" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Role="AspNetUserLogins" Type="Self.AspNetUserLogins" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUsers">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogins">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="AppletSoftwareModelStoreContainer">
+          <EntitySet Name="AspNetClients" EntityType="Self.AspNetClients" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetClientsCategories" EntityType="Self.AspNetClientsCategories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetMessages" EntityType="Self.AspNetMessages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetNews" EntityType="Self.AspNetNews" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetNewsCategories" EntityType="Self.AspNetNewsCategories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetNewsLetters" EntityType="Self.AspNetNewsLetters" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetNotifications" EntityType="Self.AspNetNotifications" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetPlanOrders" EntityType="Self.AspNetPlanOrders" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetPlans" EntityType="Self.AspNetPlans" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetPlansCategories" EntityType="Self.AspNetPlansCategories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetProjects" EntityType="Self.AspNetProjects" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetProjectsCategories" EntityType="Self.AspNetProjectsCategories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetRoles" EntityType="Self.AspNetRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetTeams" EntityType="Self.AspNetTeams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetTeamsCategories" EntityType="Self.AspNetTeamsCategories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetTestmonials" EntityType="Self.AspNetTestmonials" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetTestmonialsCategories" EntityType="Self.AspNetTestmonialsCategories" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserClaims" EntityType="Self.AspNetUserClaims" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserLogins" EntityType="Self.AspNetUserLogins" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUserRoles" EntityType="Self.AspNetUserRoles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUsers" EntityType="Self.AspNetUsers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="AspNetUsersInfoPlus" EntityType="Self.AspNetUsersInfoPlus" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_AspNetClients_AspNetClientsCategories" Association="Self.FK_AspNetClients_AspNetClientsCategories">
+            <End Role="AspNetClientsCategories" EntitySet="AspNetClientsCategories" />
+            <End Role="AspNetClients" EntitySet="AspNetClients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetClients_AspNetUsers" Association="Self.FK_AspNetClients_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetClients" EntitySet="AspNetClients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetClientsCategories_AspNetUsers" Association="Self.FK_AspNetClientsCategories_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetClientsCategories" EntitySet="AspNetClientsCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetNews_AspNetNewsCategories" Association="Self.FK_AspNetNews_AspNetNewsCategories">
+            <End Role="AspNetNewsCategories" EntitySet="AspNetNewsCategories" />
+            <End Role="AspNetNews" EntitySet="AspNetNews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetNews_AspNetUsers" Association="Self.FK_AspNetNews_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetNews" EntitySet="AspNetNews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetNewsCategories_AspNetUsers" Association="Self.FK_AspNetNewsCategories_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetNewsCategories" EntitySet="AspNetNewsCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetPlans_AspNetPlansCategories" Association="Self.FK_AspNetPlans_AspNetPlansCategories">
+            <End Role="AspNetPlansCategories" EntitySet="AspNetPlansCategories" />
+            <End Role="AspNetPlans" EntitySet="AspNetPlans" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetPlans_AspNetUsers" Association="Self.FK_AspNetPlans_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetPlans" EntitySet="AspNetPlans" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetProjects_AspNetProjectsCategories" Association="Self.FK_AspNetProjects_AspNetProjectsCategories">
+            <End Role="AspNetProjectsCategories" EntitySet="AspNetProjectsCategories" />
+            <End Role="AspNetProjects" EntitySet="AspNetProjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetProjects_AspNetUsers" Association="Self.FK_AspNetProjects_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetProjects" EntitySet="AspNetProjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetProjectsCategories_AspNetUsers" Association="Self.FK_AspNetProjectsCategories_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetProjectsCategories" EntitySet="AspNetProjectsCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetTeams_AspNetTeamsCategories" Association="Self.FK_AspNetTeams_AspNetTeamsCategories">
+            <End Role="AspNetTeamsCategories" EntitySet="AspNetTeamsCategories" />
+            <End Role="AspNetTeams" EntitySet="AspNetTeams" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetTeams_AspNetUsers" Association="Self.FK_AspNetTeams_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetTeams" EntitySet="AspNetTeams" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetTeamsCategories_AspNetUsers" Association="Self.FK_AspNetTeamsCategories_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetTeamsCategories" EntitySet="AspNetTeamsCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetTestmonials_AspNetTestmonialsCategories" Association="Self.FK_AspNetTestmonials_AspNetTestmonialsCategories">
+            <End Role="AspNetTestmonialsCategories" EntitySet="AspNetTestmonialsCategories" />
+            <End Role="AspNetTestmonials" EntitySet="AspNetTestmonials" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetTestmonials_AspNetUsers" Association="Self.FK_AspNetTestmonials_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetTestmonials" EntitySet="AspNetTestmonials" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetTestmonialsCategories_AspNetUsers" Association="Self.FK_AspNetTestmonialsCategories_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetTestmonialsCategories" EntitySet="AspNetTestmonialsCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetUserRoles_AspNetRoles" Association="Self.FK_AspNetUserRoles_AspNetRoles">
+            <End Role="AspNetRoles" EntitySet="AspNetRoles" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetUserRoles_AspNetUsers" Association="Self.FK_AspNetUserRoles_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserRoles" EntitySet="AspNetUserRoles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetUsersInfoPlus_AspNetUsers" Association="Self.FK_AspNetUsersInfoPlus_AspNetUsers">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUsersInfoPlus" EntitySet="AspNetUsersInfoPlus" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaims" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="Self.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUsers" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogins" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AppletSoftwareModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="AppletSoftwareEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(AppletSoftwareModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(AppletSoftwareModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <EntitySet Name="AspNetClients" EntityType="AppletSoftwareModel.AspNetClient" />
+          <EntitySet Name="AspNetClientsCategories" EntityType="AppletSoftwareModel.AspNetClientsCategory" />
+          <EntitySet Name="AspNetMessages" EntityType="AppletSoftwareModel.AspNetMessage" />
+          <EntitySet Name="AspNetNews" EntityType="AppletSoftwareModel.AspNetNew" />
+          <EntitySet Name="AspNetNewsCategories" EntityType="AppletSoftwareModel.AspNetNewsCategory" />
+          <EntitySet Name="AspNetNewsLetters" EntityType="AppletSoftwareModel.AspNetNewsLetter" />
+          <EntitySet Name="AspNetNotifications" EntityType="AppletSoftwareModel.AspNetNotification" />
+          <EntitySet Name="AspNetPlanOrders" EntityType="AppletSoftwareModel.AspNetPlanOrder" />
+          <EntitySet Name="AspNetPlans" EntityType="AppletSoftwareModel.AspNetPlan" />
+          <EntitySet Name="AspNetPlansCategories" EntityType="AppletSoftwareModel.AspNetPlansCategory" />
+          <EntitySet Name="AspNetProjects" EntityType="AppletSoftwareModel.AspNetProject" />
+          <EntitySet Name="AspNetProjectsCategories" EntityType="AppletSoftwareModel.AspNetProjectsCategory" />
+          <EntitySet Name="AspNetRoles" EntityType="AppletSoftwareModel.AspNetRole" />
+          <EntitySet Name="AspNetTeams" EntityType="AppletSoftwareModel.AspNetTeam" />
+          <EntitySet Name="AspNetTeamsCategories" EntityType="AppletSoftwareModel.AspNetTeamsCategory" />
+          <EntitySet Name="AspNetTestmonials" EntityType="AppletSoftwareModel.AspNetTestmonial" />
+          <EntitySet Name="AspNetTestmonialsCategories" EntityType="AppletSoftwareModel.AspNetTestmonialsCategory" />
+          <EntitySet Name="AspNetUserClaims" EntityType="AppletSoftwareModel.AspNetUserClaim" />
+          <EntitySet Name="AspNetUserLogins" EntityType="AppletSoftwareModel.AspNetUserLogin" />
+          <EntitySet Name="AspNetUsers" EntityType="AppletSoftwareModel.AspNetUser" />
+          <EntitySet Name="AspNetUsersInfoPlus" EntityType="AppletSoftwareModel.AspNetUsersInfoPlu" />
+          <EntitySet Name="C__MigrationHistory" EntityType="AppletSoftwareModel.C__MigrationHistory" />
+          <EntitySet Name="sysdiagrams" EntityType="AppletSoftwareModel.sysdiagram" />
+          <AssociationSet Name="FK_AspNetClients_AspNetClientsCategories" Association="AppletSoftwareModel.FK_AspNetClients_AspNetClientsCategories">
+            <End Role="AspNetClientsCategory" EntitySet="AspNetClientsCategories" />
+            <End Role="AspNetClient" EntitySet="AspNetClients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetClients_AspNetUsers" Association="AppletSoftwareModel.FK_AspNetClients_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetClient" EntitySet="AspNetClients" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetClientsCategories_AspNetUsers" Association="AppletSoftwareModel.FK_AspNetClientsCategories_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetClientsCategory" EntitySet="AspNetClientsCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetNews_AspNetNewsCategories" Association="AppletSoftwareModel.FK_AspNetNews_AspNetNewsCategories">
+            <End Role="AspNetNewsCategory" EntitySet="AspNetNewsCategories" />
+            <End Role="AspNetNew" EntitySet="AspNetNews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetNews_AspNetUsers" Association="AppletSoftwareModel.FK_AspNetNews_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetNew" EntitySet="AspNetNews" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetNewsCategories_AspNetUsers" Association="AppletSoftwareModel.FK_AspNetNewsCategories_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetNewsCategory" EntitySet="AspNetNewsCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetPlans_AspNetPlansCategories" Association="AppletSoftwareModel.FK_AspNetPlans_AspNetPlansCategories">
+            <End Role="AspNetPlansCategory" EntitySet="AspNetPlansCategories" />
+            <End Role="AspNetPlan" EntitySet="AspNetPlans" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetPlans_AspNetUsers" Association="AppletSoftwareModel.FK_AspNetPlans_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetPlan" EntitySet="AspNetPlans" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetProjects_AspNetProjectsCategories" Association="AppletSoftwareModel.FK_AspNetProjects_AspNetProjectsCategories">
+            <End Role="AspNetProjectsCategory" EntitySet="AspNetProjectsCategories" />
+            <End Role="AspNetProject" EntitySet="AspNetProjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetProjects_AspNetUsers" Association="AppletSoftwareModel.FK_AspNetProjects_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetProject" EntitySet="AspNetProjects" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetProjectsCategories_AspNetUsers" Association="AppletSoftwareModel.FK_AspNetProjectsCategories_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetProjectsCategory" EntitySet="AspNetProjectsCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetTeams_AspNetTeamsCategories" Association="AppletSoftwareModel.FK_AspNetTeams_AspNetTeamsCategories">
+            <End Role="AspNetTeamsCategory" EntitySet="AspNetTeamsCategories" />
+            <End Role="AspNetTeam" EntitySet="AspNetTeams" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetTeams_AspNetUsers" Association="AppletSoftwareModel.FK_AspNetTeams_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetTeam" EntitySet="AspNetTeams" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetTeamsCategories_AspNetUsers" Association="AppletSoftwareModel.FK_AspNetTeamsCategories_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetTeamsCategory" EntitySet="AspNetTeamsCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetTestmonials_AspNetTestmonialsCategories" Association="AppletSoftwareModel.FK_AspNetTestmonials_AspNetTestmonialsCategories">
+            <End Role="AspNetTestmonialsCategory" EntitySet="AspNetTestmonialsCategories" />
+            <End Role="AspNetTestmonial" EntitySet="AspNetTestmonials" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetTestmonials_AspNetUsers" Association="AppletSoftwareModel.FK_AspNetTestmonials_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetTestmonial" EntitySet="AspNetTestmonials" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetTestmonialsCategories_AspNetUsers" Association="AppletSoftwareModel.FK_AspNetTestmonialsCategories_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetTestmonialsCategory" EntitySet="AspNetTestmonialsCategories" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" Association="AppletSoftwareModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserClaim" EntitySet="AspNetUserClaims" />
+          </AssociationSet>
+          <AssociationSet Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" Association="AppletSoftwareModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetUserLogin" EntitySet="AspNetUserLogins" />
+          </AssociationSet>
+          <AssociationSet Name="FK_AspNetUsersInfoPlus_AspNetUsers" Association="AppletSoftwareModel.FK_AspNetUsersInfoPlus_AspNetUsers">
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+            <End Role="AspNetUsersInfoPlu" EntitySet="AspNetUsersInfoPlus" />
+          </AssociationSet>
+          <AssociationSet Name="AspNetUserRoles" Association="AppletSoftwareModel.AspNetUserRoles">
+            <End Role="AspNetRole" EntitySet="AspNetRoles" />
+            <End Role="AspNetUser" EntitySet="AspNetUsers" />
+          </AssociationSet>
+          </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="AspNetClient">
+          <Key>
+            <PropertyRef Name="Client_Id" />
+          </Key>
+          <Property Name="Client_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Client_Fname_Ar" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Client_Fname_En" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Client_Lname_Ar" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Client_Lname_En" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Client_Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Client_PhoneNumber" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="Client_CompanyName_Ar" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Client_CompanyName_En" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Client_Address_Ar" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Client_Address_En" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Client_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="ClCat_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Client_Photo" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetClientsCategory" Relationship="AppletSoftwareModel.FK_AspNetClients_AspNetClientsCategories" FromRole="AspNetClient" ToRole="AspNetClientsCategory" />
+          <NavigationProperty Name="AspNetUser" Relationship="AppletSoftwareModel.FK_AspNetClients_AspNetUsers" FromRole="AspNetClient" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetClientsCategory">
+          <Key>
+            <PropertyRef Name="ClCat_Id" />
+          </Key>
+          <Property Name="ClCat_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ClCat_Name_Ar" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ClCat_Name_En" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ClCat_Description_Ar" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ClCat_Description_En" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="ClCat_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetClients" Relationship="AppletSoftwareModel.FK_AspNetClients_AspNetClientsCategories" FromRole="AspNetClientsCategory" ToRole="AspNetClient" />
+          <NavigationProperty Name="AspNetUser" Relationship="AppletSoftwareModel.FK_AspNetClientsCategories_AspNetUsers" FromRole="AspNetClientsCategory" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetMessage">
+          <Key>
+            <PropertyRef Name="Message_Id" />
+          </Key>
+          <Property Name="Message_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Message_Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Message_Subject" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Message_Content" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Message_Active" Type="Boolean" Nullable="false" />
+          <Property Name="Message_Response" Type="Boolean" Nullable="false" />
+          <Property Name="Message_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="AspNetNew">
+          <Key>
+            <PropertyRef Name="News_Id" />
+          </Key>
+          <Property Name="News_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="News_Title_Ar" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="News_Title_En" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="News_Short_Ar" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="News_Short_En" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="News_Long_Ar" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="News_Long_En" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="News_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="News_Photo" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="NCat_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetNewsCategory" Relationship="AppletSoftwareModel.FK_AspNetNews_AspNetNewsCategories" FromRole="AspNetNew" ToRole="AspNetNewsCategory" />
+          <NavigationProperty Name="AspNetUser" Relationship="AppletSoftwareModel.FK_AspNetNews_AspNetUsers" FromRole="AspNetNew" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetNewsCategory">
+          <Key>
+            <PropertyRef Name="NCat_Id" />
+          </Key>
+          <Property Name="NCat_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="NCat_Name_Ar" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NCat_Name_En" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NCat_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="NCat_Description_Ar" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="NCat_Description_En" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetNews" Relationship="AppletSoftwareModel.FK_AspNetNews_AspNetNewsCategories" FromRole="AspNetNewsCategory" ToRole="AspNetNew" />
+          <NavigationProperty Name="AspNetUser" Relationship="AppletSoftwareModel.FK_AspNetNewsCategories_AspNetUsers" FromRole="AspNetNewsCategory" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetNewsLetter">
+          <Key>
+            <PropertyRef Name="Letter_Id" />
+          </Key>
+          <Property Name="Letter_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Letter_Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Letter_Active" Type="Boolean" Nullable="false" />
+          <Property Name="Letter_Response" Type="Boolean" Nullable="false" />
+          <Property Name="Letter_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="AspNetNotification">
+          <Key>
+            <PropertyRef Name="Notify_Id" />
+          </Key>
+          <Property Name="Notify_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Notify_Manager_Name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Notify_Manager_Photo" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Notify_Title" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Notify_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Notify_Active" Type="Boolean" Nullable="false" />
+          <Property Name="Notify_Action" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Notify_Manager_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="AspNetPlanOrder">
+          <Key>
+            <PropertyRef Name="Order_Id" />
+          </Key>
+          <Property Name="Order_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Order_Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Order_Phone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Order_Plan" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Order_Message" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Order_Fname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Order_Lname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Order_Response" Type="Boolean" Nullable="false" />
+          <Property Name="Order_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="AspNetPlan">
+          <Key>
+            <PropertyRef Name="Plan_Id" />
+          </Key>
+          <Property Name="Plan_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Plan_Name_Ar" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Plan_Name_En" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Plan_Price" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="Plan_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Plan_Description_Ar" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Plan_Description_En" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PlanCat_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetPlansCategory" Relationship="AppletSoftwareModel.FK_AspNetPlans_AspNetPlansCategories" FromRole="AspNetPlan" ToRole="AspNetPlansCategory" />
+          <NavigationProperty Name="AspNetUser" Relationship="AppletSoftwareModel.FK_AspNetPlans_AspNetUsers" FromRole="AspNetPlan" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetPlansCategory">
+          <Key>
+            <PropertyRef Name="PlanCat_Id" />
+          </Key>
+          <Property Name="PlanCat_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="PlanCat_Name_Ar" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PlanCat_Name_En" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PlanCat_Description_Ar" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PlanCat_Description_En" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PlanCat_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetPlans" Relationship="AppletSoftwareModel.FK_AspNetPlans_AspNetPlansCategories" FromRole="AspNetPlansCategory" ToRole="AspNetPlan" />
+        </EntityType>
+        <EntityType Name="AspNetProject">
+          <Key>
+            <PropertyRef Name="Project_Id" />
+          </Key>
+          <Property Name="Project_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Project_Name_Ar" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Project_Name_En" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Project_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Project_Photo" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Project_Url" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Project_Descrption_Ar" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Project_Descrption_En" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PCat_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetProjectsCategory" Relationship="AppletSoftwareModel.FK_AspNetProjects_AspNetProjectsCategories" FromRole="AspNetProject" ToRole="AspNetProjectsCategory" />
+          <NavigationProperty Name="AspNetUser" Relationship="AppletSoftwareModel.FK_AspNetProjects_AspNetUsers" FromRole="AspNetProject" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetProjectsCategory">
+          <Key>
+            <PropertyRef Name="PCat_Id" />
+          </Key>
+          <Property Name="PCat_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="PCat_Name_Ar" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PCat_Name_En" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="PCat_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PCat_Description_Ar" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="PCat_Description_En" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetProjects" Relationship="AppletSoftwareModel.FK_AspNetProjects_AspNetProjectsCategories" FromRole="AspNetProjectsCategory" ToRole="AspNetProject" />
+          <NavigationProperty Name="AspNetUser" Relationship="AppletSoftwareModel.FK_AspNetProjectsCategories_AspNetUsers" FromRole="AspNetProjectsCategory" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetRole">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUsers" Relationship="AppletSoftwareModel.AspNetUserRoles" FromRole="AspNetRole" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetTeam">
+          <Key>
+            <PropertyRef Name="Team_Id" />
+          </Key>
+          <Property Name="Team_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Team_Fname_Ar" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Team_Fname_En" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Team_Lname_Ar" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Team_Lname_En" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Team_Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Team_Phone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Team_Photo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Team_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TCat_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Team_Salary" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="Team_JobTitle_Ar" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Team_JobTitle_En" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetTeamsCategory" Relationship="AppletSoftwareModel.FK_AspNetTeams_AspNetTeamsCategories" FromRole="AspNetTeam" ToRole="AspNetTeamsCategory" />
+          <NavigationProperty Name="AspNetUser" Relationship="AppletSoftwareModel.FK_AspNetTeams_AspNetUsers" FromRole="AspNetTeam" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetTeamsCategory">
+          <Key>
+            <PropertyRef Name="TCat_Id" />
+          </Key>
+          <Property Name="TCat_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="TCat_Name_Ar" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TCat_Name_En" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TCat_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TCat_Description_Ar" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TCat_Description_En" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetTeams" Relationship="AppletSoftwareModel.FK_AspNetTeams_AspNetTeamsCategories" FromRole="AspNetTeamsCategory" ToRole="AspNetTeam" />
+          <NavigationProperty Name="AspNetUser" Relationship="AppletSoftwareModel.FK_AspNetTeamsCategories_AspNetUsers" FromRole="AspNetTeamsCategory" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetTestmonial">
+          <Key>
+            <PropertyRef Name="Testmonial_Id" />
+          </Key>
+          <Property Name="Testmonial_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Testmonial_Question_Ar" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Testmonial_Question_En" Type="String" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="Testmonial_Answer_Ar" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Testmonial_Answer_En" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Testmonial_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Testmonial_ClientName_Ar" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Testmonial_ClientName_En" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Testmonial_ClientJobTitle_Ar" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Testmonial_ClientJobTitle_En" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Testmonial_ClientPhoto" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="TsCat_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetTestmonialsCategory" Relationship="AppletSoftwareModel.FK_AspNetTestmonials_AspNetTestmonialsCategories" FromRole="AspNetTestmonial" ToRole="AspNetTestmonialsCategory" />
+          <NavigationProperty Name="AspNetUser" Relationship="AppletSoftwareModel.FK_AspNetTestmonials_AspNetUsers" FromRole="AspNetTestmonial" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetTestmonialsCategory">
+          <Key>
+            <PropertyRef Name="TsCat_Id" />
+          </Key>
+          <Property Name="TsCat_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="TsCat_Name_Ar" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TsCat_Name_En" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TsCat_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TsCat_Description_En" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="TsCat_Description_Ar" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetTestmonials" Relationship="AppletSoftwareModel.FK_AspNetTestmonials_AspNetTestmonialsCategories" FromRole="AspNetTestmonialsCategory" ToRole="AspNetTestmonial" />
+          <NavigationProperty Name="AspNetUser" Relationship="AppletSoftwareModel.FK_AspNetTestmonialsCategories_AspNetUsers" FromRole="AspNetTestmonialsCategory" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetUserClaim">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="ClaimValue" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="AppletSoftwareModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUserClaim" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetUserLogin">
+          <Key>
+            <PropertyRef Name="LoginProvider" />
+            <PropertyRef Name="ProviderKey" />
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="LoginProvider" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="ProviderKey" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="UserId" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="AppletSoftwareModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUserLogin" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="AspNetUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="256" FixedLength="false" Unicode="true" />
+          <Property Name="EmailConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="PasswordHash" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="SecurityStamp" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="PhoneNumberConfirmed" Type="Boolean" Nullable="false" />
+          <Property Name="TwoFactorEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="LockoutEndDateUtc" Type="DateTime" Precision="3" />
+          <Property Name="LockoutEnabled" Type="Boolean" Nullable="false" />
+          <Property Name="AccessFailedCount" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetClients" Relationship="AppletSoftwareModel.FK_AspNetClients_AspNetUsers" FromRole="AspNetUser" ToRole="AspNetClient" />
+          <NavigationProperty Name="AspNetClientsCategories" Relationship="AppletSoftwareModel.FK_AspNetClientsCategories_AspNetUsers" FromRole="AspNetUser" ToRole="AspNetClientsCategory" />
+          <NavigationProperty Name="AspNetNews" Relationship="AppletSoftwareModel.FK_AspNetNews_AspNetUsers" FromRole="AspNetUser" ToRole="AspNetNew" />
+          <NavigationProperty Name="AspNetNewsCategories" Relationship="AppletSoftwareModel.FK_AspNetNewsCategories_AspNetUsers" FromRole="AspNetUser" ToRole="AspNetNewsCategory" />
+          <NavigationProperty Name="AspNetPlans" Relationship="AppletSoftwareModel.FK_AspNetPlans_AspNetUsers" FromRole="AspNetUser" ToRole="AspNetPlan" />
+          <NavigationProperty Name="AspNetProjects" Relationship="AppletSoftwareModel.FK_AspNetProjects_AspNetUsers" FromRole="AspNetUser" ToRole="AspNetProject" />
+          <NavigationProperty Name="AspNetProjectsCategories" Relationship="AppletSoftwareModel.FK_AspNetProjectsCategories_AspNetUsers" FromRole="AspNetUser" ToRole="AspNetProjectsCategory" />
+          <NavigationProperty Name="AspNetTeams" Relationship="AppletSoftwareModel.FK_AspNetTeams_AspNetUsers" FromRole="AspNetUser" ToRole="AspNetTeam" />
+          <NavigationProperty Name="AspNetTeamsCategories" Relationship="AppletSoftwareModel.FK_AspNetTeamsCategories_AspNetUsers" FromRole="AspNetUser" ToRole="AspNetTeamsCategory" />
+          <NavigationProperty Name="AspNetTestmonials" Relationship="AppletSoftwareModel.FK_AspNetTestmonials_AspNetUsers" FromRole="AspNetUser" ToRole="AspNetTestmonial" />
+          <NavigationProperty Name="AspNetTestmonialsCategories" Relationship="AppletSoftwareModel.FK_AspNetTestmonialsCategories_AspNetUsers" FromRole="AspNetUser" ToRole="AspNetTestmonialsCategory" />
+          <NavigationProperty Name="AspNetUserClaims" Relationship="AppletSoftwareModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserClaim" />
+          <NavigationProperty Name="AspNetUserLogins" Relationship="AppletSoftwareModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" FromRole="AspNetUser" ToRole="AspNetUserLogin" />
+          <NavigationProperty Name="AspNetUsersInfoPlus" Relationship="AppletSoftwareModel.FK_AspNetUsersInfoPlus_AspNetUsers" FromRole="AspNetUser" ToRole="AspNetUsersInfoPlu" />
+          <NavigationProperty Name="AspNetRoles" Relationship="AppletSoftwareModel.AspNetUserRoles" FromRole="AspNetUser" ToRole="AspNetRole" />
+        </EntityType>
+        <EntityType Name="AspNetUsersInfoPlu">
+          <Key>
+            <PropertyRef Name="UInfoPlus_Id" />
+          </Key>
+          <Property Name="UInfoPlus_Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="UInfoPlus_Fname_En" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UInfoPlus_Fname_Ar" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UInfo_Lname_En" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UInfo_Lname_Ar" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="UInfo_Photo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Id" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="UInfo_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UInfo_Publisher" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="AspNetUser" Relationship="AppletSoftwareModel.FK_AspNetUsersInfoPlus_AspNetUsers" FromRole="AspNetUsersInfoPlu" ToRole="AspNetUser" />
+        </EntityType>
+        <EntityType Name="C__MigrationHistory">
+          <Key>
+            <PropertyRef Name="MigrationId" />
+            <PropertyRef Name="ContextKey" />
+          </Key>
+          <Property Name="MigrationId" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="ContextKey" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Model" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
+          <Property Name="ProductVersion" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_AspNetClients_AspNetClientsCategories">
+          <End Type="AppletSoftwareModel.AspNetClientsCategory" Role="AspNetClientsCategory" Multiplicity="1" />
+          <End Type="AppletSoftwareModel.AspNetClient" Role="AspNetClient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetClientsCategory">
+              <PropertyRef Name="ClCat_Id" />
+            </Principal>
+            <Dependent Role="AspNetClient">
+              <PropertyRef Name="ClCat_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetClients_AspNetUsers">
+          <End Type="AppletSoftwareModel.AspNetUser" Role="AspNetUser" Multiplicity="1" />
+          <End Type="AppletSoftwareModel.AspNetClient" Role="AspNetClient" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetClient">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetClientsCategories_AspNetUsers">
+          <End Type="AppletSoftwareModel.AspNetUser" Role="AspNetUser" Multiplicity="1" />
+          <End Type="AppletSoftwareModel.AspNetClientsCategory" Role="AspNetClientsCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetClientsCategory">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetNews_AspNetNewsCategories">
+          <End Type="AppletSoftwareModel.AspNetNewsCategory" Role="AspNetNewsCategory" Multiplicity="1" />
+          <End Type="AppletSoftwareModel.AspNetNew" Role="AspNetNew" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetNewsCategory">
+              <PropertyRef Name="NCat_Id" />
+            </Principal>
+            <Dependent Role="AspNetNew">
+              <PropertyRef Name="NCat_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetNews_AspNetUsers">
+          <End Type="AppletSoftwareModel.AspNetUser" Role="AspNetUser" Multiplicity="1" />
+          <End Type="AppletSoftwareModel.AspNetNew" Role="AspNetNew" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetNew">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetNewsCategories_AspNetUsers">
+          <End Type="AppletSoftwareModel.AspNetUser" Role="AspNetUser" Multiplicity="1" />
+          <End Type="AppletSoftwareModel.AspNetNewsCategory" Role="AspNetNewsCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetNewsCategory">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetPlans_AspNetPlansCategories">
+          <End Type="AppletSoftwareModel.AspNetPlansCategory" Role="AspNetPlansCategory" Multiplicity="1" />
+          <End Type="AppletSoftwareModel.AspNetPlan" Role="AspNetPlan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetPlansCategory">
+              <PropertyRef Name="PlanCat_Id" />
+            </Principal>
+            <Dependent Role="AspNetPlan">
+              <PropertyRef Name="PlanCat_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetPlans_AspNetUsers">
+          <End Type="AppletSoftwareModel.AspNetUser" Role="AspNetUser" Multiplicity="1" />
+          <End Type="AppletSoftwareModel.AspNetPlan" Role="AspNetPlan" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetPlan">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetProjects_AspNetProjectsCategories">
+          <End Type="AppletSoftwareModel.AspNetProjectsCategory" Role="AspNetProjectsCategory" Multiplicity="1" />
+          <End Type="AppletSoftwareModel.AspNetProject" Role="AspNetProject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetProjectsCategory">
+              <PropertyRef Name="PCat_Id" />
+            </Principal>
+            <Dependent Role="AspNetProject">
+              <PropertyRef Name="PCat_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetProjects_AspNetUsers">
+          <End Type="AppletSoftwareModel.AspNetUser" Role="AspNetUser" Multiplicity="1" />
+          <End Type="AppletSoftwareModel.AspNetProject" Role="AspNetProject" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetProject">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetProjectsCategories_AspNetUsers">
+          <End Type="AppletSoftwareModel.AspNetUser" Role="AspNetUser" Multiplicity="1" />
+          <End Type="AppletSoftwareModel.AspNetProjectsCategory" Role="AspNetProjectsCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetProjectsCategory">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetTeams_AspNetTeamsCategories">
+          <End Type="AppletSoftwareModel.AspNetTeamsCategory" Role="AspNetTeamsCategory" Multiplicity="1" />
+          <End Type="AppletSoftwareModel.AspNetTeam" Role="AspNetTeam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetTeamsCategory">
+              <PropertyRef Name="TCat_Id" />
+            </Principal>
+            <Dependent Role="AspNetTeam">
+              <PropertyRef Name="TCat_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetTeams_AspNetUsers">
+          <End Type="AppletSoftwareModel.AspNetUser" Role="AspNetUser" Multiplicity="1" />
+          <End Type="AppletSoftwareModel.AspNetTeam" Role="AspNetTeam" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetTeam">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetTeamsCategories_AspNetUsers">
+          <End Type="AppletSoftwareModel.AspNetUser" Role="AspNetUser" Multiplicity="1" />
+          <End Type="AppletSoftwareModel.AspNetTeamsCategory" Role="AspNetTeamsCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetTeamsCategory">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetTestmonials_AspNetTestmonialsCategories">
+          <End Type="AppletSoftwareModel.AspNetTestmonialsCategory" Role="AspNetTestmonialsCategory" Multiplicity="1" />
+          <End Type="AppletSoftwareModel.AspNetTestmonial" Role="AspNetTestmonial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetTestmonialsCategory">
+              <PropertyRef Name="TsCat_Id" />
+            </Principal>
+            <Dependent Role="AspNetTestmonial">
+              <PropertyRef Name="TsCat_Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetTestmonials_AspNetUsers">
+          <End Type="AppletSoftwareModel.AspNetUser" Role="AspNetUser" Multiplicity="1" />
+          <End Type="AppletSoftwareModel.AspNetTestmonial" Role="AspNetTestmonial" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetTestmonial">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetTestmonialsCategories_AspNetUsers">
+          <End Type="AppletSoftwareModel.AspNetUser" Role="AspNetUser" Multiplicity="1" />
+          <End Type="AppletSoftwareModel.AspNetTestmonialsCategory" Role="AspNetTestmonialsCategory" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetTestmonialsCategory">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId">
+          <End Type="AppletSoftwareModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="AppletSoftwareModel.AspNetUserClaim" Role="AspNetUserClaim" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserClaim">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId">
+          <End Type="AppletSoftwareModel.AspNetUser" Role="AspNetUser" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="AppletSoftwareModel.AspNetUserLogin" Role="AspNetUserLogin" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUserLogin">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_AspNetUsersInfoPlus_AspNetUsers">
+          <End Type="AppletSoftwareModel.AspNetUser" Role="AspNetUser" Multiplicity="1" />
+          <End Type="AppletSoftwareModel.AspNetUsersInfoPlu" Role="AspNetUsersInfoPlu" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="AspNetUser">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="AspNetUsersInfoPlu">
+              <PropertyRef Name="Id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="AspNetUserRoles">
+          <End Type="AppletSoftwareModel.AspNetRole" Role="AspNetRole" Multiplicity="*" />
+          <End Type="AppletSoftwareModel.AspNetUser" Role="AspNetUser" Multiplicity="*" />
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AppletSoftwareModelStoreContainer" CdmEntityContainer="AppletSoftwareEntities">
+          <EntitySetMapping Name="AspNetClients">
+            <EntityTypeMapping TypeName="AppletSoftwareModel.AspNetClient">
+              <MappingFragment StoreEntitySet="AspNetClients">
+                <ScalarProperty Name="Client_Photo" ColumnName="Client_Photo" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ClCat_Id" ColumnName="ClCat_Id" />
+                <ScalarProperty Name="Client_DateTime" ColumnName="Client_DateTime" />
+                <ScalarProperty Name="Client_Address_En" ColumnName="Client_Address_En" />
+                <ScalarProperty Name="Client_Address_Ar" ColumnName="Client_Address_Ar" />
+                <ScalarProperty Name="Client_CompanyName_En" ColumnName="Client_CompanyName_En" />
+                <ScalarProperty Name="Client_CompanyName_Ar" ColumnName="Client_CompanyName_Ar" />
+                <ScalarProperty Name="Client_PhoneNumber" ColumnName="Client_PhoneNumber" />
+                <ScalarProperty Name="Client_Email" ColumnName="Client_Email" />
+                <ScalarProperty Name="Client_Lname_En" ColumnName="Client_Lname_En" />
+                <ScalarProperty Name="Client_Lname_Ar" ColumnName="Client_Lname_Ar" />
+                <ScalarProperty Name="Client_Fname_En" ColumnName="Client_Fname_En" />
+                <ScalarProperty Name="Client_Fname_Ar" ColumnName="Client_Fname_Ar" />
+                <ScalarProperty Name="Client_Id" ColumnName="Client_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetClientsCategories">
+            <EntityTypeMapping TypeName="AppletSoftwareModel.AspNetClientsCategory">
+              <MappingFragment StoreEntitySet="AspNetClientsCategories">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ClCat_DateTime" ColumnName="ClCat_DateTime" />
+                <ScalarProperty Name="ClCat_Description_En" ColumnName="ClCat_Description_En" />
+                <ScalarProperty Name="ClCat_Description_Ar" ColumnName="ClCat_Description_Ar" />
+                <ScalarProperty Name="ClCat_Name_En" ColumnName="ClCat_Name_En" />
+                <ScalarProperty Name="ClCat_Name_Ar" ColumnName="ClCat_Name_Ar" />
+                <ScalarProperty Name="ClCat_Id" ColumnName="ClCat_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetMessages">
+            <EntityTypeMapping TypeName="AppletSoftwareModel.AspNetMessage">
+              <MappingFragment StoreEntitySet="AspNetMessages">
+                <ScalarProperty Name="Message_DateTime" ColumnName="Message_DateTime" />
+                <ScalarProperty Name="Message_Response" ColumnName="Message_Response" />
+                <ScalarProperty Name="Message_Active" ColumnName="Message_Active" />
+                <ScalarProperty Name="Message_Content" ColumnName="Message_Content" />
+                <ScalarProperty Name="Message_Subject" ColumnName="Message_Subject" />
+                <ScalarProperty Name="Message_Email" ColumnName="Message_Email" />
+                <ScalarProperty Name="Message_Id" ColumnName="Message_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetNews">
+            <EntityTypeMapping TypeName="AppletSoftwareModel.AspNetNew">
+              <MappingFragment StoreEntitySet="AspNetNews">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="NCat_Id" ColumnName="NCat_Id" />
+                <ScalarProperty Name="News_Photo" ColumnName="News_Photo" />
+                <ScalarProperty Name="News_DateTime" ColumnName="News_DateTime" />
+                <ScalarProperty Name="News_Long_En" ColumnName="News_Long_En" />
+                <ScalarProperty Name="News_Long_Ar" ColumnName="News_Long_Ar" />
+                <ScalarProperty Name="News_Short_En" ColumnName="News_Short_En" />
+                <ScalarProperty Name="News_Short_Ar" ColumnName="News_Short_Ar" />
+                <ScalarProperty Name="News_Title_En" ColumnName="News_Title_En" />
+                <ScalarProperty Name="News_Title_Ar" ColumnName="News_Title_Ar" />
+                <ScalarProperty Name="News_Id" ColumnName="News_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetNewsCategories">
+            <EntityTypeMapping TypeName="AppletSoftwareModel.AspNetNewsCategory">
+              <MappingFragment StoreEntitySet="AspNetNewsCategories">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="NCat_Description_En" ColumnName="NCat_Description_En" />
+                <ScalarProperty Name="NCat_Description_Ar" ColumnName="NCat_Description_Ar" />
+                <ScalarProperty Name="NCat_DateTime" ColumnName="NCat_DateTime" />
+                <ScalarProperty Name="NCat_Name_En" ColumnName="NCat_Name_En" />
+                <ScalarProperty Name="NCat_Name_Ar" ColumnName="NCat_Name_Ar" />
+                <ScalarProperty Name="NCat_Id" ColumnName="NCat_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetNewsLetters">
+            <EntityTypeMapping TypeName="AppletSoftwareModel.AspNetNewsLetter">
+              <MappingFragment StoreEntitySet="AspNetNewsLetters">
+                <ScalarProperty Name="Letter_DateTime" ColumnName="Letter_DateTime" />
+                <ScalarProperty Name="Letter_Response" ColumnName="Letter_Response" />
+                <ScalarProperty Name="Letter_Active" ColumnName="Letter_Active" />
+                <ScalarProperty Name="Letter_Email" ColumnName="Letter_Email" />
+                <ScalarProperty Name="Letter_Id" ColumnName="Letter_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetNotifications">
+            <EntityTypeMapping TypeName="AppletSoftwareModel.AspNetNotification">
+              <MappingFragment StoreEntitySet="AspNetNotifications">
+                <ScalarProperty Name="Notify_Manager_Id" ColumnName="Notify_Manager_Id" />
+                <ScalarProperty Name="Notify_Action" ColumnName="Notify_Action" />
+                <ScalarProperty Name="Notify_Active" ColumnName="Notify_Active" />
+                <ScalarProperty Name="Notify_DateTime" ColumnName="Notify_DateTime" />
+                <ScalarProperty Name="Notify_Title" ColumnName="Notify_Title" />
+                <ScalarProperty Name="Notify_Manager_Photo" ColumnName="Notify_Manager_Photo" />
+                <ScalarProperty Name="Notify_Manager_Name" ColumnName="Notify_Manager_Name" />
+                <ScalarProperty Name="Notify_Id" ColumnName="Notify_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetPlanOrders">
+            <EntityTypeMapping TypeName="AppletSoftwareModel.AspNetPlanOrder">
+              <MappingFragment StoreEntitySet="AspNetPlanOrders">
+                <ScalarProperty Name="Order_DateTime" ColumnName="Order_DateTime" />
+                <ScalarProperty Name="Order_Response" ColumnName="Order_Response" />
+                <ScalarProperty Name="Order_Lname" ColumnName="Order_Lname" />
+                <ScalarProperty Name="Order_Fname" ColumnName="Order_Fname" />
+                <ScalarProperty Name="Order_Message" ColumnName="Order_Message" />
+                <ScalarProperty Name="Order_Plan" ColumnName="Order_Plan" />
+                <ScalarProperty Name="Order_Phone" ColumnName="Order_Phone" />
+                <ScalarProperty Name="Order_Email" ColumnName="Order_Email" />
+                <ScalarProperty Name="Order_Id" ColumnName="Order_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetPlans">
+            <EntityTypeMapping TypeName="AppletSoftwareModel.AspNetPlan">
+              <MappingFragment StoreEntitySet="AspNetPlans">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PlanCat_Id" ColumnName="PlanCat_Id" />
+                <ScalarProperty Name="Plan_Description_En" ColumnName="Plan_Description_En" />
+                <ScalarProperty Name="Plan_Description_Ar" ColumnName="Plan_Description_Ar" />
+                <ScalarProperty Name="Plan_DateTime" ColumnName="Plan_DateTime" />
+                <ScalarProperty Name="Plan_Price" ColumnName="Plan_Price" />
+                <ScalarProperty Name="Plan_Name_En" ColumnName="Plan_Name_En" />
+                <ScalarProperty Name="Plan_Name_Ar" ColumnName="Plan_Name_Ar" />
+                <ScalarProperty Name="Plan_Id" ColumnName="Plan_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetPlansCategories">
+            <EntityTypeMapping TypeName="AppletSoftwareModel.AspNetPlansCategory">
+              <MappingFragment StoreEntitySet="AspNetPlansCategories">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PlanCat_DateTime" ColumnName="PlanCat_DateTime" />
+                <ScalarProperty Name="PlanCat_Description_En" ColumnName="PlanCat_Description_En" />
+                <ScalarProperty Name="PlanCat_Description_Ar" ColumnName="PlanCat_Description_Ar" />
+                <ScalarProperty Name="PlanCat_Name_En" ColumnName="PlanCat_Name_En" />
+                <ScalarProperty Name="PlanCat_Name_Ar" ColumnName="PlanCat_Name_Ar" />
+                <ScalarProperty Name="PlanCat_Id" ColumnName="PlanCat_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetProjects">
+            <EntityTypeMapping TypeName="AppletSoftwareModel.AspNetProject">
+              <MappingFragment StoreEntitySet="AspNetProjects">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PCat_Id" ColumnName="PCat_Id" />
+                <ScalarProperty Name="Project_Descrption_En" ColumnName="Project_Descrption_En" />
+                <ScalarProperty Name="Project_Descrption_Ar" ColumnName="Project_Descrption_Ar" />
+                <ScalarProperty Name="Project_Url" ColumnName="Project_Url" />
+                <ScalarProperty Name="Project_Photo" ColumnName="Project_Photo" />
+                <ScalarProperty Name="Project_DateTime" ColumnName="Project_DateTime" />
+                <ScalarProperty Name="Project_Name_En" ColumnName="Project_Name_En" />
+                <ScalarProperty Name="Project_Name_Ar" ColumnName="Project_Name_Ar" />
+                <ScalarProperty Name="Project_Id" ColumnName="Project_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetProjectsCategories">
+            <EntityTypeMapping TypeName="AppletSoftwareModel.AspNetProjectsCategory">
+              <MappingFragment StoreEntitySet="AspNetProjectsCategories">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="PCat_Description_En" ColumnName="PCat_Description_En" />
+                <ScalarProperty Name="PCat_Description_Ar" ColumnName="PCat_Description_Ar" />
+                <ScalarProperty Name="PCat_DateTime" ColumnName="PCat_DateTime" />
+                <ScalarProperty Name="PCat_Name_En" ColumnName="PCat_Name_En" />
+                <ScalarProperty Name="PCat_Name_Ar" ColumnName="PCat_Name_Ar" />
+                <ScalarProperty Name="PCat_Id" ColumnName="PCat_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetRoles">
+            <EntityTypeMapping TypeName="AppletSoftwareModel.AspNetRole">
+              <MappingFragment StoreEntitySet="AspNetRoles">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetTeams">
+            <EntityTypeMapping TypeName="AppletSoftwareModel.AspNetTeam">
+              <MappingFragment StoreEntitySet="AspNetTeams">
+                <ScalarProperty Name="Team_JobTitle_En" ColumnName="Team_JobTitle_En" />
+                <ScalarProperty Name="Team_JobTitle_Ar" ColumnName="Team_JobTitle_Ar" />
+                <ScalarProperty Name="Team_Salary" ColumnName="Team_Salary" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TCat_Id" ColumnName="TCat_Id" />
+                <ScalarProperty Name="Team_DateTime" ColumnName="Team_DateTime" />
+                <ScalarProperty Name="Team_Photo" ColumnName="Team_Photo" />
+                <ScalarProperty Name="Team_Phone" ColumnName="Team_Phone" />
+                <ScalarProperty Name="Team_Email" ColumnName="Team_Email" />
+                <ScalarProperty Name="Team_Lname_En" ColumnName="Team_Lname_En" />
+                <ScalarProperty Name="Team_Lname_Ar" ColumnName="Team_Lname_Ar" />
+                <ScalarProperty Name="Team_Fname_En" ColumnName="Team_Fname_En" />
+                <ScalarProperty Name="Team_Fname_Ar" ColumnName="Team_Fname_Ar" />
+                <ScalarProperty Name="Team_Id" ColumnName="Team_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetTeamsCategories">
+            <EntityTypeMapping TypeName="AppletSoftwareModel.AspNetTeamsCategory">
+              <MappingFragment StoreEntitySet="AspNetTeamsCategories">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TCat_Description_En" ColumnName="TCat_Description_En" />
+                <ScalarProperty Name="TCat_Description_Ar" ColumnName="TCat_Description_Ar" />
+                <ScalarProperty Name="TCat_DateTime" ColumnName="TCat_DateTime" />
+                <ScalarProperty Name="TCat_Name_En" ColumnName="TCat_Name_En" />
+                <ScalarProperty Name="TCat_Name_Ar" ColumnName="TCat_Name_Ar" />
+                <ScalarProperty Name="TCat_Id" ColumnName="TCat_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetTestmonials">
+            <EntityTypeMapping TypeName="AppletSoftwareModel.AspNetTestmonial">
+              <MappingFragment StoreEntitySet="AspNetTestmonials">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TsCat_Id" ColumnName="TsCat_Id" />
+                <ScalarProperty Name="Testmonial_ClientPhoto" ColumnName="Testmonial_ClientPhoto" />
+                <ScalarProperty Name="Testmonial_ClientJobTitle_En" ColumnName="Testmonial_ClientJobTitle_En" />
+                <ScalarProperty Name="Testmonial_ClientJobTitle_Ar" ColumnName="Testmonial_ClientJobTitle_Ar" />
+                <ScalarProperty Name="Testmonial_ClientName_En" ColumnName="Testmonial_ClientName_En" />
+                <ScalarProperty Name="Testmonial_ClientName_Ar" ColumnName="Testmonial_ClientName_Ar" />
+                <ScalarProperty Name="Testmonial_DateTime" ColumnName="Testmonial_DateTime" />
+                <ScalarProperty Name="Testmonial_Answer_En" ColumnName="Testmonial_Answer_En" />
+                <ScalarProperty Name="Testmonial_Answer_Ar" ColumnName="Testmonial_Answer_Ar" />
+                <ScalarProperty Name="Testmonial_Question_En" ColumnName="Testmonial_Question_En" />
+                <ScalarProperty Name="Testmonial_Question_Ar" ColumnName="Testmonial_Question_Ar" />
+                <ScalarProperty Name="Testmonial_Id" ColumnName="Testmonial_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetTestmonialsCategories">
+            <EntityTypeMapping TypeName="AppletSoftwareModel.AspNetTestmonialsCategory">
+              <MappingFragment StoreEntitySet="AspNetTestmonialsCategories">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TsCat_Description_Ar" ColumnName="TsCat_Description_Ar" />
+                <ScalarProperty Name="TsCat_Description_En" ColumnName="TsCat_Description_En" />
+                <ScalarProperty Name="TsCat_DateTime" ColumnName="TsCat_DateTime" />
+                <ScalarProperty Name="TsCat_Name_En" ColumnName="TsCat_Name_En" />
+                <ScalarProperty Name="TsCat_Name_Ar" ColumnName="TsCat_Name_Ar" />
+                <ScalarProperty Name="TsCat_Id" ColumnName="TsCat_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserClaims">
+            <EntityTypeMapping TypeName="AppletSoftwareModel.AspNetUserClaim">
+              <MappingFragment StoreEntitySet="AspNetUserClaims">
+                <ScalarProperty Name="ClaimValue" ColumnName="ClaimValue" />
+                <ScalarProperty Name="ClaimType" ColumnName="ClaimType" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUserLogins">
+            <EntityTypeMapping TypeName="AppletSoftwareModel.AspNetUserLogin">
+              <MappingFragment StoreEntitySet="AspNetUserLogins">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="ProviderKey" ColumnName="ProviderKey" />
+                <ScalarProperty Name="LoginProvider" ColumnName="LoginProvider" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUsers">
+            <EntityTypeMapping TypeName="AppletSoftwareModel.AspNetUser">
+              <MappingFragment StoreEntitySet="AspNetUsers">
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
+                <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />
+                <ScalarProperty Name="LockoutEndDateUtc" ColumnName="LockoutEndDateUtc" />
+                <ScalarProperty Name="TwoFactorEnabled" ColumnName="TwoFactorEnabled" />
+                <ScalarProperty Name="PhoneNumberConfirmed" ColumnName="PhoneNumberConfirmed" />
+                <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+                <ScalarProperty Name="SecurityStamp" ColumnName="SecurityStamp" />
+                <ScalarProperty Name="PasswordHash" ColumnName="PasswordHash" />
+                <ScalarProperty Name="EmailConfirmed" ColumnName="EmailConfirmed" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="AspNetUsersInfoPlus">
+            <EntityTypeMapping TypeName="AppletSoftwareModel.AspNetUsersInfoPlu">
+              <MappingFragment StoreEntitySet="AspNetUsersInfoPlus">
+                <ScalarProperty Name="UInfo_Publisher" ColumnName="UInfo_Publisher" />
+                <ScalarProperty Name="UInfo_DateTime" ColumnName="UInfo_DateTime" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UInfo_Photo" ColumnName="UInfo_Photo" />
+                <ScalarProperty Name="UInfo_Lname_Ar" ColumnName="UInfo_Lname_Ar" />
+                <ScalarProperty Name="UInfo_Lname_En" ColumnName="UInfo_Lname_En" />
+                <ScalarProperty Name="UInfoPlus_Fname_Ar" ColumnName="UInfoPlus_Fname_Ar" />
+                <ScalarProperty Name="UInfoPlus_Fname_En" ColumnName="UInfoPlus_Fname_En" />
+                <ScalarProperty Name="UInfoPlus_Id" ColumnName="UInfoPlus_Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="C__MigrationHistory">
+            <EntityTypeMapping TypeName="AppletSoftwareModel.C__MigrationHistory">
+              <MappingFragment StoreEntitySet="C__MigrationHistory">
+                <ScalarProperty Name="ProductVersion" ColumnName="ProductVersion" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
+                <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="AppletSoftwareModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="AspNetUserRoles" TypeName="AppletSoftwareModel.AspNetUserRoles" StoreEntitySet="AspNetUserRoles">
+            <EndProperty Name="AspNetUser">
+              <ScalarProperty Name="Id" ColumnName="UserId" />
+            </EndProperty>
+            <EndProperty Name="AspNetRole">
+              <ScalarProperty Name="Id" ColumnName="RoleId" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

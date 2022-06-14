@@ -1,0 +1,720 @@
+﻿@using System.Linq
+@using AppletSoftware.Models
+@using Microsoft.AspNet.Identity;
+@using Microsoft.AspNet.Identity.Owin;
+@using Microsoft.Owin.Security;
+@using System.Threading
+@{
+    Layout = null;
+
+    AppletSoftware.Models.AppletSoftwareEntities Context = new AppletSoftware.Models.AppletSoftwareEntities();
+
+    IEnumerable<ManagersShowViewModel> TopManagers = Context.AspNetUsers.Join(Context.AspNetUsersInfoPlus, m => m.Id, n => n.Id, (m, n) => new { AspNetUser = m, AspNetUsersInfoPlu = n }).OrderByDescending(m => m.AspNetUsersInfoPlu.UInfo_DateTime).Select(m => new ManagersShowViewModel { Users = m.AspNetUser, UsersPlusInfo = m.AspNetUsersInfoPlu });
+
+    IEnumerable<AspNetMessage> ActiveMessages = Context.AspNetMessages.Where(m => m.Message_Active == true).Take(3).OrderByDescending(m => m.Message_DateTime).ToList();
+
+    int TotalActiveMessages = Context.AspNetMessages.Where(m => m.Message_Active == true).Count();
+
+
+    IEnumerable<AspNetNewsLetter> ActiveNewsLetters = Context.AspNetNewsLetters.Where(m => m.Letter_Active == true).Take(3).OrderByDescending(m => m.Letter_DateTime).ToList();
+
+    int TotalActiveNewsLetters = Context.AspNetNewsLetters.Where(m => m.Letter_Active == true).Count();
+
+
+    IEnumerable<AspNetNotification> ActiveNotifications = Context.AspNetNotifications.Where(m => m.Notify_Active == true).Take(3).OrderByDescending(m => m.Notify_DateTime).ToList();
+
+    int TotalActiveNotifications = Context.AspNetNotifications.Where(m => m.Notify_Active == true).Count();
+    string UserId = HttpContext.Current.User.Identity.GetUserId().ToString();
+
+    string ProfileImage = Context.AspNetUsersInfoPlus.Where(m => m.Id == UserId).SingleOrDefault().UInfo_Photo;
+
+    int OrdersCount = Context.AspNetPlanOrders.Where(m => m.Order_Response == false).ToList().Count;
+
+
+}
+
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <title>reach UP marketing agency</title>
+    <!-- custom-theme -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="@AppletDashIndex.DashIndex.appletdashindexlogoicon" rel="shortcut icon" />
+
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+               function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //custom-theme -->
+    <link href="@AppletDashIndex.DashIndex.appletdashindexbootstrapcss" rel="stylesheet" type="text/css" media="all" />
+    <link href="@AppletDashIndex.DashIndex.appletdashindexbootstraprtlcss" rel="stylesheet" type="text/css" media="all" />
+    <link href="@AppletDashIndex.DashIndex.appletdashindexcomponentcss" rel="stylesheet" type="text/css" media="all" />
+    <link href="@AppletDashIndex.DashIndex.appletdashindexexportcss" rel="stylesheet" type="text/css" media="all" />
+    <link href="@AppletDashIndex.DashIndex.appletdashindexflipclockcss" rel="stylesheet" type="text/css" media="all" />
+    <link href="@AppletDashIndex.DashIndex.appletdashindexcirclecss" rel="stylesheet" type="text/css" media="all" />
+    <link href="@AppletDashIndex.DashIndex.appletdashindexstylegridcss" rel="stylesheet" type="text/css" media="all" />
+    <link href="@AppletDashIndex.DashIndex.appletdashindexstylecss" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="@AppletDashIndex.DashIndex.appletdashindexstyletablecss">
+    <link rel="stylesheet" href="@AppletDashIndex.DashIndex.appletdashindexbaictablecss">
+    <link rel="stylesheet" href="@AppletDashIndex.DashIndex.appletdashindexnewstylecss">
+    <link rel="stylesheet" href="@AppletDashIndex.DashIndex.appletdashindexnewmediacss">
+
+    <!-- font-awesome-icons -->
+    <link href="@AppletDashIndex.DashIndex.appletdashindexfontawesomecss" rel="stylesheet">
+
+    <link href="@AppletDashIndex.DashIndex.appletdashindexfileinputcss" rel="stylesheet" type="text/css" media="all" />
+    <link href="@AppletDashIndex.DashIndex.appletdashindextoastcss" rel="stylesheet" />
+
+    <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+
+    <!-- //font-awesome-icons -->
+    <link href="@AppletDashIndex.DashIndex.appletdashindexgooglefontcss" rel="stylesheet">
+
+    <script src="~/Scripts/dashjs/jquery-2.1.4.min.js"></script>
+</head>
+<body>
+    <!-- banner -->
+    <div class="wthree_agile_admin_info">
+        <!-- /w3_agileits_top_nav-->
+        <!-- /nav-->
+        <div class="w3_agileits_top_nav">
+            <ul id="gn-menu" class="gn-menu-main">
+                <!-- /nav_agile_w3l -->
+                <li class="gn-trigger">
+                    <a class="gn-icon gn-icon-menu"><i class="fa fa-bars" aria-hidden="true"></i><span>Menu</span></a>
+                    <nav class="gn-menu-wrapper">
+                        <div class="gn-scroller scrollbar1">
+                            <ul class="gn-menu agile_menu_drop">
+
+                                <li>
+                                    <a href="@Url.Action("Dashboard","Manage")">
+                                        <i class="fa fa-tachometer"></i> @AppletDashIndex.DashIndex.appletdashindexsidebardashboard
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("ClientsOrders","Manage")">
+                                        <i class="fa fa-shopping-cart"></i> @AppletDashIndex.DashIndex.appletdashindexsidebardclientorders <span class="badge">@Html.DisplayFor(m => OrdersCount)</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("Projects","Manage")">
+                                        <i class="fa fa-desktop" aria-hidden="true">
+                                        </i> @AppletDashIndex.DashIndex.appletdashindexsidebardprojects
+                                       
+                                    </a>
+                                   
+                                </li>
+
+                                <li>
+
+                                    <a href="@Url.Action("News","Manage")">
+
+                                        <i class="fa fa-file" aria-hidden="true"></i>
+                                            @AppletDashIndex.DashIndex.appletdashindexsidebardnews
+
+                                    </a>
+                                 
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("Teams","Manage")">
+                                        <i class="fa fa-user-times" aria-hidden="true"></i> @AppletDashIndex.DashIndex.appletdashindexsidebarteams
+                                     
+                                    </a>
+                                 
+                                </li>
+
+
+                                <li>
+                                    <a href="@Url.Action("Testmonials","Manage")">
+                                        <i class="fa fa-child" aria-hidden="true"></i>
+                                        @AppletDashIndex.DashIndex.appletdashindexsidebartestimonials
+                                        
+                                    </a>
+                                 
+                                </li>
+
+                                <li>
+                                    <a href="@Url.Action("Plans","Manage")">
+                                        <i class="fa fa-area-chart" aria-hidden="true"></i>
+                                        @AppletDashIndex.DashIndex.appletdashindexsidebarplans
+                                      
+                                    </a>
+                                 
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Clients","Manage")">
+                                        <i class="fa fa-users" aria-hidden="true"></i>
+                                        @AppletDashIndex.DashIndex.appletdashindexsidebarclients
+                                       
+                                    </a>
+                                  
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("Managers","Manage")">
+                                        <i class="fa fa-briefcase" aria-hidden="true"></i>
+                                        @AppletDashIndex.DashIndex.appletdashindexsidebarmanagers
+                                       
+                                    </a>
+                                 
+                                </li>
+                            
+
+
+
+
+
+                            </ul>
+                        </div><!-- /gn-scroller -->
+                    </nav>
+                </li>
+                <!-- //nav_agile_w3l -->
+                <li class="second logo"><a href="@Url.Action("Index","Home")"><img src="~/Images/images/logofooter.png" style="width: 100px; height: 60px; background-color: #fff;" /></a></li>
+                <li class="second admin-pic">
+                    <ul class="top_dp_agile">
+                        <li class="dropdown profile_details_drop">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                <div class="profile_img">
+                                    <span class="prfil-img"><img src="@Url.Content("~/Images/resizedmanagers/"+ProfileImage)" width="50" height="50" alt=""> </span>
+                                </div>
+                            </a>
+                            <ul class="dropdown-menu drp-mnu">
+
+                                <li> <a href="@Url.Action("ManagerProfile","Manage",new { Id=UserId })"><i class="fa fa-user"></i> @AppletDashIndex.DashIndex.appletdashindextopmenuprofile</a> </li>
+                                <li>
+
+
+
+                                    @{ string lang = Thread.CurrentThread.CurrentCulture.Name;
+
+                                        if (lang == "ar-SA")
+                                        {
+
+                                            lang = "en-US";
+                                        }
+                                        else if (lang == "en-US")
+                                        {
+                                            lang = "ar-SA";
+                                        }
+
+
+
+                                        string Order_Id = Url.RequestContext.HttpContext.GetOwinContext().Request.QueryString.HasValue && Request.QueryString["Order_Id"] != null ? Request.QueryString["Order_Id"].ToString() : "";
+                                        string PCat_Id = Url.RequestContext.HttpContext.GetOwinContext().Request.QueryString.HasValue && Request.QueryString["PCat_Id"] != null ? Request.QueryString["PCat_Id"].ToString() : "";
+                                        string Project_Id = Url.RequestContext.HttpContext.GetOwinContext().Request.QueryString.HasValue && Request.QueryString["Project_Id"] != null ? Request.QueryString["Project_Id"].ToString() : "";
+                                        string News_Id = Url.RequestContext.HttpContext.GetOwinContext().Request.QueryString.HasValue && Request.QueryString["News_Id"] != null ? Request.QueryString["News_Id"].ToString() : "";
+                                        string NCat_Id = Url.RequestContext.HttpContext.GetOwinContext().Request.QueryString.HasValue && Request.QueryString["NCat_Id"] != null ? Request.QueryString["NCat_Id"].ToString() : "";
+                                        string Teams_Id = Url.RequestContext.HttpContext.GetOwinContext().Request.QueryString.HasValue && Request.QueryString["Teams_Id"] != null ? Request.QueryString["Teams_Id"].ToString() : "";
+                                        string TCat_Id = Url.RequestContext.HttpContext.GetOwinContext().Request.QueryString.HasValue && Request.QueryString["TCat_Id"] != null ? Request.QueryString["TCat_Id"].ToString() : "";
+                                        string Plan_Id = Url.RequestContext.HttpContext.GetOwinContext().Request.QueryString.HasValue && Request.QueryString["Plan_Id"] != null ? Request.QueryString["Plan_Id"].ToString() : "";
+                                        string TsCat_Id = Url.RequestContext.HttpContext.GetOwinContext().Request.QueryString.HasValue && Request.QueryString["TsCat_Id"] != null ? Request.QueryString["TsCat_Id"].ToString() : "";
+                                        string Testmonial_Id = Url.RequestContext.HttpContext.GetOwinContext().Request.QueryString.HasValue && Request.QueryString["Testmonial_Id"] != null ? Request.QueryString["Testmonial_Id"].ToString() : "";
+                                        string Manager_Id = Url.RequestContext.HttpContext.GetOwinContext().Request.QueryString.HasValue && Request.QueryString["Manager_Id"] != null ? Request.QueryString["Manager_Id"].ToString() : "";
+                                        string Clients_Id = Url.RequestContext.HttpContext.GetOwinContext().Request.QueryString.HasValue && Request.QueryString["Clients_Id"] != null ? Request.QueryString["Clients_Id"].ToString() : "";
+
+                                    }
+
+
+                                    @if (!string.IsNullOrEmpty(Order_Id))
+                                    {
+
+
+                                        <a href="@Url.Action(ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), new { Order_Id=Order_Id, language=lang})">
+                                            <i class="fa fa-language"></i>
+                                            @AppletDashIndex.DashIndex.appletdashindextopmenulanguage
+
+
+
+                                        </a>
+
+                                    }
+
+                                    @if (!string.IsNullOrEmpty(Clients_Id))
+                                    {
+
+
+                                        <a href="@Url.Action(ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), new { Clients_Id=Clients_Id, language=lang})">
+                                            <i class="fa fa-language"></i>
+                                            @AppletDashIndex.DashIndex.appletdashindextopmenulanguage
+
+
+
+                                        </a>
+
+                                    }
+                                    @if (!string.IsNullOrEmpty(Manager_Id))
+                                    {
+
+
+                                        <a href="@Url.Action(ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), new { Manager_Id=Manager_Id, language=lang})">
+                                            <i class="fa fa-language"></i>
+                                            @AppletDashIndex.DashIndex.appletdashindextopmenulanguage
+
+
+
+                                        </a>
+
+                                    }
+                                    @if (!string.IsNullOrEmpty(Plan_Id))
+                                    {
+
+
+                                        <a href="@Url.Action(ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), new { Plan_Id=Plan_Id, language=lang})">
+                                            <i class="fa fa-language"></i>
+                                            @AppletDashIndex.DashIndex.appletdashindextopmenulanguage
+
+
+
+                                        </a>
+
+                                    }
+
+                                    else if (!string.IsNullOrEmpty(PCat_Id))
+                                    {
+                                        <a href="@Url.Action(ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), new { PCat_Id=PCat_Id, language=lang})">
+                                            <i class="fa fa-language"></i>
+                                            @AppletDashIndex.DashIndex.appletdashindextopmenulanguage
+
+
+
+                                        </a>
+                                    }
+                                    else if (!string.IsNullOrEmpty(TsCat_Id))
+                                    {
+                                        <a href="@Url.Action(ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), new { TsCat_Id=TsCat_Id, language=lang})">
+                                            <i class="fa fa-language"></i>
+                                            @AppletDashIndex.DashIndex.appletdashindextopmenulanguage
+
+
+
+                                        </a>
+                                    }
+                                    else if (!string.IsNullOrEmpty(Project_Id))
+                                    {
+                                        <a href="@Url.Action(ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), new { Project_Id=Project_Id, language=lang})">
+                                            <i class="fa fa-language"></i>
+                                            @AppletDashIndex.DashIndex.appletdashindextopmenulanguage
+
+
+
+                                        </a>
+                                    }
+                                    else if (!string.IsNullOrEmpty(Testmonial_Id))
+                                    {
+                                        <a href="@Url.Action(ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), new { Testmonial_Id=Testmonial_Id, language=lang})">
+                                            <i class="fa fa-language"></i>
+                                            @AppletDashIndex.DashIndex.appletdashindextopmenulanguage
+
+
+
+                                        </a>
+                                    }
+                                    else if (!string.IsNullOrEmpty(News_Id))
+                                    {
+                                        <a href="@Url.Action(ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), new {News_Id=News_Id, language=lang})">
+                                            <i class="fa fa-language"></i>
+                                            @AppletDashIndex.DashIndex.appletdashindextopmenulanguage
+
+
+
+                                        </a>
+                                    }
+                                    else if (!string.IsNullOrEmpty(NCat_Id))
+                                    {
+                                        <a href="@Url.Action(ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), new { NCat_Id=NCat_Id, language=lang})">
+                                            <i class="fa fa-language"></i>
+                                            @AppletDashIndex.DashIndex.appletdashindextopmenulanguage
+
+
+
+                                        </a>
+                                    }
+
+                                    else if (!string.IsNullOrEmpty(TCat_Id))
+                                    {
+                                        <a href="@Url.Action(ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), new { TCat_Id=TCat_Id, language=lang})">
+                                            <i class="fa fa-language"></i>
+                                            @AppletDashIndex.DashIndex.appletdashindextopmenulanguage
+
+
+
+                                        </a>
+                                    }
+
+                                    else if (!string.IsNullOrEmpty(Teams_Id))
+                                    {
+                                        <a href="@Url.Action(ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), new {Teams_Id=Teams_Id, language=lang})">
+                                            <i class="fa fa-language"></i>
+                                            @AppletDashIndex.DashIndex.appletdashindextopmenulanguage
+
+
+
+                                        </a>
+                                    }
+
+                                    else
+                                    {
+
+                                        <a href="@Url.Action(ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), new {language=lang})">
+                                            <i class="fa fa-language"></i>
+                                            @AppletDashIndex.DashIndex.appletdashindextopmenulanguage
+
+
+
+                                        </a>
+                                    }
+
+
+                                </li>
+                                <li class="logoutli">
+                                    @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm" }))
+                                    {
+                                        @Html.AntiForgeryToken()
+                                        <a href="javascript:document.getElementById('logoutForm').submit()"><i class="fa fa-sign-out"></i> @AppletDashIndex.DashIndex.appletdashindextopmenuprologout</a>
+
+                                    }
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+                <li class="second top_bell_nav">
+                    <ul class="top_dp_agile ">
+                        <li class="dropdown head-dpdn">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-bell-o" aria-hidden="true"></i> <span class="badge blue">@TotalActiveNotifications</span></a>
+                            <ul class="dropdown-menu notifications">
+                                <li>
+                                    <div class="notification_header">
+                                        <h3>@AppletDashIndex.DashIndex.appletdashindextopmenunotificationstitle</h3>
+                                    </div>
+                                </li>
+                                @foreach (var item in ActiveNotifications)
+                                {
+                                    <li>
+                                        <a href="#">
+                                            <div class="user_img"><img src="@Url.Content("~/Images/resizedmanagers/"+item.Notify_Manager_Photo)" alt=""></div>
+                                            <div class="notification_desc">
+                                                <h6>@item.Notify_Manager_Name</h6>
+                                                <p>@item.Notify_Title</p>
+                                                @{
+
+                                                    string Ago = DateTime.Now.Subtract(item.Notify_DateTime).Hours.ToString();
+
+
+                                                }
+
+
+                                                <p><span>@string.Concat(Ago, "hour ago")</span> |<span>@item.Notify_Action</span> </p>
+
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </a>
+                                    </li>
+
+
+                                }
+
+                                <li>
+                                    <div class="notification_bottom">
+                                        <a href="@Url.Action("ActiveNotifications","Manage")">@AppletDashIndex.DashIndex.appletdashindextopmenunotificationsseeall</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+                <li class="second top_bell_nav">
+                    <ul class="top_dp_agile ">
+                        <li class="dropdown head-dpdn">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true"><i class="fa fa-envelope-o" aria-hidden="true"></i> <span class="badge blue">@TotalActiveMessages</span></a>
+                            <ul class="dropdown-menu messages">
+                                <li>
+                                    <div class="notification_header">
+                                        <h3>@AppletDashIndex.DashIndex.appletdashindextopmenumessagestitle</h3>
+                                    </div>
+                                </li>
+                                @foreach (var item in ActiveMessages)
+                                {
+                                    <li>
+                                        <a href="#">
+                                            <div class="user_img"><img src="~/Images/dashimages/a1.jpg" alt=""></div>
+                                            <div class="notification_desc">
+                                                <h6>@item.Message_Email</h6>
+                                                <p>@item.Message_Subject</p>
+                                                @{
+
+                                                    string Ago = DateTime.Now.Subtract(item.Message_DateTime).Hours.ToString();
+
+
+                                                }
+
+
+                                                <p><span>@string.Concat(Ago, "hour ago")</span></p>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </a>
+                                    </li>
+
+
+                                }
+
+
+
+                                <li>
+                                    <div class="notification_bottom">
+                                        <a href="@Url.Action("ActiveMessages","Manage")">@AppletDashIndex.DashIndex.appletdashindextopmenumessagesseeall</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+                <li class="second top_bell_nav">
+                    <ul class="top_dp_agile ">
+                        <li class="dropdown head-dpdn">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-tasks"></i><span class="badge blue">@TotalActiveNewsLetters</span></a>
+                            <ul class="dropdown-menu newsletters">
+                                <li>
+                                    <div class="notification_header">
+                                        <h3>@AppletDashIndex.DashIndex.appletdashindextopmenunewsletterstitle</h3>
+                                    </div>
+                                </li>
+                                @foreach (var item in ActiveNewsLetters)
+                                {
+                                    <li>
+                                        <a href="#">
+                                            <div class="user_img"><img src="~/Images/dashimages/a1.jpg" alt=""></div>
+                                            <div class="notification_desc">
+                                                <h6>@item.Letter_Email</h6>
+                                                <p>I want to hear from APPLET by Email !</p>
+                                                @{
+
+                                                    string Ago = DateTime.Now.Subtract(item.Letter_DateTime).Hours.ToString();
+
+
+                                                }
+
+
+                                                <p><span>@string.Concat(Ago, "hour ago")</span></p>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </a>
+                                    </li>
+
+
+                                }
+
+                                <li>
+                                    <div class="notification_bottom">
+                                        <a href="@Url.Action("ActiveNewsLetters","Manage")">@AppletDashIndex.DashIndex.appletdashindextopmenunewslettersseeall</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="second w3l_search">
+
+                    <form action="#" method="post">
+                        <input type="search" name="search" placeholder="@AppletDashIndex.DashIndex.appletdashindextopmenusearchplaceholder" required="">
+                        <button class="btn btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+
+                </li>
+                <li class="second full-screen">
+                    <section class="full-top">
+                        <a href="https://dashboard.tawk.to/#/dashboard/5fe83948df060f156a90839a" class="btn btn-dark" target="_blank"><i class="fa fa-inbox" aria-hidden="true"></i></a>
+                    </section>
+                </li>
+
+            </ul>
+            <!-- //nav -->
+
+        </div>
+        <div class="clearfix"></div>
+        <!-- //w3_agileits_top_nav-->
+        <!-- /inner_content-->
+        <div class="inner_content">
+            @RenderBody()
+        </div>
+        <!-- //inner_content-->
+    </div>
+
+
+
+   
+    <!--copy rights start here-->
+    <div class="copyrights">
+        <p>@Appletindex.Index.appletindexfootercopyright <a href="#" target="_blank">@Appletindex.Index.appletindexfooterbrand</a> </p>
+    </div>
+    <!--copy rights end here-->
+    <!-- js -->
+
+
+    <div id="Scroll-top" class="Scroll-top">
+        <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </div>
+
+    <!-- ----------------------------Start Section Loading------------------------- -->
+
+    <section class="loading-overlay">
+        <div class="myloading">
+            <div class="loading-overlay-content">
+                <h1 class="text-center heading"></h1>
+            </div>
+            <div class="sk-cube-grid">
+                <div class="sk-cube sk-cube1"></div>
+                <div class="sk-cube sk-cube2"></div>
+                <div class="sk-cube sk-cube3"></div>
+                <div class="sk-cube sk-cube4"></div>
+                <div class="sk-cube sk-cube5"></div>
+                <div class="sk-cube sk-cube6"></div>
+                <div class="sk-cube sk-cube7"></div>
+                <div class="sk-cube sk-cube8"></div>
+                <div class="sk-cube sk-cube9"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ----------------------------End Section Loading------------------------- -->
+
+
+    <script type="text/javascript" src="~/Scripts/dashjs/bootstrap-3.1.1.min.js"></script>
+
+
+    <!-- /amcharts -->
+    <script src="~/Scripts/dashjs/amcharts.js"></script>
+    <script src="~/Scripts/dashjs/serial.js"></script>
+    <script src="~/Scripts/dashjs/export.js"></script>
+    <script src="~/Scripts/dashjs/light.js"></script>
+
+    <script src="~/Scripts/dashjs/chart1.js"></script>
+    <script src="~/Scripts/dashjs/Chart.min.js"></script>
+    <script src="~/Scripts/dashjs/modernizr.custom.js"></script>
+
+    <script src="~/Scripts/dashjs/classie.js"></script>
+    <script src="~/Scripts/dashjs/gnmenu.js"></script>
+
+
+
+    <!-- //amcharts -->
+
+    <script>
+        new gnMenu(document.getElementById('gn-menu'));
+    </script>
+    <!-- script-for-menu -->
+    <!-- /circle-->
+    <script type="text/javascript" src="~/Scripts/dashjs/circles.js"></script>
+
+    <!--skycons-icons-->
+    <script src="~/Scripts/dashjs/skycons.js"></script>
+    <script>
+        var icons = new Skycons({ "color": "#fcb216" }),
+            list = [
+                "partly-cloudy-day"
+            ],
+            i;
+
+        for (i = list.length; i--;)
+            icons.set(list[i], list[i]);
+        icons.play();
+    </script>
+    <script>
+        var icons = new Skycons({ "color": "#fff" }),
+            list = [
+                "clear-night", "partly-cloudy-night", "cloudy", "clear-day", "sleet", "snow", "wind", "fog"
+            ],
+            i;
+
+        for (i = list.length; i--;)
+            icons.set(list[i], list[i]);
+        icons.play();
+    </script>
+    <!--//skycons-icons-->
+    <!-- //js -->
+    <script src="~/Scripts/dashjs/screenfull.js"></script>
+    <script>
+        $(function () {
+            $('#supported').text('Supported/allowed: ' + !!screenfull.enabled);
+
+            if (!screenfull.enabled) {
+                return false;
+            }
+
+
+
+            $('#toggle').click(function () {
+                screenfull.toggle($('#container')[0]);
+            });
+        });
+    </script>
+    <script src="~/Scripts/dashjs/flipclock.js"></script>
+
+    <script type="text/javascript">
+        var clock;
+
+        $(document).ready(function () {
+
+            clock = $('.clock').FlipClock({
+                clockFace: 'HourlyCounter'
+            });
+        });
+    </script>
+
+    <!-- //inner_content_w3_agile_info-->
+    <script src="~/Scripts/dashjs/bars.js"></script>
+    <script src="~/Scripts/dashjs/jquery.nicescroll.js"></script>
+
+    <script src="~/Scripts/js/typed.js"></script>
+
+
+
+    <script type="text/javascript" src="~/Scripts/dashjs/bootstrap-3.1.1.min.js"></script>
+    <script src="~/Scripts/dashjs/plugins/sortable.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/dashjs/fileinput.js" type="text/javascript"></script>
+    <script src="~/Scripts/dashjs/plugins/fa/theme.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/dashjs/plugins/jquery.toast.min.js"></script>
+    <script src="~/Scripts/dashjs/scripts.js"></script>
+    <script>
+
+
+        $(document).on('ready', function () {
+
+            $("#input-b6").fileinput({
+                showUpload: false,
+                maxFileCount: 1,
+                mainClass: "input-group-lg",
+                theme: "fa",
+                initialPreview: [
+                    "<img src='/Images/images/logo.png' class='file-preview-image' alt='Desert' title='Desert'>",
+
+                ],
+                // initial preview configuration
+                initialPreviewConfig: [
+                    {
+                        caption: 'ReachUp',
+                        width: '120px',
+                        url: '/Images/images/logo.png',
+                        key: 100,
+                        extra: { id: 100 }
+                    }
+
+
+
+                ]
+
+            });
+
+
+        });
+
+    </script>
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

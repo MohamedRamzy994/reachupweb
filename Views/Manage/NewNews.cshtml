@@ -1,0 +1,284 @@
+﻿@model AppletSoftware.Models.NewsViewModel
+@{
+
+    Layout = "~/Views/Shared/_DashLayout.cshtml";
+}
+
+<!-- breadcrumbs -->
+<div class="w3l_agileits_breadcrumbs">
+    <div class="w3l_agileits_breadcrumbs_inner">
+        <ul>
+            <li><a href="@Url.Action("News","Manage")">@AppletDashIndex.DashIndex.appletdashindexsidebardnews</a><span>«</span></li>
+            <li>@AppletDashIndex.DashIndex.appletdashnewnewsbreadcrums</li>
+        </ul>
+    </div>
+</div>
+<!-- //breadcrumbs -->
+
+<div class="inner_content_w3_agile_info two_in">
+    <h2 class="w3_inner_tittle">@AppletDashIndex.DashIndex.appletdashnewnewsbreadcrums</h2>
+    <!--/forms-->
+    <div class="forms-main_agileits">
+        <!--/forms-inner-->
+        <div class="forms-inner">
+            <!--/set-3-->
+            @using (Html.BeginForm("NewNews", "Manage", FormMethod.Post, new { id = "NewsForm", role = "form", enctype = "multipart/form-data" }))
+            {
+
+
+                @Html.AntiForgeryToken()
+                <div class="wthree_general">
+
+
+                    <div class="grid-1 graph-form agile_info_shadow">
+                        <h3 class="w3_inner_tittle two">@AppletDashIndex.DashIndex.appletdashnewnewsbreadcrums</h3>
+
+                        <div class="row">
+
+
+                            <div class="col-md-5 col-md-offset-1">
+                                <div class="form-group has-warning">
+                                    @Html.ValidationMessageFor(m => m.News_Title_En, "", new { @class = "text-danger" })
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-pencil-square-o"></i>
+                                        </span>
+                                        @Html.TextBoxFor(m => m.News_Title_En, new { @class = "form-control1 icon", placeholder =AppletDashIndex.DashIndex.appletdashnewnewsplaceholdertitleinenglish })
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-5 col-md-offset-1">
+                                <div class="form-group has-warning">
+                                    @Html.ValidationMessageFor(m => m.News_Title_Ar, "", new { @class = "text-danger" })
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-pencil-square-o"></i>
+                                        </span>
+                                        @Html.TextBoxFor(m => m.News_Title_Ar, new { @class = "form-control1 icon", placeholder = AppletDashIndex.DashIndex.appletdashnewnewsplaceholdertitleinarabic})
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+
+                            <div class="col-md-5 col-md-offset-1">
+                                <div class="form-group has-warning">
+                                    @Html.ValidationMessageFor(m => m.News_Short_En, "", new { @class = "text-danger" })
+                                    <span class="input-group-addon">
+                                       @AppletDashIndex.DashIndex.appletdashnewnewsplaceholdershortenglish &nbsp;<i class="fa fa-pencil-square-o"></i>
+                                    </span>
+
+                                    @Html.TextAreaFor(m => m.News_Short_En, new { placeholder = AppletDashIndex.DashIndex.appletdashnewnewsplaceholdershortenglish })
+                                    <script>
+                                        CKEDITOR.replace('News_Short_En');
+                                    </script>
+
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-5 col-md-offset-1 ">
+                                @Html.ValidationMessageFor(m => m.News_Short_Ar, "", new { @class = "text-danger" })
+                                <div class="form-group has-warning">
+
+                                    <span class="input-group-addon">
+                                        @AppletDashIndex.DashIndex.appletdashnewnewsplaceholdershortearabic &nbsp;<i class="fa fa-pencil-square-o"></i>
+                                    </span>
+
+                                    @Html.TextAreaFor(m => m.News_Short_Ar, new { placeholder = AppletDashIndex.DashIndex.appletdashnewnewsplaceholdershortearabic })
+                                    <script>
+                                        CKEDITOR.replace('News_Short_Ar');
+                                    </script>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+
+                            <div class="col-md-5 col-md-offset-1">
+                                <div class="form-group has-warning">
+                                    @Html.ValidationMessageFor(m => m.News_Long_En, "", new { @class = "text-danger" })
+                                    <span class="input-group-addon">
+                                        @AppletDashIndex.DashIndex.appletdashnewnewsplaceholderlongenglish &nbsp;<i class="fa fa-pencil-square-o"></i>
+                                    </span>
+
+                                    @Html.TextAreaFor(m => m.News_Long_En, new { placeholder =AppletDashIndex.DashIndex.appletdashnewnewsplaceholderlongenglish })
+                                    <script>
+                                        CKEDITOR.replace('News_Long_En');
+                                    </script>
+
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-5 col-md-offset-1 ">
+                                @Html.ValidationMessageFor(m => m.News_Long_Ar, "", new { @class = "text-danger" })
+                                <div class="form-group has-warning">
+
+                                    <span class="input-group-addon">
+                                        @AppletDashIndex.DashIndex.appletdashnewnewsplaceholderlongarabic &nbsp;<i class="fa fa-pencil-square-o"></i>
+                                    </span>
+
+                                    @Html.TextAreaFor(m => m.News_Long_Ar, new { placeholder = AppletDashIndex.DashIndex.appletdashnewnewsplaceholderlongarabic })
+                                    <script>
+                                        CKEDITOR.replace('News_Long_Ar');
+                                    </script>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                           
+                            <div class="col-md-5 col-md-offset-1">
+                                <div class="has-warning">
+                                    <div class="file-loading">
+
+                                        @Html.TextBoxFor(m => m.News_Photo, new { type = "file", multiple = true })
+                                    </div>
+                                    <script>
+
+
+                                        $(document).on('ready', function () {
+
+                                            $("#News_Photo").fileinput({
+                                                showUpload: false,
+                                                maxFileCount: 1,
+                                                mainClass: "input-group-lg",
+                                                theme: "fa",
+                                                initialPreview: [
+                                                    "<img src='/Images/images/logo.png' class='file-preview-image' alt='Desert' title='Desert' height='50'>",
+
+                                                ],
+                                                // initial preview configuration
+                                                initialPreviewConfig: [
+                                                    {
+                                                        caption: 'appletsoftware',
+                                                        width: '120px',
+                                                        url: '/Images/images/logo.png',
+                                                        key: 100,
+                                                        extra: { id: 100 }
+                                                    }
+
+
+
+                                                ]
+
+                                            });
+
+
+                                        });
+
+                                    </script>
+
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-5 col-md-offset-1">
+                                <div class="form-group has-warning">
+
+                                    @Html.ValidationMessageFor(m => m.NCat_Id, "", new { @class = "text-danger" })
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="fa fa-bitbucket"></i>
+                                        </span>
+
+                                        @Html.DropDownListFor(m => m.NCat_Id, Model.Categories, AppletDashIndex.DashIndex.appletdashnewprojectplaceholdercategory, new { @class = "form-control" })
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="button">
+
+                            <p class="btnText"> @AppletDashIndex.DashIndex.appletdashnewprojectreadybutton</p>
+                            <div class="btnTwo">
+                                <input type="submit" class="btnText2 btn-submit" value=" @AppletDashIndex.DashIndex.appletdashnewprojectsavebutton">
+                            </div>
+
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <!--//set-3-->
+            }
+        </div>
+
+        <!--//forms-inner-->
+    </div>
+    <!--//forms-->
+</div>
+
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var modelStatus =@string.IsNullOrEmpty(Model.NewsStatus).ToString().ToLower();
+        if (status == false) {
+
+            var modelMessage =@string.Compare(Model.NewsStatus, "Success");
+            console.log(modelMessage);
+
+            if (modelMessage == 0) {
+
+
+
+                $.toast({
+                    text: " News Added Successfuly Thank you :) !", // Text that is to be shown in the toast
+                    heading: 'APPLET Software', // Optional heading to be shown on the toast
+                    icon: 'success', // Type of toast icon
+                    showHideTransition: 'slide', // fade, slide or plain
+                    allowToastClose: true, // Boolean value true or false
+                    hideAfter: 10000, // false to make it sticky or number representing the miliseconds as time after which toast needs to be hidden
+                    stack: 5, // false if there should be only one toast at a time or a number representing the maximum number of toasts to be shown at a time
+                    position: { left: '0', right: '0', top: '0', bottom: 'auto' }, // bottom-left or bottom-right or bottom-center or top-left or top-right or top-center or mid-center or an object representing the left, right, top, bottom values
+
+
+
+                    textAlign: 'center',  // Text alignment i.e. left, right or center
+                    loader: true,  // Whether to show loader or not. True by default
+                    loaderBg: '#9EC600',  // Background color of the toast loader
+                    beforeShow: function () { }, // will be triggered before the toast is shown
+                    afterShown: function () { }, // will be triggered after the toat has been shown
+                    beforeHide: function () { }, // will be triggered before the toast gets hidden
+                    afterHidden: function () { }  // will be triggered after the toast has been hidden
+                });
+
+
+
+
+            }
+
+
+
+        }
+
+
+
+
+    });
+
+</script>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

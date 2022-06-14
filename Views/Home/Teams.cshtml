@@ -1,0 +1,208 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+@using AppletSoftware.Models
+@using System.Threading
+@using System.Globalization
+@model PagedList.IPagedList<AspNetTeam>
+@{
+    ViewBag.currentteams = "active";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!-- ---------------------------- Start Team ---------------------------- -->
+
+
+
+<section class="team  text-center" id="TEAM">
+
+    <!-- Start Container -->
+    <div class="container">
+
+        @if (CultureInfo.CurrentCulture.Name == "en-US")
+    {
+        <!-- start row -->
+        <div class="row">
+
+            <h1 class="my_head" style="margin-top:50px">@Appletindex.Index.appletindexteamtitle </h1>
+
+            <p class="col-xs-offset-2 col-xs-8" style="margin-bottom:60px">
+                @Appletindex.Index.appletteamtitle
+            </p>
+
+            <div class="clearfix"></div>
+
+            <div class="autoplay text-center">
+                @foreach (var item in ViewData["TeamsAscending"] as IEnumerable<AspNetTeam>)
+            {
+
+
+                <!-- --------------------------------------------------- -->
+
+                <div class="col-md-3 col-sm-4">
+
+                    <!-- Start content 1 -->
+                    <div class="content">
+                        <img src="@Url.Content("~/Images/resizedteams/"+item.Team_Photo)" class="img-responsive" style="width:100%;height:250px;">
+                        <h3>@item.Team_Fname_En @item.Team_Lname_En</h3>
+                        <h5>@item.Team_JobTitle_En</h5>
+                        @Html.Raw(item.AspNetTeamsCategory.TCat_Description_En)
+                        <div class="socials">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                            <a href="#"><i class="fa fa-dribbble"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    <!-- End content 1 -->
+
+                </div>
+
+                <!-- --------------------------------------------------- -->
+
+
+
+
+             }
+
+
+            </div>
+            <!-- End autoplay -->
+
+
+            <div class="clearfix"></div>
+
+
+
+
+        </div>
+        <!-- End Row -->
+}
+else if (CultureInfo.CurrentCulture.Name == "ar-SA")
+{
+    <!-- start row -->
+    <div class="row">
+
+        <h1 class="my_head" style="margin-top:50px">@Appletindex.Index.appletindexteamtitle </h1>
+
+        <p class="col-xs-offset-2 col-xs-8" style="margin-bottom:60px">
+            @Appletindex.Index.appletteamtitle
+        </p>
+
+        <div class="clearfix"></div>
+
+        <div class="autoplay text-center">
+            @foreach (var item in ViewData["TeamsAscending"] as IEnumerable<AspNetTeam>)
+        {
+
+
+            <!-- --------------------------------------------------- -->
+
+            <div class="col-md-3 col-sm-4">
+
+                <!-- Start content 1 -->
+                <div class="content">
+                    <img src="@Url.Content("~/Images/resizedteams/"+item.Team_Photo)" class="img-responsive" style="width:100%;height:250px;">
+                    <h3>@item.Team_Fname_Ar @item.Team_Lname_Ar</h3>
+                    <h5>@item.Team_JobTitle_Ar</h5>
+                    @Html.Raw(item.AspNetTeamsCategory.TCat_Description_Ar)
+                    <div class="socials">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <!-- End content 1 -->
+
+            </div>
+
+            <!-- --------------------------------------------------- -->
+
+
+
+
+    }
+
+
+        </div>
+        <!-- End autoplay -->
+
+
+        <div class="clearfix"></div>
+
+
+
+    </div>
+    <!-- End Row -->
+}
+else
+{
+    <!-- start row -->
+    <div class="row">
+
+        <h1 class="my_head" style="margin-top:50px">@Appletindex.Index.appletindexteamtitle </h1>
+
+        <p class="col-xs-offset-2 col-xs-8" style="margin-bottom:60px">
+            @Appletindex.Index.appletteamtitle
+        </p>
+
+        <div class="clearfix"></div>
+
+        <div class="autoplay text-center">
+            @foreach (var item in ViewData["TeamsAscending"] as IEnumerable<AspNetTeam>)
+        {
+
+
+            <!-- --------------------------------------------------- -->
+
+            <div class="col-md-3 col-sm-4">
+
+                <!-- Start content 1 -->
+                <div class="content">
+                    <img src="@Url.Content("~/Images/resizedteams/"+item.Team_Photo)" class="img-responsive" style="width:100%;height:250px;">
+                    <h3>@item.Team_Fname_En @item.Team_Lname_En</h3>
+                    <h5>@item.Team_JobTitle_En</h5>
+                    @Html.Raw(item.AspNetTeamsCategory.TCat_Description_En)
+                    <div class="socials">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        <a href="#"><i class="fa fa-dribbble"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <!-- End content 1 -->
+
+            </div>
+
+            <!-- --------------------------------------------------- -->
+
+
+
+
+    }
+
+
+        </div>
+        <!-- End autoplay -->
+
+
+        <div class="clearfix"></div>
+
+     
+
+    </div>
+    <!-- End Row -->
+}
+
+
+
+    </div>
+    <!-- End Container -->
+
+</section>
+
+<!-- ---------------------------- End Team ---------------------------- -->

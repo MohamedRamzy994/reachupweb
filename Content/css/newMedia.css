@@ -1,0 +1,16 @@
+@media (max-width: 660px) {
+    
+    .codeHtml .vendor-edit-content input[type="text"],
+    .codeHtml .vendor-edit-content textarea {
+        width: 92%
+    }
+    
+    .about-icon { width: 94% }
+    
+}
+
+
+@media (max-width: 630px) {
+    
+    .codeHtml .my-panel, .codeHtml .vendor-edit-content { margin-top: 100px }
+}

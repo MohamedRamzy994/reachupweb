@@ -1,0 +1,227 @@
+﻿@model AppletSoftware.Models.PlanOrderViewModel
+    @using System.Threading
+@using System.Globalization
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="@AppletDashIndex.DashIndex.appletdashindexstylegridcss" rel="stylesheet" type="text/css" media="all" />
+<link href="@AppletDashIndex.DashIndex.appletdashindexstylecss" rel="stylesheet" type="text/css" media="all" />
+
+<style>
+
+    .has-feedback {
+        position: unset;
+    }
+
+    .form-control {
+        display: block;
+        width: 100%;
+        height: 37px;
+        padding: 0px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        /* color: #777; */
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ddd;
+        border-radius: 0;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+        -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+        transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    }
+
+    .has-error {
+        background: #fff;
+        color: maroon;
+    }
+</style>
+
+
+
+
+<div class="inner_content">
+    <!-- /inner_content_w3_agile_info-->
+    <!-- breadcrumbs -->
+    <div class="w3l_agileits_breadcrumbs">
+        <div class="w3l_agileits_breadcrumbs_inner">
+            <ul>
+                <li><a href="@Url.Action("Index","Home")">@Appletindex.Index.applettopmenuhome</a><span>«</span></li>
+
+                <li>@Model.Order_Plan</li>
+
+            </ul>
+        </div>
+    </div>
+    <!-- //breadcrumbs -->
+
+    <div class="inner_content_w3_agile_info two_in">
+        <h2 class="w3_inner_tittle">@Model.Order_Plan</h2>
+
+        <div class="agile-grids">
+            <!-- validation -->
+            <div class="grids">
+
+                <div class="forms-grids">
+                    <div class="w3agile-validation">
+                        <div class="agile-validation agile_info_shadow">
+                            <div class="my-div">
+
+                                @using (Html.BeginForm("OrderNow", "Home", FormMethod.Post, new { @class = "valida", autocomplete = "off", novalidate = "novalidate" }))
+                                {
+
+                                    @Html.AntiForgeryToken()
+
+                                    <div class="input-info">
+                                        @if (ViewBag.success == "success")
+                                        {
+                                            <div class="alert alert-success alert-dismissible">
+                                                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                                Successfuly Order we will contact you soon Thank you ! @Html.ActionLink("Go to Plans", "Plans", "Home", null, new { @class = "btn btn-primary" })
+                                            </div>
+                                        }
+
+
+                                        <h3 class="w3_inner_tittle two">@Appletindex.Index.appletordernowfillform</h3>
+                                    </div>
+
+                                    <label for="Order_Plan" class="text-info">@Appletindex.Index.appletordernoworderplanlabel</label>
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(m => m.Order_Plan, new { required = "true", @class = "form-control", disabled = "disabled" })
+                                        @*@Html.ValidationMessageFor(m => m.Order_Plan, "", new { @class = "text-info" })*@
+                                        @Html.HiddenFor(m => m.Order_Plan)
+                                    </div>
+
+                                    <label for="Order_Email" class="text-info">@Appletindex.Index.appletordernoworderemaillabel</label>
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(m => m.Order_Email, new { required = "true", @class = "form-control" })
+                                        @*@Html.ValidationMessageFor(m => m.Order_Email, "", new { @class = "text-info" })*@
+
+                                    </div>
+
+                                    <label for="Order_Phone" class="text-info">@Appletindex.Index.appletordernoworderphonenumberlabel</label>
+                                    <div class="form-group">
+                                        @Html.TextBoxFor(m => m.Order_Phone, new { required = "true", @class = "form-control" })
+                                        @*   @Html.ValidationMessageFor(m => m.Order_Phone, "", new { @class = "text-info" })*@
+
+                                    </div>
+
+                                    <div class="row">
+
+                                        <div class="col-xs-12 col-sm-6">
+
+                                            <label for="Order_Fname" class="text-info">@Appletindex.Index.appletordernoworderfirstnamelabel</label>
+                                            <div class="form-group">
+                                                @Html.TextBoxFor(m => m.Order_Fname, new { required = "true", @class = "form-control" })
+                                                @*@Html.ValidationMessageFor(m => m.Order_Fname, "", new { @class = "text-info" })*@
+
+                                            </div>
+
+                                        </div>
+
+                                        <div class="col-xs-12 col-sm-6">
+
+                                            <label for="Order_Lname" class="text-info">@Appletindex.Index.appletordernoworderlastnamelabel</label>
+                                            <div class="form-group">
+                                                @Html.TextBoxFor(m => m.Order_Lname, new { required = "true", @class = "form-control" })
+                                                @*@Html.ValidationMessageFor(m => m.Order_Lname, "", new { @class = "text-info" })*@
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <label for="Order_Message" class="text-info">@Appletindex.Index.appletordernowordermessageelabel</label>
+                                    <div class="form-group">
+                                        @Html.TextAreaFor(m => m.Order_Message, new { required = "true", rows = "12", @class = "form-control" })
+                                        @*@Html.ValidationMessageFor(m => m.Order_Message, "", new { @class = "text-info" })*@
+
+                                    </div>
+
+                                    <p>
+                                        <input type="submit" name="sub-1" value="@Appletindex.Index.appletordernowsubmitbutton" class="btn btn-primary">
+
+                                    </p>
+                                }
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="clearfix"> </div>
+                </div>
+            </div>
+            <!-- //validation -->
+
+        </div>
+
+
+    </div>
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <!-- input-forms -->
+    <script type="text/javascript" src="~/Scripts/dashjs/valida.2.1.6.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+
+            // show Valida's version.
+            $('#version').valida('version');
+
+            // Exemple 1
+            $('.valida').valida();
+
+            // Exemple 2
+            /*
+            $('.valida').valida({
+
+                // basic settings
+                validate: 'novalidate',
+                autocomplete: 'off',
+                tag: 'p',
+
+                // default messages
+                messages: {
+                    submit: 'Wait ...',
+                    required: 'Este campo é obrigatório',
+                    invalid: 'Field with invalid data',
+                    textarea_help: 'Digitados <span class="at-counter">{0}</span> de {1}'
+                },
+
+                // filters & callbacks
+                use_filter: true,
+
+                // a callback function that will be called right before valida runs.
+                // it must return a boolan value (true for good results and false for errors)
+                before_validate: null,
+
+                // a callback function that will be called right after valida runs.
+                // it must return a boolan value (true for good results and false for errors)
+                after_validate: null
+
+            });
+            */
+
+            // setup the partial validation
+            $('#partial-1').on('click', function (ev) {
+                ev.preventDefault();
+                $('#res-1').click(); // clear form error msgs
+                $('form').valida('partial', '#field-1'); // validate only field-1
+                $('form').valida('partial', '#field-1-3'); // validate only field-1-3
+            });
+
+        });
+
+    </script>
+    <!-- //input-forms -->
+    <!--validator js-->
+    <script src="~/Scripts/dashjs/validator.min.js"></script>
+
+
+}

@@ -1,0 +1,442 @@
+﻿@using System.Threading
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reach UP marketing agency</title>
+    <link rel="stylesheet" href="~/Content/filtergallery.css" />
+    <link rel="stylesheet" href="@Appletindex.Index.appletbootstrapcss">
+    <link rel="stylesheet" href="@Appletindex.Index.appletbootstraprtlcss">
+
+    <!-- Libarary of font Awesome -->
+    <link rel="stylesheet" href="@Appletindex.Index.appletfontawesomcss">
+
+    <link rel="stylesheet" href="@Appletindex.Index.appletlineariconcss">
+
+    <!-- Hover Css -->
+    <link rel="stylesheet" href="@Appletindex.Index.applethovercss">
+
+    <!-- Animate Css -->
+    <link rel="stylesheet" href="@Appletindex.Index.appletanimatecss">
+
+    <!-- icon Css -->
+    <link rel="icon" href="@Appletindex.Index.appletlogoicon">
+
+    <!-- Get Youtube vido Css -->
+    <link rel="stylesheet" href="@Appletindex.Index.appletyoutubepopupcss">
+
+    <!-- Get vimo vido Css -->
+    <link rel="stylesheet" href="@Appletindex.Index.appletyoutubepopupvimocss">
+
+    <link href="@Appletindex.Index.appleticoncloseicon">
+
+    <!-- popuo Css -->
+    <link href="@Appletindex.Index.appletpopupboxcss" rel="stylesheet">
+
+    <!-- slick Css -->
+    <link rel="stylesheet" href="@Appletindex.Index.appletslickthemecss">
+
+    <!-- slick Css -->
+    <link rel="stylesheet" href="@Appletindex.Index.appletslickcss">
+
+    <!-- gif Css -->
+    <link href="@Appletindex.Index.appletajaxloadericon">
+
+    <!-- Libarary of themify-icons -->
+    <link rel="stylesheet" href="@Appletindex.Index.appletthemifycss">
+
+    <!-- Libarary of ionicons-icons -->
+    <link rel="stylesheet" href="@Appletindex.Index.appletioniconscss">
+
+    <link rel="stylesheet" href="@Appletindex.Index.appletfancyboxcss">
+
+
+    <!-- My Style CSS -->
+    <link rel="stylesheet" href="@Appletindex.Index.appletstylecss">
+
+    <!-- My feature CSS -->
+    <link rel="stylesheet" href="@Appletindex.Index.appletstyle2css">
+
+    <!-- My Media CSS -->
+    <link rel="stylesheet" href="@Appletindex.Index.appletmediacss">
+
+    <link href='@Appletindex.Index.appletgooglefonts' rel='stylesheet' type='text/css'>
+
+    <link href='@Appletindex.Index.appletgooglefonts2' rel='stylesheet' type='text/css'>
+
+
+
+
+    <!--[if lt IE 9]>
+        <script src="js/html5shiv.min.js"></script>
+        <script src="js/respond.min.js"></script>
+        <!-- Libarary of themify-icons -->
+    <!--[endif]-->
+    <!-- ---------------------------------------------------------------------------------------------------- -->
+    @*@Styles.Render("~/Content/css")*@
+    @*@Scripts.Render("~/bundles/modernizr")*@
+
+
+</head>
+<body>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+        (function () {
+            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+            s1.async = true;
+            s1.src = 'https://embed.tawk.to/5fe83948df060f156a90839a/1eqhhvhf3';
+            s1.charset = 'UTF-8';
+            s1.setAttribute('crossorigin', '*');
+            s0.parentNode.insertBefore(s1, s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
+    <!-- -----------------------------------Start Navbar------------------------------ -->
+
+    <div id="myhome">
+
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapsible" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+
+                    <a class="navbar-brand logo" href="index.html">
+                        <img src="~/Images/images/logo.png" class="img-responsive">
+                    </a>
+
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar-collapsible">
+                    @Html.Partial("_LoginPartial")
+                    <ul class="nav navbar-nav navbar-right">
+
+                        <li class="@ViewBag.currenthome"> <a href="@Url.Action("Index","Home")" data-value="myhome"> @Appletindex.Index.applettopmenuhome </a> </li>
+
+
+
+                        <li class="@ViewBag.currentplans">
+                            <a href="@Url.Action("Plans","Home")" data-value="Plans">
+                                @Appletindex.Index.applettopmenuplans
+                            </a>
+                        </li>
+
+                        <li class="@ViewBag.currentprojects"> <a href="@Url.Action("Projects","Home")" data-value="Projects">@Appletindex.Index.applettopmenuprojects </a> </li>
+
+                        <li class="@ViewBag.currentteams"> <a href="@Url.Action("Teams","Home")" data-value="TEAM"> @Appletindex.Index.applettopmenuteams </a> </li>
+                        <li class="@ViewBag.currentnews"> <a href="@Url.Action("News","Home")" data-value="myblog"> @Appletindex.Index.applettopmenublog</a> </li>
+                        <li class="@ViewBag.currentabout"> <a href="@Url.Action("About","Home")" data-value="myblog"> @Appletindex.Index.applettopmenuabout </a> </li>
+                        <li class="@ViewBag.currentcontact"> <a href="@Url.Action("Contact","Home")" data-value="myblog"> @Appletindex.Index.applettopmenucontact </a> </li>
+                        <li>
+
+
+
+                            @{ string lang = Thread.CurrentThread.CurrentCulture.Name;
+
+                                if (lang == "ar-SA")
+                                {
+
+                                    lang = "en-US";
+                                }
+                                else if (lang == "en-US")
+                                {
+                                    lang = "ar-SA";
+                                }
+
+
+
+                                string Plan_Id = Url.RequestContext.HttpContext.GetOwinContext().Request.QueryString.HasValue && Request.QueryString["Plan_Id"] != null ? Request.QueryString["Plan_Id"].ToString() : "";
+                                string News_Id = Url.RequestContext.HttpContext.GetOwinContext().Request.QueryString.HasValue && Request.QueryString["News_Id"] != null ? Request.QueryString["News_Id"].ToString() : "";
+
+
+
+                            }
+
+
+                            @if (!string.IsNullOrEmpty(Plan_Id))
+                            {
+
+
+                                <a href="@Url.Action(ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), new { Plan_Id=Plan_Id, language=lang})">
+                                    @Appletindex.Index.appletchangelanguagebutton
+
+
+                                    <i class="fa fa-language"></i>
+                                </a>
+
+                            }
+
+                            else if (!string.IsNullOrEmpty(News_Id))
+                            {
+                                <a href="@Url.Action(ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), new { News_Id=News_Id, language=lang})">
+                                    @Appletindex.Index.appletchangelanguagebutton
+
+
+                                    <i class="fa fa-language"></i>
+                                </a>
+                            }
+                            else
+                            {
+
+                                <a href="@Url.Action(ViewContext.RouteData.Values["action"].ToString(), ViewContext.RouteData.Values["controller"].ToString(), new {language=lang})">
+                                    @Appletindex.Index.appletchangelanguagebutton
+
+
+                                    <i class="fa fa-language"></i>
+                                </a>
+                            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </li>
+                    </ul>
+
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container -->
+        </nav>
+
+    </div>
+
+    <!-- ------------------------------------End Navbar------------------------------------------ -->
+
+
+
+    @RenderBody()
+
+
+    <!-- -----------------------------Start Section Footer------------------------------------- -->
+
+
+    <section class="Footer">
+
+        <div class="container">
+
+
+            <div class="row">
+
+                <div class="col-sm-4 col-sm-offset-0 col-xs-offset-1 col-xs-10">
+                    <div class="footer-first">
+                        <h4>@Appletindex.Index.appletindexfooterabouttitle </h4>
+                        <p>
+
+
+                            @Appletindex.Index.appletindexfooteraboutparagraph
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-4 col-sm-offset-0 col-xs-offset-1 col-xs-10">
+                    <div class="footer-second">
+                        <div class="row">
+
+
+
+                            <div class="col-sm-8 col-md-offset-4 col-xs-12">
+                                <h4>@Appletindex.Index.appletindexfooterquicklinkstitle</h4>
+                                <ul>
+                                    <li> <a href="@Url.Action("Projects","Home")">@Appletindex.Index.appletindexfooterquicklinksli1</a> </li>
+                                    <li> <a href="@Url.Action("Plans","Home")">@Appletindex.Index.appletindexfooterquicklinksli2</a> </li>
+                                    <li> <a href="@Url.Action("News","Home")">@Appletindex.Index.appletindexfooterquicklinksli3</a> </li>
+                                    <li> <a href="#">@Appletindex.Index.appletindexfooterquicklinksli4</a> </li>
+                                    <li> <a href="@Url.Action("Teams","Home")">@Appletindex.Index.appletindexfooterquicklinksli5</a> </li>
+                                    <li> <a href="@Url.Action("Contact","Home")">@Appletindex.Index.appletindexfooterquicklinksli6</a> </li>
+                                    <li> <a href="@Url.Action("About","Home")">@Appletindex.Index.appletindexfooterquicklinksli7</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End Row -->
+                    </div>
+                    <!-- End Footer Second -->
+                </div>
+
+
+
+                <div class="col-sm-4 col-sm-offset-0 col-xs-offset-1 col-xs-10">
+                    <div class="footer-third">
+
+
+                        <div class="row">
+
+                            <div class="footer-~/Images/images col-sm-12">
+
+                                <img src="~/Images/images/logo.png" height="200" />
+
+                            </div>
+
+
+                        </div>
+                        <!-- End Row -->
+
+                    </div>
+                    <!-- End footer-third -->
+                </div>
+                <!-- End third col-md-4 -->
+
+            </div>
+            <!-- End first Row -->
+
+            <hr>
+
+
+            <div class="row">
+                <div class="footer-bottom">
+                    <div class="copyright pull-left">
+                        @Appletindex.Index.appletindexfootercopyright <a href="#" style="background-color:#fff;"> <img src="~/Images/images/logofooter.png" height="60" /> </a>
+                    </div>
+
+                    <!-- Start Social Media in Footer -->
+                    <div class="social-media  pull-right">
+                        <a href="#" title="Follow Me On Facebook">
+                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="#" title="Follow Me On Twitter">
+                            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="#" title="Follow Me On Youtube">
+                            <i class="fa fa-youtube-square" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="#" title="Follow Me On Linkedin">
+                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="#" title="Follow Me On Behance">
+                            <i class="fa fa-behance-square" aria-hidden="true"></i>
+                        </a>
+
+                        <a href="#" title="Follow Me On Github">
+                            <i class="fa fa-github-square" aria-hidden="true"></i>
+                        </a>
+
+                    </div>
+                    <!-- End Social Media in Footer -->
+
+                </div>
+                <!-- End footer-bottom -->
+            </div>
+            <!-- End Second Row -->
+
+
+        </div>
+    </section>
+
+
+    <!-- ------------------------------End Section Footer------------------------------------- -->
+
+
+    <div id="Scroll-top" class="Scroll-top">
+        <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </div>
+
+
+
+    <!-- ----------------------------Start Section Loading------------------------- -->
+
+    <section class="loading-overlay">
+        <div class="myloading">
+            <div class="loading-overlay-content">
+                <h1 class="text-center heading"></h1>
+            </div>
+            <div class="sk-cube-grid">
+                <div class="sk-cube sk-cube1"></div>
+                <div class="sk-cube sk-cube2"></div>
+                <div class="sk-cube sk-cube3"></div>
+                <div class="sk-cube sk-cube4"></div>
+                <div class="sk-cube sk-cube5"></div>
+                <div class="sk-cube sk-cube6"></div>
+                <div class="sk-cube sk-cube7"></div>
+                <div class="sk-cube sk-cube8"></div>
+                <div class="sk-cube sk-cube9"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ----------------------------End Section Loading------------------------- -->
+    <!-- ----------------------------------------------------------------------------------------------------- -->
+
+
+
+    <script src="~/Scripts/js/jquery-3.2.1.min.js"></script>
+    <script>
+        $(document).remove("iframe");
+
+    </script>
+    <!-- bootstrap js -->
+    <script src="~/Scripts/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Shuffle/5.2.3/shuffle.min.js" integrity="sha512-VHIYn9ssmuPBliadBEgGCTRtCO4agkhQCxiPaTBKaAq0cm2KKpX+PE2klG1VfOHKKcN5eZcev0M3s5V2xXxVew==" crossorigin="anonymous"></script>
+
+    <script src="~/Scripts/filtergallery.js"></script>
+    <!-- foor animated words -->
+    <script src="~/Scripts/js/typed.js"></script>
+
+    <script src="~/Scripts/js/jquery.nicescroll.min.js"></script>
+
+    <!-- GRT Youtube Popup -->
+    <script src="~/Scripts/js/grt-youtube-popup.js"></script>
+
+    <!-- for animated background -->
+    <script src="~/Scripts/js/jquery.particleground.min.js"></script>
+
+    <script src="~/Scripts/js/wow.min.js"></script>
+
+    <!-- for counter -->
+    <script src="~/Scripts/js/jquery.countTo.js"></script>
+
+    <!-- for slick -->
+    <script src="~/Scripts/js/slick/slick.min.js"></script>
+
+    <!-- Circle progress -->
+    <script src="~/Scripts/js/pie-chart.js"></script>
+
+    <!-- directional overlay -->
+    <script src="~/Scripts/js/jquery.directional-hover.min.js"></script>
+
+    <script src="~/Scripts/js/modernizr.custom.53451.js"></script>
+
+    <script src="~/Scripts/js/jquery.magnific-popup.js"></script>
+    <script src="~/Scripts/js/jquery.fancybox.min.js"></script>
+    <!-- <script src="js/numscroller-1.0.js"></script> -->
+    <!-- Java Script Code -->
+    <script src="~/Scripts/js/mycode.js"></script>
+
+
+
+    <script>
+        new WOW().init();
+    </script>
+
+
+
+    @*@Scripts.Render("~/bundles/jquery")*@
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=5a9d222e2326af0013ae40ec&product=inline-share-buttons' async='async'></script>
+
+</body>
+</html>
